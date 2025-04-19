@@ -1,9 +1,9 @@
 - 👋 Hi, I’m @gowtham-cr and iam a student of amc enjineering college.
 - 👀 I’m interested in   programming language.
-- 🌱 I’m currently learning java core and advanced.
+- 🌱 I have finished java core and advanced.
 - 💞️ I’m looking to collaborate on new projects .
-- 📫 How to reach me  rg3212703@gmail.com .
-- 😄 Pronouns: ...
+- 📫  reach me  at rg3212703@gmail.com .
+- 😄 
 - ⚡ Fun fact: ...
 
 <!---
