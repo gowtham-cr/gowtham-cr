@@ -1,152 +1,208 @@
-I want you to customize my GitHub profile README.md.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=36BCF7&center=true&vCenter=true&width=700&lines=Hi%2C+I'm+Gowtham+R+%F0%9F%91%8B;Information+Science+%26+Engineering+Student;Java+Full+Stack+Developer+%7C+AI%2FML+Enthusiast;Building+Practical+AI+%26+Web+Applications" />
+</p>
 
-First, inspect the existing README.md completely and understand its:
-- structure
-- design
-- sections
-- links
-- images
-- badges
-- animations
-- statistics
-- layout
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=gowtham-cr&label=Profile%20Views&color=0e75b6&style=flat" />
+</p>
 
-Do NOT blindly delete the existing design. Preserve the professional
-visual style and useful animations, badges, icons and statistics.
+<h2 align="center">👨‍💻 About Me</h2>
 
-Replace ONLY the previous person's information with my information.
+<p align="center">
+  I'm <b>Gowtham R</b>, a 5th semester B.E. Information Science & Engineering student
+  at <b>AMC Engineering College</b>.
+</p>
 
-IMPORTANT:
-- Do not invent achievements, experience, projects, certificates,
-  statistics, job titles or links.
-- Do not keep any personal information belonging to the previous person.
-- If information is missing, remove that section instead of inventing it.
-- Keep the README professional and suitable for internships,
-  placements and a developer portfolio.
-- Keep proper alignment and spacing.
-- Make sure Markdown and HTML are valid.
-- Use my GitHub username wherever GitHub statistics or widgets require it.
+<p align="center">
+  I enjoy building <b>Java Full Stack applications</b>, exploring
+  <b>AI/ML</b>, participating in <b>hackathons</b>, and turning ideas
+  into practical software projects.
+</p>
 
-MY PERSONAL DETAILS
+---
 
-Name:
-Gowtham R
+<h2 align="center">🚀 What I Do</h2>
 
-GitHub Username:
-gowtham-cr
+<table align="center">
+<tr>
+<td width="50%" valign="top">
 
-College:
-AMC Engineering College
+### 💻 Full Stack Development
 
-Degree:
-B.E.
+- Java
+- Spring Boot
+- Node.js
+- Express.js
+- React
+- Vite
+- Tailwind CSS
+- REST APIs
 
-Department:
-Information Science & Engineering
+</td>
 
-Year:
-5th Semester
+<td width="50%" valign="top">
 
-About Me:
-I am an Information Science & Engineering student interested in
-Java Full Stack Development, Artificial Intelligence and Machine
-Learning. I enjoy building practical web applications, AI-based
-projects and participating in hackathons.
+### 🤖 AI / ML
 
-Programming Languages:
-Java, Python, JavaScript, HTML, CSS
+- Python
+- Machine Learning
+- OpenCV
+- YOLO
+- AI-powered applications
+- Computer Vision
 
-Frontend:
-React, Vite, Tailwind CSS
+</td>
+</tr>
+</table>
 
-Backend:
-Spring Boot, Node.js, Express.js
+---
 
-Database:
-MySQL, PostgreSQL
+<h2 align="center">🔥 Featured Projects</h2>
 
-AI / ML:
-Python, Machine Learning, OpenCV, YOLO
+<table align="center">
+<tr>
+<td width="50%" valign="top">
 
-Tools & Technologies:
-Git, GitHub, IntelliJ IDEA, VS Code, Postman, Figma
+### 🏗️ TowerLens AI
 
-Projects:
-- TowerLens AI
-- NextStep AI – AI Placement Readiness Copilot
-- AMC College AI Chatbot
-- Inventory Management System
-- AI Disease Prediction System
+AI-powered tower component detection system using:
 
-Career Goal:
-To become a strong software developer with Full Stack Development
-and AI/ML skills and prepare for software engineering placements.
+- YOLO
+- OpenCV
+- Python
+- FastAPI
+- React
 
-SOCIAL LINKS
+</td>
 
-GitHub:
-https://github.com/gowtham-cr
+<td width="50%" valign="top">
 
-LeetCode:
-Do not add until I provide my exact LeetCode profile.
+### 🎯 NextStep AI
 
-LinkedIn:
-Do not add until I provide my exact LinkedIn profile.
+AI Placement Readiness Copilot designed to help students with:
 
-Instagram:
-Do not add until I provide my exact Instagram profile.
+- Resume improvement
+- Job matching
+- Skill-gap analysis
+- Study planning
+- Interview preparation
 
-Email:
-Do not add until I provide my exact email.
+</td>
+</tr>
 
-Portfolio:
-Do not add until I provide my exact portfolio.
+<tr>
+<td width="50%" valign="top">
 
-Resume:
-Do not add until I provide my exact resume link.
+### 🏥 AI Disease Prediction System
 
-IMPORTANT DESIGN REQUIREMENTS
+AI-based application for disease prediction and healthcare assistance.
 
-Keep the existing professional GitHub profile design.
+</td>
 
-Keep useful:
-- typing animations
-- GitHub statistics
-- contribution statistics
-- skill icons
-- badges
-- project sections
-- clean HTML alignment
-- visual separators
+<td width="50%" valign="top">
 
-Change all GitHub username-dependent statistics to:
+### 📦 Inventory Management System
 
-gowtham-cr
+Full-stack employee inventory management application using:
 
-Remove all links and information belonging to the previous person.
+- React
+- Node.js
+- Express.js
+- MySQL
 
-Do not copy the previous person's:
-- name
-- social media
-- email
-- projects
-- LeetCode username
-- achievements
-- resume
-- portfolio
-- personal descriptions
+</td>
+</tr>
+</table>
 
-Before finishing:
-1. Review the entire README.md.
-2. Check all personal information.
-3. Check GitHub username-based widgets.
-4. Check Markdown and HTML syntax.
-5. Check image URLs.
-6. Check that no previous person's information remains.
-7. Keep the design visually attractive.
-8. Do not add unnecessary sections.
+---
 
-Finally, show me a short summary of exactly what you changed.
+<h2 align="center">🛠️ Tech Stack</h2>
 
-DO NOT PUSH TO GITHUB YET.
-Only modify README.md and show me the result first.
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,python,js,html,css,react,vite,tailwind,spring,nodejs,express,mysql,postgres,opencv,git,github,idea,vscode,postman,figma" />
+</p>
+
+---
+
+<h2 align="center">📊 GitHub Stats</h2>
+
+<p align="center">
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=gowtham-cr&show_icons=true&theme=tokyonight&hide_border=true" height="180"/>
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=gowtham-cr&layout=compact&theme=tokyonight&hide_border=true" height="180"/>
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=gowtham-cr&theme=tokyonight&hide_border=true" />
+</p>
+
+---
+
+<h2 align="center">🐍 Contribution Graph</h2>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
+</p>
+
+---
+
+<h2 align="center">🎯 Current Goals</h2>
+
+<p align="center">
+
+🔹 Improve Java Full Stack Development  
+🔹 Learn AI & Machine Learning  
+🔹 Practice DSA & Problem Solving  
+🔹 Build real-world projects  
+🔹 Participate in hackathons  
+🔹 Prepare for software engineering placements  
+
+</p>
+
+---
+
+<h2 align="center">💡 Areas of Interest</h2>
+
+<p align="center">
+
+💻 Software Development &nbsp; • &nbsp;
+🤖 Artificial Intelligence &nbsp; • &nbsp;
+🧠 Machine Learning &nbsp; • &nbsp;
+🌐 Full Stack Development &nbsp; • &nbsp;
+👁️ Computer Vision &nbsp; • &nbsp;
+🏆 Hackathons
+
+</p>
+
+---
+
+<h2 align="center">🧑‍💻 Developer Journey</h2>
+
+```text
+                ┌─────────────────────┐
+                │   Information Sci.  │
+                │    & Engineering    │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │   Java & Full Stack │
+                │     Development     │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │      AI / ML        │
+                │      Learning       │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │  Real World Apps &  │
+                │     Hackathons      │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Software Engineer   │
+                │       🚀            │
+                └─────────────────────┘
