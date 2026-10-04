@@ -1,200 +1,152 @@
-<div align="center">
+I want you to customize my GitHub profile README.md.
 
-# 👋 Hi, I'm Gowtham R
+First, inspect the existing README.md completely and understand its:
+- structure
+- design
+- sections
+- links
+- images
+- badges
+- animations
+- statistics
+- layout
 
-### Information Science & Engineering Student | Full-Stack Developer | AI/ML Enthusiast
+Do NOT blindly delete the existing design. Preserve the professional
+visual style and useful animations, badges, icons and statistics.
 
-<p>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=2563EB&center=true&vCenter=true&width=750&height=45&lines=Hi+there!+I'm+Gowtham+R+%F0%9F%91%8B;Information+Science+%26+Engineering+Student+%F0%9F%8E%93;Java+Full+Stack+Developer+%F0%9F%92%BB;AI+%2F+Machine+Learning+Enthusiast+%F0%9F%A4%96;Building+Real-World+Projects+%F0%9F%9A%80" alt="Typing SVG" />
-</p>
+Replace ONLY the previous person's information with my information.
 
-<p>
-  <img src="https://img.shields.io/badge/Focus-Full%20Stack%20%7C%20AI%2FML-2563EB?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Building%20%26%20Learning-111827?style=for-the-badge" />
-  <img src="https://komarev.com/ghpvc/?username=gowtham-cr&label=PROFILE%20VIEWS&color=2563EB&style=for-the-badge" />
-</p>
+IMPORTANT:
+- Do not invent achievements, experience, projects, certificates,
+  statistics, job titles or links.
+- Do not keep any personal information belonging to the previous person.
+- If information is missing, remove that section instead of inventing it.
+- Keep the README professional and suitable for internships,
+  placements and a developer portfolio.
+- Keep proper alignment and spacing.
+- Make sure Markdown and HTML are valid.
+- Use my GitHub username wherever GitHub statistics or widgets require it.
 
-</div>
+MY PERSONAL DETAILS
 
----
+Name:
+Gowtham R
 
-## 👨‍💻 About Me
+GitHub Username:
+gowtham-cr
 
-<p align="center">
+College:
+AMC Engineering College
 
-I'm a B.E. Information Science & Engineering student at AMC Engineering College,
-interested in Full-Stack Development, Artificial Intelligence and Machine Learning.
+Degree:
+B.E.
 
-I enjoy building practical applications, participating in hackathons,
-solving coding problems and turning ideas into real-world projects.
+Department:
+Information Science & Engineering
+
+Year:
+5th Semester
 
-</p>
+About Me:
+I am an Information Science & Engineering student interested in
+Java Full Stack Development, Artificial Intelligence and Machine
+Learning. I enjoy building practical web applications, AI-based
+projects and participating in hackathons.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/🎓-B.E.%20Information%20Science%20%26%20Engineering-2563EB?style=flat-square" />
-  <img src="https://img.shields.io/badge/💻-Java%20Full%20Stack-111827?style=flat-square" />
-  <img src="https://img.shields.io/badge/🤖-AI%20%2F%20Machine%20Learning-7C3AED?style=flat-square" />
-</p>
+Programming Languages:
+Java, Python, JavaScript, HTML, CSS
 
----
+Frontend:
+React, Vite, Tailwind CSS
 
-## 🚀 Featured Projects
+Backend:
+Spring Boot, Node.js, Express.js
 
-### 🔭 TowerLens AI
+Database:
+MySQL, PostgreSQL
 
-**AI-powered tower component detection and analysis system**
+AI / ML:
+Python, Machine Learning, OpenCV, YOLO
 
-- YOLO-based object detection
-- Computer vision processing
-- FastAPI backend
-- React + Vite frontend
-- Image validation and processing
-- AI-based tower component detection
-- Real-time detection dashboard
+Tools & Technologies:
+Git, GitHub, IntelliJ IDEA, VS Code, Postman, Figma
 
----
+Projects:
+- TowerLens AI
+- NextStep AI – AI Placement Readiness Copilot
+- AMC College AI Chatbot
+- Inventory Management System
+- AI Disease Prediction System
 
-### 🤖 NextStep AI — AI Placement Readiness Copilot
+Career Goal:
+To become a strong software developer with Full Stack Development
+and AI/ML skills and prepare for software engineering placements.
 
-**AI assistant for students preparing for internships and placements**
+SOCIAL LINKS
 
-- Resume improvement
-- Job description matching
-- Skill-gap analysis
-- Personalized learning roadmap
-- DSA preparation
-- Mock interview preparation
-- Daily study planning
-- Career guidance
+GitHub:
+https://github.com/gowtham-cr
 
----
+LeetCode:
+Do not add until I provide my exact LeetCode profile.
 
-### 🏥 AI Disease Prediction System
+LinkedIn:
+Do not add until I provide my exact LinkedIn profile.
 
-**AI-based healthcare assistance and disease prediction platform**
+Instagram:
+Do not add until I provide my exact Instagram profile.
 
-- Machine learning based prediction
-- AI conversational assistant
-- Healthcare assistance
-- Disease prediction workflow
-- Appointment and notification integration
+Email:
+Do not add until I provide my exact email.
 
----
-
-### 📦 Inventory Management System
-
-**Employee inventory management application**
-
-- React frontend
-- Node.js backend
-- Express.js
-- MySQL database
-- Inventory tracking
-- Employee management
-
----
-
-### 🎓 AMC College AI Chatbot
-
-**AI chatbot application for college-related assistance**
-
-- Conversational AI interface
-- College information assistance
-- Student-focused features
-- Web-based application
-
----
-
-## 🛠️ Tech Stack
-
-### 💻 Programming Languages
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,python,js,html,css" />
-</p>
-
-### 🎨 Frontend Development
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=react,vite,tailwind" />
-</p>
-
-### ⚙️ Backend Development
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=spring,nodejs,express" />
-</p>
-
-### 🗄️ Database
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=mysql,postgres" />
-</p>
-
-### 🤖 AI / ML / Computer Vision
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,opencv,pytorch" />
-</p>
-
-### 🔧 Tools & Technologies
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=git,github,postman,figma,idea,vscode,linux" />
-</p>
-
----
-
-## 📊 GitHub Analytics
-
-<p align="center">
-
-<img src="https://github-readme-stats-fast.vercel.app/api?username=gowtham-cr&show_icons=true&theme=default&hide_border=false&border_radius=10" width="48%" />
-
-<img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=gowtham-cr&layout=compact&theme=default&hide_border=false&border_radius=10" width="42%" />
-
-</p>
-
-<p align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=gowtham-cr&theme=default&hide_border=false&border_radius=10" width="60%" />
-
-</p>
-
----
-
-## 🐍 Contribution Journey
-
-<p align="center">
-
-<img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" width="100%" alt="GitHub Contribution Snake" />
-
-</p>
-
----
-
-## 🎯 Current Goals
-
-<p align="center">
-
-| 🎯 Goal | 📌 Focus |
-|---|---|
-| 💻 Full Stack | Java + Spring Boot + React |
-| 🤖 AI / ML | Python + Machine Learning |
-| 🧠 DSA | Problem Solving + LeetCode |
-| 🏗️ Projects | Build real-world applications |
-| 🚀 Hackathons | Build innovative solutions |
-| 💼 Placements | Prepare for software engineering roles |
-
-</p>
-
----
-
-## 📚 Currently Learning
-
-```text
-Java / Spring Boot       ███████████████████░  Strong
-React / Frontend         ████████████████░░░░  Strong
-Python / AI-ML           █████████████░░░░░░░  Learning
-DSA / Problem Solving    ██████████████░░░░░░  Improving
-System Design            ██████████░░░░░░░░░░  Learning
+Portfolio:
+Do not add until I provide my exact portfolio.
+
+Resume:
+Do not add until I provide my exact resume link.
+
+IMPORTANT DESIGN REQUIREMENTS
+
+Keep the existing professional GitHub profile design.
+
+Keep useful:
+- typing animations
+- GitHub statistics
+- contribution statistics
+- skill icons
+- badges
+- project sections
+- clean HTML alignment
+- visual separators
+
+Change all GitHub username-dependent statistics to:
+
+gowtham-cr
+
+Remove all links and information belonging to the previous person.
+
+Do not copy the previous person's:
+- name
+- social media
+- email
+- projects
+- LeetCode username
+- achievements
+- resume
+- portfolio
+- personal descriptions
+
+Before finishing:
+1. Review the entire README.md.
+2. Check all personal information.
+3. Check GitHub username-based widgets.
+4. Check Markdown and HTML syntax.
+5. Check image URLs.
+6. Check that no previous person's information remains.
+7. Keep the design visually attractive.
+8. Do not add unnecessary sections.
+
+Finally, show me a short summary of exactly what you changed.
+
+DO NOT PUSH TO GITHUB YET.
+Only modify README.md and show me the result first.
