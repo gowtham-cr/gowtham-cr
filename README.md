@@ -1,1424 +1,445 @@
-============================================================
-GITHUB PROFILE — COMPLETE 3D GALAXY DEVELOPER PORTFOLIO
-============================================================
-
-You are working inside my EXISTING GitHub profile repository.
-
-GitHub username:
-gowtham-cr
-
-Repository:
-gowtham-cr
-
-IMPORTANT:
-This is my GitHub PROFILE repository.
-
-DO NOT:
-- create another repository
-- change the repository URL
-- delete the .git folder
-- delete unrelated files
-- use another person's identity
-- invent achievements
-- invent experience
-- invent social media links
-- invent certificates
-- invent statistics
-- invent project links
-
-Your task is to completely redesign my GitHub profile README.md into
-a premium futuristic 3D / Galaxy developer portfolio.
-
-============================================================
-1. FIRST — INSPECT THE EXISTING PROJECT
-============================================================
-
-Before changing anything:
-
-1. Inspect the complete README.md.
-2. Inspect the complete repository structure.
-3. Inspect the existing assets folder.
-4. Identify all current SVGs, images, badges and animations.
-5. Identify all links belonging to the previous/reference profile.
-6. Identify all GitHub username-dependent widgets.
-7. Preserve useful design elements where appropriate.
-8. Do not blindly delete the existing structure.
-
-The final README must represent ME, not the previous/reference person.
-
-============================================================
-2. MY PERSONAL INFORMATION
-============================================================
-
-NAME:
-Gowtham R
-
-GITHUB USERNAME:
-gowtham-cr
-
-GITHUB:
-https://github.com/gowtham-cr
-
-COLLEGE:
-AMC Engineering College
-
-DEGREE:
-B.E.
-
-DEPARTMENT:
-Information Science & Engineering
-
-CURRENT SEMESTER:
-5th Semester
-
-LOCATION:
-India
-
-============================================================
-3. ABOUT ME
-============================================================
-
-Use this genuine profile information:
-
-I am an Information Science & Engineering student interested in
-Java Full Stack Development, Artificial Intelligence, Machine Learning,
-Computer Vision, practical web applications, AI projects and hackathons.
-
-I enjoy learning new technologies, building practical software,
-experimenting with AI, participating in hackathons and preparing
-for software engineering placements.
-
-My career direction is to become a strong software developer with
-Full Stack Development and AI/ML skills.
-
-Keep the wording professional and concise.
-
-============================================================
-4. PROFILE PHOTO
-============================================================
-
-Use my GitHub profile picture.
-
-Remote source:
-
-https://github.com/gowtham-cr.png
-
-If the repository already contains:
-
-assets/avatar.png
-
-use:
-
-./assets/avatar.png
-
-as the primary profile image.
-
-The avatar should appear near the top of the profile.
-
-STYLE:
-
-- circular presentation
-- professional developer style
-- futuristic glow
-- neon cyan / blue / purple galaxy theme
-- subtle border or gradient ring
-- do not distort the original image
-- maintain correct aspect ratio
-
-If avatar.png already exists, DO NOT overwrite it unnecessarily.
-
-============================================================
-5. VISUAL STYLE
-============================================================
-
-The entire README should have a:
-
-FUTURISTIC GALAXY + AI + SOFTWARE ENGINEERING
-
-theme.
-
-Use visual inspiration from:
-
-- futuristic developer portfolios
-- galaxy interfaces
-- AI dashboards
-- cyberpunk-inspired technology
-- modern GitHub developer profiles
-
-Preferred visual language:
-
-Dark background
-+
-Deep space
-+
-Neon cyan
-+
-Electric blue
-+
-Purple
-+
-Subtle gradients
-+
-Glowing borders
-+
-Technology icons
-+
-Animated typing
-+
-Developer diagrams
-+
-3D-inspired sections
-
-IMPORTANT:
-
-GitHub README cannot execute arbitrary JavaScript or a real WebGL
-application directly.
-
-Therefore create a 3D-LOOKING experience using:
-
-- SVG
-- animated SVG
-- GIF
-- external image widgets
-- HTML
-- Markdown
-- CSS-like SVG effects
-- GitHub-compatible images
-- diagrams
-- badges
-
-Do NOT insert JavaScript that GitHub README cannot execute.
-
-============================================================
-6. HERO SECTION
-============================================================
-
-Create an impressive hero section.
-
-Order:
-
-1. Profile avatar
-2. Name
-3. Animated typing introduction
-4. Developer title
-5. Technology focus
-6. Profile view counter
-7. GitHub badge
-
-Main typing messages:
-
-Hi, I'm Gowtham R 👋
-
-Information Science & Engineering Student 🎓
-
-Java Full Stack Developer 💻
-
-AI / ML Enthusiast 🤖
-
-Computer Vision Explorer 👁️
-
-Building Ideas Into Real Applications 🚀
-
-Use readme-typing-svg.
-
-Use GitHub username:
-
-gowtham-cr
-
-for profile-related widgets.
-
-============================================================
-7. GALAXY HEADER
-============================================================
-
-If assets/header.svg exists, use:
-
-./assets/header.svg
-
-Create a futuristic galaxy banner.
-
-The banner should visually communicate:
-
-AI
-+
-Full Stack
-+
-Software Engineering
-+
-Innovation
-
-If a new SVG is required, create:
-
-assets/header.svg
-
-The SVG should be GitHub-compatible.
-
-Use:
-
-- dark space background
-- stars
-- glowing particles
-- orbit lines
-- subtle grid
-- neon cyan
-- purple
-- blue
-- futuristic technology feel
-
-Do not create an enormous SVG that makes GitHub slow.
-
-============================================================
-8. STATUS BADGES
-============================================================
-
-Create professional badges for:
-
-BUILDING & LEARNING
-
-FULL STACK + AI
-
-B.E. ISE
-
-5TH SEMESTER
-
-HACKATHON ENTHUSIAST
-
-Do not claim professional employment.
-
-Do not claim achievements I have not provided.
-
-============================================================
-9. ABOUT ME SECTION
-============================================================
-
-Create:
-
-# 👨‍💻 About Me
-
-Include:
-
-- Gowtham R
-- AMC Engineering College
-- B.E.
-- Information Science & Engineering
-- 5th Semester
-- Full Stack Development
-- AI / ML
-- Computer Vision
-- Hackathons
-- Software Engineering preparation
-
-Make it visually attractive.
-
-Use a two-column HTML layout if GitHub supports it safely.
-
-One side:
-
-About text
-
-Other side:
-
-My avatar / futuristic developer graphic
-
-============================================================
-10. DEVELOPER UNIVERSE
-============================================================
-
-Create a section:
-
-# 🌌 My Developer Universe
-
-Use a futuristic 4-card or table layout.
-
-Cards:
-
-💻 FULL STACK
-
-🤖 AI / ML
-
-🗄️ DATABASE
-
-🏆 HACKATHONS
-
-Include relevant technologies.
-
-============================================================
-11. PROGRAMMING LANGUAGES
-============================================================
-
-My programming languages:
-
-Java
-Python
-JavaScript
-HTML
-CSS
-
-Use skillicons.dev.
-
-Do not add programming languages that I did not provide.
-
-============================================================
-12. FRONTEND
-============================================================
-
-Frontend:
-
-React
-Vite
-Tailwind CSS
-
-Use technology icons.
-
-============================================================
-13. BACKEND
-============================================================
-
-Backend:
-
-Spring Boot
-Node.js
-Express.js
-REST APIs
-
-Create a futuristic backend architecture section.
-
-Example:
-
-React
-   ↓
-REST API
-   ↓
-Spring Boot / Node.js
-   ↓
-Service Layer
-   ↓
-Database
-
-Use SVG or ASCII architecture.
-
-============================================================
-14. DATABASE
-============================================================
-
-Databases:
-
-MySQL
-PostgreSQL
-
-Do not add MongoDB unless I explicitly provide it.
-
-============================================================
-15. AI / MACHINE LEARNING
-============================================================
-
-AI/ML:
-
-Python
-Machine Learning
-OpenCV
-YOLO
-Computer Vision
-
-Create an AI pipeline:
-
-IMAGE
- ↓
-VALIDATION
- ↓
-PREPROCESSING
- ↓
-AI / ML MODEL
- ↓
-OBJECT DETECTION
- ↓
-RESULT
- ↓
-WEB APPLICATION
-
-Make it visually futuristic.
-
-============================================================
-16. DEVELOPER TOOLS
-============================================================
-
-Tools:
-
-Git
-GitHub
-IntelliJ IDEA
-VS Code
-Postman
-Figma
-
-Use skillicons.dev or badges.
-
-============================================================
-17. FEATURED PROJECTS
-============================================================
-
-Create professional project cards.
-
-PROJECT 1:
-
-TowerLens AI
-
-Description:
-
-AI-powered tower component detection system using computer vision
-and object detection.
-
-Technologies:
-
-Python
-YOLO
-OpenCV
-FastAPI
-React
-Vite
-
-Do not invent a live deployment URL.
-
-Do not invent a GitHub repository URL.
-
-If no project link is provided, do not create a fake link.
-
-------------------------------------------------------------
-
-PROJECT 2:
-
-NextStep AI — AI Placement Readiness Copilot
-
-Description:
-
-AI assistant for students focused on:
-
-Resume improvement
-Job/internship matching
-Skill-gap analysis
-Study planning
-Coding preparation
-Interview preparation
-Career roadmap
-
-Do not invent a live URL.
-
-------------------------------------------------------------
-
-PROJECT 3:
-
-AMC College AI Chatbot
-
-Description:
-
-AI chatbot application for college-related assistance.
-
-Do not invent a deployment URL.
-
-------------------------------------------------------------
-
-PROJECT 4:
-
-Inventory Management System
-
-Description:
-
-Full-stack employee inventory management system.
-
-Technology:
-
-React
-Node.js
-Express.js
-MySQL
-
-Do not invent links.
-
-------------------------------------------------------------
-
-PROJECT 5:
-
-AI Disease Prediction System
-
-Description:
-
-AI-based healthcare assistance and disease prediction application.
-
-Do not invent medical claims or accuracy percentages.
-
-Do not invent links.
-
-============================================================
-18. PROJECT CARD DESIGN
-============================================================
-
-Each project should visually contain:
-
-Project number
-Project name
-Short description
-Technology badges
-Architecture / workflow
-GitHub button ONLY if a real link exists
-Live Demo button ONLY if a real link exists
-
-Do not create fake buttons.
-
-If no link exists, omit the button.
-
-============================================================
-19. TOWERLENS AI — SPECIAL VISUAL
-============================================================
-
-Create a futuristic computer-vision pipeline:
-
-         📷 IMAGE
-            |
-            ▼
-     IMAGE VALIDATION
-            |
-            ▼
-       PREPROCESSING
-            |
-            ▼
-        YOLO MODEL
-            |
-            ▼
-     OBJECT DETECTION
-            |
-            ▼
-       CONFIDENCE
-            |
-            ▼
-       RESULT JSON
-            |
-            ▼
-       FASTAPI BACKEND
-            |
-            ▼
-        REACT UI
-
-Use a clean SVG or HTML/ASCII representation.
-
-============================================================
-20. FULL STACK ARCHITECTURE
-============================================================
-
-Create a section:
-
-# 🏗️ Full Stack Architecture
-
-Visualize:
-
-React / Vite
-      |
-      ▼
-Frontend
-      |
-      ▼
-REST API
-      |
-      ▼
-Backend
-      |
- ┌────┴─────┐
- |          |
-Spring     Node
-Boot       Express
- |          |
- └────┬─────┘
-      |
-      ▼
-Database
- |
- ├── MySQL
- └── PostgreSQL
-
-Make this look futuristic.
-
-============================================================
-21. GITHUB ANALYTICS
-============================================================
-
-Use GitHub username:
-
-gowtham-cr
-
-Include:
-
-GitHub Stats
-
-Top Languages
-
-GitHub Streak
-
-Profile Views
-
-Contribution Graph
-
-All statistics must target:
-
-gowtham-cr
-
-Do not use:
-
-DeepakAmalWinstarJ
-
-or any other username.
-
-Use reliable GitHub README-compatible services.
-
-Suggested:
-
-github-readme-stats-fast.vercel.app
-
-streak-stats.demolab.com
-
-komarev.com/ghpvc
-
-============================================================
-22. GITHUB STATS STYLE
-============================================================
-
-Use a dark galaxy theme.
-
-Preferred visual colors:
-
-Background:
-#050816
-
-Neon cyan:
-#00E5FF
-
-Blue:
-#3B82F6
-
-Purple:
-#7C3AED
-
-White:
-#FFFFFF
-
-Gray:
-#94A3B8
-
-Use rounded cards if supported.
-
-Do not overuse colors.
-
-============================================================
-23. CONTRIBUTION SNAKE
-============================================================
-
-Include GitHub contribution snake if the endpoint works.
-
-Use:
-
-https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg
-
-If that endpoint does not work, do not create a broken image.
-
-Use an alternative working contribution visualization.
-
-============================================================
-24. DEVELOPER JOURNEY
-============================================================
-
-Create:
-
-# 🧭 Developer Journey
-
-Journey:
-
-Information Science & Engineering
-          ↓
-Java Programming
-          ↓
-Full Stack Development
-          ↓
-Backend Engineering
-          ↓
-AI / Machine Learning
-          ↓
-Computer Vision
-          ↓
-Hackathons
-          ↓
-Real World Projects
-          ↓
-Software Engineering Career
-
-Create a futuristic SVG:
-
-assets/journey.svg
-
-if appropriate.
-
-============================================================
-25. CURRENT LEARNING
-============================================================
-
-Create:
-
-# 📚 Currently Learning
-
-Include only genuine areas:
-
-Advanced Java
-
-Spring Boot
-
-Full Stack Development
-
-Python for AI/ML
-
-Machine Learning
-
-Computer Vision
-
-DSA / Problem Solving
-
-Do not claim mastery.
-
-Use wording such as:
-
-Learning
-Exploring
-Improving
-Practicing
-
-============================================================
-26. CAREER GOALS
-============================================================
-
-Create:
-
-# 🎯 Career Goals
-
-Include:
-
-Become a strong software developer.
-
-Build strong Java Full Stack skills.
-
-Develop practical AI/ML applications.
-
-Improve DSA and problem solving.
-
-Build real-world projects.
-
-Participate in hackathons.
-
-Prepare for software engineering placements.
-
-============================================================
-27. HACKATHON SECTION
-============================================================
-
-Create:
-
-# 🏆 Hackathon Mode
-
-Visualize:
-
-IDEA
- ↓
-PROBLEM
- ↓
-RESEARCH
- ↓
-AI / LOGIC
- ↓
-DEVELOPMENT
- ↓
-TESTING
- ↓
-DEMO
- ↓
-HACKATHON
-
-Do not invent hackathon wins.
-
-Do not invent rankings.
-
-Do not invent prizes.
-
-============================================================
-28. AREAS OF INTEREST
-============================================================
-
-Include:
-
-Artificial Intelligence
-
-Machine Learning
-
-Computer Vision
-
-Full Stack Development
-
-Backend Development
-
-Software Engineering
-
-Hackathons
-
-Problem Solving
-
-============================================================
-29. DEVELOPER PHILOSOPHY
-============================================================
-
-Create:
-
-# 💭 Developer Philosophy
-
-Use:
-
-"Build. Learn. Experiment. Improve. Repeat."
-
-Do not attribute the quote to another person.
-
-Create:
-
-assets/quote.svg
-
-if useful.
-
-============================================================
-30. GALAXY DEVELOPMENT LOOP
-============================================================
-
-Create a futuristic visual:
-
-💡 THINK
-   ↓
-🔎 RESEARCH
-   ↓
-🧠 LEARN
-   ↓
-💻 BUILD
-   ↓
-🧪 TEST
-   ↓
-🐛 DEBUG
-   ↓
-🚀 DEPLOY
-   ↓
-📈 IMPROVE
-   ↓
-🔁 REPEAT
-
-============================================================
-31. 3D-STYLE VISUALIZATION
-============================================================
-
-Create the feeling of a 3D developer dashboard using
-GitHub-compatible HTML/SVG.
-
-Possible visual elements:
-
-- orbital rings
-- stars
-- glowing nodes
-- connected technology nodes
-- circuit-board lines
-- futuristic grid
-- neon borders
-- gradient text rendered inside SVG
-- floating technology icons
-- central "GOWTHAM R" node
-- surrounding technology nodes
-
-Central node:
-
-GOWTHAM R
-
-Connected nodes:
-
-JAVA
-SPRING BOOT
-REACT
-NODE.JS
-PYTHON
-AI/ML
-YOLO
-OPENCV
-MYSQL
-GITHUB
-
-Do not use JavaScript.
-
-Create SVG graphics instead.
-
-============================================================
-32. GALAXY SKILLS MAP
-============================================================
-
-Create an SVG or HTML visualization:
-
-                    🤖 AI / ML
-                       |
-                       |
-        React ---- GOWTHAM R ---- Java
-                       |
-                       |
-                  Spring Boot
-                       |
-               ┌───────┴───────┐
-               |               |
-             MySQL          Node.js
-               |               |
-            Backend        Full Stack
-
-Make it visually attractive.
-
-============================================================
-33. PROFILE FOOTER
-============================================================
-
-If:
-
-assets/footer.svg
-
-exists, use it.
-
-Otherwise create a simple futuristic SVG footer.
-
-Include:
-
-Thanks for visiting my GitHub profile!
-
-Keep Learning.
-Keep Building.
-Keep Growing.
-
-Gowtham R
-
-Information Science & Engineering
-Full Stack • AI/ML
-
-============================================================
-34. SOCIAL LINKS
-============================================================
-
-IMPORTANT:
-
-I HAVE NOT PROVIDED:
-
-LinkedIn
-Instagram
-LeetCode
-Email
-Portfolio
-Resume
-
-Therefore:
-
-DO NOT invent these links.
-
-DO NOT use another person's links.
-
-DO NOT create placeholder URLs.
-
-DO NOT display fake social buttons.
-
-Only display my authentic GitHub:
-
-https://github.com/gowtham-cr
-
-If I provide social links later, they can be added later.
-
-============================================================
-35. PHOTO
-============================================================
-
-Use:
-
-assets/avatar.png
-
-if available.
-
-Fallback:
-
-https://github.com/gowtham-cr.png
-
-The photo should appear:
-
-- Hero
-- About section if visually useful
-
-Do not duplicate it excessively.
-
-============================================================
-36. LOCAL ASSETS
-============================================================
-
-Preserve existing assets.
-
-Expected:
-
-assets/avatar.png
-assets/avatar-raw.png
-assets/header.svg
-assets/quote.svg
-assets/journey.svg
-assets/divider.svg
-assets/footer.svg
-
-Do not delete them.
-
-If they are already good, reuse them.
-
-If an SVG is broken, fix it.
-
-============================================================
-37. README PERFORMANCE
-============================================================
-
-IMPORTANT:
-
-Do not make the README unnecessarily huge.
-
-Avoid:
-
-- massive SVG files
-- unnecessary GIFs
-- dozens of external widgets
-- broken endpoints
-- JavaScript
-- embedded applications
-- iframes
-- unsupported CSS
-
-The profile must load reasonably quickly.
-
-============================================================
-38. GITHUB COMPATIBILITY
-============================================================
-
-The README must work on GitHub.
-
-Use:
-
-Markdown
-HTML
-SVG images
-External image endpoints
-Badges
-
-Avoid unsupported:
-
-JavaScript
-iframes
-interactive HTML applications
-custom CSS files
-React components
-
-============================================================
-39. QUALITY STANDARD
-============================================================
-
-The final profile should look like:
-
-A premium futuristic software engineer portfolio.
-
-Not:
-
-A basic student README.
-
-It should communicate:
-
-💻 Full Stack Developer
-
-🤖 AI / ML Enthusiast
-
-👁️ Computer Vision
-
-☕ Java
-
-🐍 Python
-
-🌐 React
-
-⚙️ Spring Boot
-
-🚀 Projects
-
-🏆 Hackathons
-
-🎓 Engineering Student
-
-============================================================
-40. RESPONSIVE DESIGN
-============================================================
-
-Use:
-
-width="100%"
-
-max-width
-
-center alignment
-
-tables carefully
-
-Avoid extremely wide fixed layouts.
-
-The README should look good on:
-
-Desktop
-Laptop
-Mobile
-
-============================================================
-41. ACCESSIBILITY
-============================================================
-
-Every important image must have:
-
-alt="..."
-
-Do not use meaningless alt text.
-
-Examples:
-
-alt="Gowtham R profile photo"
-
-alt="GitHub statistics"
-
-alt="Technology stack"
-
-alt="Developer journey"
-
-============================================================
-42. FINAL README STRUCTURE
-============================================================
-
-Use this order:
-
-1. Hero
-2. Avatar
-3. Animated introduction
-4. Profile views
-5. Status badges
-6. Galaxy header
-7. About Me
-8. Developer Universe
-9. Tech Stack
-10. Full Stack Architecture
-11. Featured Projects
-12. TowerLens AI pipeline
-13. GitHub Analytics
-14. Contribution Snake
-15. Developer Journey
-16. Current Learning
-17. Career Goals
-18. Hackathon Mode
-19. Areas of Interest
-20. Developer Philosophy
-21. Development Loop
-22. Galaxy Skills Map
-23. GitHub
-24. Final Galaxy Footer
-
-============================================================
-43. REMOVE OLD PERSON INFORMATION
-============================================================
-
-Search the entire repository for:
-
-Deepak
-Amal
-Winstar
-DeepakAmalWinstarJ
-techwin.in
-
-Remove old personal information if it belongs to the reference profile.
-
-DO NOT remove unrelated technical content unless necessary.
-
-============================================================
-44. LINK VALIDATION
-============================================================
-
-Check all external URLs.
-
-If an image endpoint is broken:
-
-REMOVE IT or replace it with a working endpoint.
-
-Do not leave broken images.
-
-Check:
-
-- typing SVG
-- skill icons
-- GitHub stats
-- streak
-- profile views
-- contribution snake
-- badges
-
-============================================================
-45. FINAL VALIDATION
-============================================================
-
-Before saying the work is complete:
-
-Check:
-
-1. Name = Gowtham R
-2. Username = gowtham-cr
-3. College = AMC Engineering College
-4. Degree = B.E.
-5. Department = Information Science & Engineering
-6. Semester = 5th
-7. Avatar exists
-8. Avatar displays
-9. No previous person's name exists
-10. No previous person's username exists
-11. No fake social links
-12. GitHub statistics use gowtham-cr
-13. Projects are genuine
-14. Skills are genuine
-15. No fake achievements
-16. No fake certificates
-17. No fake job experience
-18. No broken HTML
-19. No broken Markdown
-20. No broken images
-21. Assets work
-22. Galaxy design is consistent
-23. Mobile-friendly layout
-24. Professional placement-ready appearance
-
-============================================================
-46. GIT CHECK
-============================================================
-
-After editing:
-
-Run:
-
-git status
-
-Show me:
-
-- modified files
-- new files
-- deleted files
-
-Do not commit or push immediately.
-
-First report what changed.
-
-============================================================
-47. COMMIT AND PUSH
-============================================================
-
-ONLY AFTER I APPROVE THE FINAL README:
-
-Run:
-
-git add README.md assets/
-
-Then:
-
-git commit -m "Create futuristic GitHub profile"
-
-Then:
-
-git push origin main
-
-IMPORTANT:
-
-Push only to the EXISTING repository.
-
-Do not:
-
-- create another repository
-- change remote URL
-- force push
-- delete branches
-- modify unrelated files
-
-If the default branch is not main, inspect the current branch first.
-
-============================================================
-48. FINAL RESPONSE
-============================================================
-
-After completing the README, report:
-
-README STATUS:
-Complete
-
-PHOTO:
-Included
-
-GALAXY DESIGN:
-Complete
-
-3D-STYLE SVG:
-Complete
-
-TECH STACK:
-Complete
-
-PROJECTS:
-Complete
-
-GITHUB STATS:
-Configured for gowtham-cr
-
-SOCIAL LINKS:
-Only authentic GitHub link included
-
-ASSETS:
-List every created/modified asset
-
-GIT STATUS:
-Show the result
-
-Do NOT claim something was pushed unless git push actually succeeded.
-
-============================================================
-FINAL GOAL
-============================================================
-
-Create a visually impressive:
-
-🌌 GALAXY
-+
-🤖 AI
-+
-💻 FULL STACK
-+
-☕ JAVA
-+
-🐍 PYTHON
-+
-🌐 WEB DEVELOPMENT
-+
-👁️ COMPUTER VISION
-+
-🏆 HACKATHON
-
-GitHub profile for:
-
-GOWTHAM R
-
-GitHub:
-
-gowtham-cr
-
-The final result must look like a premium futuristic developer
-portfolio while remaining completely compatible with GitHub README
-rendering.
-
-START NOW.
-
-First inspect the existing repository and README.
-
-Then implement the complete design.
+<div align="center">
+
+  <!-- Profile Avatar -->
+  <a href="https://github.com/gowtham-cr">
+    <img src="./assets/avatar.png" width="135" height="135" alt="Gowtham R" />
+  </a>
+
+  <br/><br/>
+
+  <!-- Header Banner -->
+  <img src="./assets/header.svg" width="100%" alt="Gowtham R - Header Banner" />
+
+  <br/><br/>
+
+  <!-- Animated Typing Headline -->
+  <a href="https://github.com/gowtham-cr">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=750&lines=Hi%2C+I'm+Gowtham+R+%F0%9F%91%8B;5th+Sem+ISE+Student+%40+AMC+Engineering+College;Java+Full+Stack+Developer+%7C+Spring+Boot+%26+React;AI+%26+Computer+Vision+Builder+%7C+YOLO+%26+OpenCV;Passionate+about+Hackathons+%26+Real-World+Impact;Preparing+for+Software+Engineering+Placements+%F0%9F%9A%80" alt="Typing SVG" />
+  </a>
+
+  <br/><br/>
+
+  <!-- Badges Row -->
+  <p align="center">
+    <img src="https://komarev.com/ghpvc/?username=gowtham-cr&label=Profile%20Views&color=0284c7&style=for-the-badge&logo=eye" alt="Profile Views" />
+    <img src="https://img.shields.io/badge/Degree-B.E._ISE-0284c7?style=for-the-badge&logo=academia" alt="B.E. ISE" />
+    <img src="https://img.shields.io/badge/College-AMC_Engineering_College-6366f1?style=for-the-badge" alt="AMC Engineering College" />
+    <img src="https://img.shields.io/badge/Status-5th_Semester-8b5cf6?style=for-the-badge" alt="5th Semester" />
+  </p>
+
+  <!-- Quote Banner -->
+  <img src="./assets/quote.svg" width="100%" alt="Developer Philosophy Quote" />
+
+</div>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- ABOUT ME SECTION -->
+<!-- =================================================== -->
+<h2 align="center">👨‍💻 About Me</h2>
+
+<p align="center">
+  Hello World! I'm <b>Gowtham R</b>, an enthusiastic <b>Information Science &amp; Engineering</b> undergraduate (5th Semester) at <b>AMC Engineering College</b> with a passion for architecting end-to-end software solutions.
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>💡 What Drives Me</h3>
+      <ul>
+        <li>☕ <b>Full Stack Craftsmanship</b>: Dedicated to <b>Java Full Stack Development</b>, building reactive frontends with <b>React &amp; Tailwind CSS</b> and robust backend architectures with <b>Spring Boot, Node.js &amp; Express</b>.</li>
+        <li>🤖 <b>Applied AI &amp; Computer Vision</b>: Passionate about <b>Artificial Intelligence &amp; Machine Learning</b>, specializing in computer vision pipelines using <b>OpenCV</b> and <b>YOLO</b>.</li>
+        <li>⚡ <b>Real-World Utility</b>: Focused on creating practical web applications and AI tools that solve everyday problems with clean, scalable code.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎯 Career Objective &amp; Vision</h3>
+      <ul>
+        <li>🚀 <b>Aspiring SDE</b>: Preparing rigorously for <b>software engineering campus placements</b> by mastering software engineering fundamentals and modern application stacks.</li>
+        <li>🏆 <b>Hackathon Builder</b>: Enthusiastic hackathon participant who loves turning complex real-world problems into working software prototypes under pressure.</li>
+        <li>📈 <b>Engineering Excellence</b>: Committed to writing clean, maintainable code, adopting industry best practices, and continuously expanding technical depth.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- AREAS OF INTEREST -->
+<!-- =================================================== -->
+<h2 align="center">💡 Areas of Interest</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Full_Stack_Development-38BDF8?style=for-the-badge&logo=codeforces&logoColor=white" alt="Full Stack Dev" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Artificial_Intelligence-818CF8?style=for-the-badge&logo=openai&logoColor=white" alt="AI" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Machine_Learning-A855F7?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="ML" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Computer_Vision-EC4899?style=for-the-badge&logo=opencv&logoColor=white" alt="Computer Vision" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Java_Ecosystem-F97316?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Ecosystem" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Hackathons_%26_Prototyping-10B981?style=for-the-badge&logo=speedtest&logoColor=white" alt="Hackathons" />
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- TECHNICAL SKILLS -->
+<!-- =================================================== -->
+<h2 align="center">🛠️ Technical Skills</h2>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,python,js,html,css,react,vite,tailwind,spring,nodejs,express,mysql,postgres,opencv,git,github,idea,vscode,postman,figma&perline=10" alt="Tech Stack Icons" />
+</p>
+
+<br/>
+
+<table align="center" width="100%">
+  <thead>
+    <tr>
+      <th width="28%" align="left">Domain</th>
+      <th width="72%" align="left">Technologies &amp; Tools</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>💻 Programming</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+      </td>
+    </tr>
+    <tr>
+      <td><b>🌐 Frontend</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+        <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+      </td>
+    </tr>
+    <tr>
+      <td><b>⚙️ Backend &amp; APIs</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white" alt="Spring Boot" />
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" />
+        <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express.js" />
+        <img src="https://img.shields.io/badge/REST_APIs-0052CC?style=flat-square&logo=fastapi&logoColor=white" alt="REST APIs" />
+      </td>
+    </tr>
+    <tr>
+      <td><b>🗄️ Databases</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+        <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+      </td>
+    </tr>
+    <tr>
+      <td><b>🤖 AI / ML &amp; Vision</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/Machine_Learning-FF6F00?style=flat-square&logo=scikit-learn&logoColor=white" alt="Machine Learning" />
+        <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV" />
+        <img src="https://img.shields.io/badge/YOLO-00FFFF?style=flat-square&logo=target&logoColor=black" alt="YOLO" />
+        <img src="https://img.shields.io/badge/Computer_Vision-0284c7?style=flat-square&logo=eye&logoColor=white" alt="Computer Vision" />
+      </td>
+    </tr>
+    <tr>
+      <td><b>🛠️ Developer Tools</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+        <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat-square&logo=intellij-idea&logoColor=white" alt="IntelliJ IDEA" />
+        <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white" alt="VS Code" />
+        <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- FEATURED PROJECTS -->
+<!-- =================================================== -->
+<h2 align="center">🚀 Featured Projects</h2>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏗️ TowerLens AI</h3>
+      <p><i>AI-Powered Tower Component Detection System</i></p>
+      <p>An intelligent computer vision system engineered for automated structural inspection and detection of telecom/transmission tower components.</p>
+      <ul>
+        <li><b>Deep Learning Detection</b>: Leverages <b>YOLO</b> models for real-time bounding-box detection of structural elements.</li>
+        <li><b>Image Processing</b>: Employs <b>OpenCV</b> pipelines for image filtering, preprocessing, and feature extraction.</li>
+        <li><b>Full-Stack Architecture</b>: High-speed <b>FastAPI</b> backend paired with a reactive <b>React</b> frontend dashboard.</li>
+      </ul>
+      <p>
+        <code>YOLO</code> &nbsp; <code>OpenCV</code> &nbsp; <code>Python</code> &nbsp; <code>FastAPI</code> &nbsp; <code>React</code>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎯 NextStep AI</h3>
+      <p><i>AI Placement Readiness Copilot for Students</i></p>
+      <p>A comprehensive AI assistant engineered to guide students through the recruitment lifecycle, bridging academic preparation and career opportunities.</p>
+      <ul>
+        <li><b>Smart Resume Feedback</b>: Automated review and actionable suggestions for resume optimization.</li>
+        <li><b>Skill-Gap Analysis</b>: Identifies missing technical competencies and recommends targeted study paths.</li>
+        <li><b>Placement Prep</b>: Comprehensive modules for coding preparation, mock interview practice, and internship matching.</li>
+      </ul>
+      <p>
+        <code>AI / ML</code> &nbsp; <code>NLP</code> &nbsp; <code>Python</code> &nbsp; <code>React</code> &nbsp; <code>Web Apps</code>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🤖 AMC College AI Chatbot</h3>
+      <p><i>Intelligent Campus Assistance System</i></p>
+      <p>A specialized conversational AI chatbot developed to deliver 24/7 college-related assistance for students, faculty, and visitors at AMC Engineering College.</p>
+      <ul>
+        <li><b>Instant Query Resolution</b>: Handles queries regarding academic schedules, syllabus, department contacts, and campus facilities.</li>
+        <li><b>Student Navigation</b>: Streamlines access to important announcements, exam timetables, and resource portals.</li>
+        <li><b>Interactive UI</b>: Clean, responsive user experience optimized for fast access on desktop and mobile.</li>
+      </ul>
+      <p>
+        <code>AI Chatbot</code> &nbsp; <code>Python</code> &nbsp; <code>Full Stack</code> &nbsp; <code>REST APIs</code>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📦 Inventory Management System</h3>
+      <p><i>Full-Stack Employee &amp; Asset Management Application</i></p>
+      <p>A complete full-stack enterprise web application designed to track, allocate, and audit organizational inventory and employee hardware assets.</p>
+      <ul>
+        <li><b>End-to-End Workflows</b>: Complete CRUD operations engineered with <b>React</b>, <b>Node.js</b>, and <b>Express.js</b>.</li>
+        <li><b>Relational Schema</b>: Robust data modeling and query optimization using <b>MySQL</b>.</li>
+        <li><b>RESTful Endpoints</b>: Secure, modular API architecture providing seamless data communication.</li>
+      </ul>
+      <p>
+        <code>React</code> &nbsp; <code>Node.js</code> &nbsp; <code>Express.js</code> &nbsp; <code>MySQL</code> &nbsp; <code>REST APIs</code>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <h3>🏥 AI Disease Prediction System</h3>
+      <p><i>Machine Learning Healthcare Risk Prediction Platform</i></p>
+      <p>An intelligent healthcare predictive application designed to forecast disease risks based on patient clinical parameters and symptoms.</p>
+      <ul>
+        <li><b>Predictive Modeling</b>: Implements supervised <b>Machine Learning</b> classification algorithms for predictive risk analysis.</li>
+        <li><b>Clinical Data Processing</b>: Structured feature extraction, data preprocessing, and model evaluation in <b>Python</b>.</li>
+        <li><b>Diagnostic Assistance</b>: Intuitive interface delivering clear, interpretable health insight reports to assist users.</li>
+      </ul>
+      <p>
+        <code>Python</code> &nbsp; <code>Machine Learning</code> &nbsp; <code>Predictive Modeling</code> &nbsp; <code>Healthcare AI</code>
+      </p>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- DEVELOPER JOURNEY -->
+<!-- =================================================== -->
+<h2 align="center">🧑‍💻 Developer Journey</h2>
+
+<p align="center">
+  <img src="./assets/journey.svg" width="100%" alt="Developer Journey Roadmap" />
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="20%" align="center" valign="top">
+      <b>Step 01: Academics</b><br/>
+      <sub>Foundational CS &amp; ISE at AMC Engineering College (5th Sem)</sub>
+    </td>
+    <td width="20%" align="center" valign="top">
+      <b>Step 02: Full Stack</b><br/>
+      <sub>Mastering Java, Spring Boot, Node.js, Express, React &amp; SQL</sub>
+    </td>
+    <td width="20%" align="center" valign="top">
+      <b>Step 03: AI &amp; Vision</b><br/>
+      <sub>Specializing in Python, ML, OpenCV &amp; YOLO Object Detection</sub>
+    </td>
+    <td width="20%" align="center" valign="top">
+      <b>Step 04: Real-World Apps</b><br/>
+      <sub>Building TowerLens AI, NextStep AI &amp; building at Hackathons</sub>
+    </td>
+    <td width="20%" align="center" valign="top">
+      <b>Step 05: Career Goal</b><br/>
+      <sub>Targeting Software Engineering &amp; SDE Placements 🚀</sub>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- HACKATHONS & BUILDING ETHOS -->
+<!-- =================================================== -->
+<h2 align="center">🏆 Hackathons &amp; Engineering Ethos</h2>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="25%" align="center" valign="top">
+      <h3>⚡ Rapid Prototyping</h3>
+      <p>Translating conceptual ideas into working MVPs within tight 24-48 hour hackathon clocks.</p>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <h3>🧩 Problem Solving</h3>
+      <p>Focusing on high-impact pain points and engineering reliable, practical software solutions.</p>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <h3>🤝 Agile Collaboration</h3>
+      <p>Thriving in multidisciplinary engineering teams through clear communication and git workflows.</p>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <h3>🔬 Modern Tech Stacks</h3>
+      <p>Integrating cutting-edge AI/vision models with full-stack interfaces to maximize project impact.</p>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- CURRENT GOALS -->
+<!-- =================================================== -->
+<h2 align="center">🎯 Current Goals &amp; Focus</h2>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <ul>
+        <li>🎓 Maintain academic excellence in <b>5th Semester B.E. ISE</b> at AMC Engineering College</li>
+        <li>☕ Deepen mastery of <b>Java Full Stack Development</b> &amp; enterprise <b>Spring Boot</b></li>
+        <li>🤖 Advance computer vision skills with <b>YOLO object detection</b> and <b>OpenCV</b></li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <ul>
+        <li>🧠 Rigorous practice of <b>Data Structures &amp; Algorithms (DSA)</b> for technical rounds</li>
+        <li>🏆 Actively compete in upcoming collegiate and national <b>hackathons</b></li>
+        <li>🚀 Prepare comprehensively for upcoming <b>software engineering placements</b></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- GITHUB STATS & ACTIVITY -->
+<!-- =================================================== -->
+<h2 align="center">📊 GitHub Statistics &amp; Activity</h2>
+
+<div align="center">
+  <table border="0" align="center">
+    <tr>
+      <td align="center">
+        <a href="https://github.com/gowtham-cr">
+          <img src="https://github-readme-stats.vercel.app/api?username=gowtham-cr&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=818cf8&text_color=94a3b8" height="175" alt="Gowtham's GitHub Stats" />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/gowtham-cr">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gowtham-cr&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=38bdf8&text_color=94a3b8" height="175" alt="Gowtham's Top Languages" />
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <br/>
+
+  <a href="https://github.com/gowtham-cr">
+    <img src="https://streak-stats.demolab.com?user=gowtham-cr&theme=tokyonight&hide_border=true&background=0d1117&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8" alt="Gowtham's GitHub Streak" />
+  </a>
+
+  <br/><br/>
+
+  <!-- Contribution Graph Snake -->
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake Animation" width="100%" />
+
+</div>
+
+<br/>
+
+<p align="center">
+  <img src="./assets/divider.svg" width="100%" alt="Section Divider" />
+</p>
+
+<!-- =================================================== -->
+<!-- CONNECT SECTION -->
+<!-- =================================================== -->
+<h2 align="center">🤝 Let's Connect &amp; Collaborate</h2>
+
+<p align="center">
+  I am always open to discussing new opportunities, collaborating on open-source projects,
+  exchanging ideas on <b>Full Stack Development &amp; AI/ML</b>, or teaming up for <b>hackathons</b>!
+</p>
+
+<p align="center">
+  <a href="https://github.com/gowtham-cr">
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/gowtham-cr?tab=repositories">
+    <img src="https://img.shields.io/badge/GitHub-Repositories-0284c7?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/gowtham-cr?tab=stars">
+    <img src="https://img.shields.io/badge/GitHub-Starred_Repos-f59e0b?style=for-the-badge&logo=github&logoColor=white" alt="Stars" />
+  </a>
+</p>
+
+<p align="center">
+  ⭐ <i>If you find my repositories helpful or interesting, consider leaving a star on GitHub!</i>
+</p>
+
+<br/>
+
+<!-- Footer Banner -->
+<div align="center">
+  <img src="./assets/footer.svg" width="100%" alt="Footer Banner" />
+</div>
