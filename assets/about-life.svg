@@ -124,7 +124,7 @@
   <!-- ================= CARD 1: CURRENT FOCUS // BUILDING (Top Left: 48, 80) ================= -->
   <g transform="translate(48, 80)">
     <rect x="0" y="0" width="420" height="240" rx="16" fill="url(#card-grad-1)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="420" height="230" rx="16" fill="none" stroke="url(#stroke-blue)" stroke-width="1.5" class="border-glow"/>
+    <rect x="0" y="0" width="420" height="240" rx="16" fill="none" stroke="url(#stroke-blue)" stroke-width="1.5" class="border-glow"/>
 
     <!-- Card Header -->
     <g transform="translate(20, 24)">
@@ -175,7 +175,7 @@
 
   <!-- ================= CARD 2: LEARNING RADAR // UPGRADING (Top Right: 482, 80) ================= -->
   <g transform="translate(482, 80)">
-    <rect x="0" y="0" width="410" height="210" rx="16" fill="url(#card-grad-2)" filter="url(#card-shadow)"/>
+    <rect x="0" y="0" width="420" height="240" rx="16" fill="url(#card-grad-2)" filter="url(#card-shadow)"/>
     <rect x="0" y="0" width="410" height="210" rx="16" fill="none" stroke="url(#stroke-crimson)" stroke-width="1.5" class="border-glow"/>
 
     <!-- Card Header -->
