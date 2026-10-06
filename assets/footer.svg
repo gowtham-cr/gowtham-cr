@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 70" width="100%" height="70">
+  <defs>
+    <linearGradient id="footer-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="1" />
+      <stop offset="75%" stop-color="#c084fc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .footer-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      fill: #94a3b8;
+      letter-spacing: 0.8px;
+    }
+    .heart {
+      fill: #f43f5e;
+    }
+  </style>
+
+  <!-- Glowing dividing line -->
+  <line x1="100" y1="18" x2="750" y2="18" stroke="url(#footer-line)" stroke-width="2" />
+
+  <!-- Center Diamond -->
+  <polygon points="425,12 431,18 425,24 419,18" fill="#38bdf8" />
+
+  <!-- Text -->
+  <text x="425" y="48" class="footer-text" text-anchor="middle">
+    Designed &amp; Built by <tspan font-weight="700" fill="#e2e8f0">Gowtham R</tspan> • Keep Learning, Keep Building 🚀
+  </text>
+</svg>
