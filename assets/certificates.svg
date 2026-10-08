@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 490" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="cert-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b16"/>
+      <stop offset="50%" stop-color="#0a1226"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <!-- Card Backgrounds -->
+    <linearGradient id="cert-card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b38"/>
+      <stop offset="100%" stop-color="#070e1c"/>
+    </linearGradient>
+    <linearGradient id="cert-card-crimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#28111e"/>
+      <stop offset="100%" stop-color="#0d0812"/>
+    </linearGradient>
+    <linearGradient id="cert-card-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1233"/>
+      <stop offset="100%" stop-color="#0b0817"/>
+    </linearGradient>
+    <linearGradient id="cert-card-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b2236"/>
+      <stop offset="100%" stop-color="#06121c"/>
+    </linearGradient>
+
+    <!-- Border Gradients -->
+    <linearGradient id="stroke-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="stroke-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#247bff"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="stroke-crimson" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff354f"/>
+      <stop offset="100%" stop-color="#ff758c"/>
+    </linearGradient>
+    <linearGradient id="stroke-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="cert-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <style>
+      @keyframes badgePulse {
+        0%, 100% { opacity: 0.95; }
+        50% { opacity: 0.55; }
+      }
+      .badge-glow { animation: badgePulse 2.8s ease-in-out infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .badge-glow { animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect x="0" y="0" width="940" height="490" rx="24" fill="url(#cert-bg)"/>
+  <rect x="2" y="2" width="936" height="486" rx="23" fill="none" stroke="#247bff" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Cyber Corners -->
+  <path d="M 16 34 L 16 16 L 34 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 924 34 L 924 16 L 906 16" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 16 456 L 16 474 L 34 474" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 924 456 L 924 474 L 906 474" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- SECTION TITLE HEADER -->
+  <g transform="translate(48, 42)">
+    <rect x="0" y="-12" width="28" height="24" rx="4" fill="#0f1f42" stroke="#247bff" stroke-width="1"/>
+    <text x="7" y="5" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="12" font-weight="800">05</text>
+    <text x="38" y="5" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="800" letter-spacing="1">
+      VERIFIED CREDENTIALS // CERTIFICATES &amp; EXHIBITIONS
+    </text>
+    <text x="565" y="5" fill="#64748b" font-family="'Segoe UI', monospace" font-size="11">
+      8 AUTHENTIC CREDENTIALS: HACKATHONS • JAVA • C/C++ • DATA
+    </text>
+  </g>
+
+  <!-- ================= ROW 1 (y: 80, height: 180, 4 CARDS) ================= -->
+
+  <!-- CARD 1: Blaze Hackathon 2026 -->
+  <g transform="translate(48, 80)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-crimson)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="url(#stroke-crimson)" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="92" height="20" rx="10" fill="#36101c" stroke="#ff354f" stroke-width="0.8"/>
+      <text x="10" y="14" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">HACKATHON</text>
+      <circle cx="166" cy="10" r="3.5" fill="#ff354f" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      Blaze Hackathon
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      2026
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      STATUS: Participation
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      ISE, AMC Engg College
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">
+      📅 18 May 2026
+    </text>
+  </g>
+
+  <!-- CARD 2: DECIPHER-X 2026 -->
+  <g transform="translate(264, 80)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-blue)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="url(#stroke-blue)" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="112" height="20" rx="10" fill="#13274f" stroke="#247bff" stroke-width="0.8"/>
+      <text x="10" y="14" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">NATIONAL HACK</text>
+      <circle cx="166" cy="10" r="3.5" fill="#38bdf8" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      DECIPHER-X
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      2026
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      STATUS: Participation
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      National Level 24-Hr Hack
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">
+      📅 8–9 Sep 2026
+    </text>
+  </g>
+
+  <!-- CARD 3: NetApp Data Explorer -->
+  <g transform="translate(480, 80)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-cyan)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="url(#stroke-cyan)" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="102" height="20" rx="10" fill="#0d293d" stroke="#00f2fe" stroke-width="0.8"/>
+      <text x="10" y="14" fill="#00f2fe" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">DATA EXPLORER</text>
+      <circle cx="166" cy="10" r="3.5" fill="#00f2fe" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      NetApp Data
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      Explorer
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      STATUS: Completion
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      Issuer: NetApp
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">
+      🏢 NetApp Verified
+    </text>
+  </g>
+
+  <!-- CARD 4: HACKTOPUS -->
+  <g transform="translate(696, 80)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-purple)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="#a855f7" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="92" height="20" rx="10" fill="#28113a" stroke="#a855f7" stroke-width="0.8"/>
+      <text x="10" y="14" fill="#d8b4fe" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">HACKATHON</text>
+      <circle cx="166" cy="10" r="3.5" fill="#a855f7" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      HACKTOPUS
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      Hackathon
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      STATUS: Participation
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      AMC Engineering College
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">
+      📅 10 May 2025
+    </text>
+  </g>
+
+  <!-- ================= ROW 2 (y: 280, height: 180, 4 CARDS) ================= -->
+
+  <!-- CARD 5: CODESTORM -->
+  <g transform="translate(48, 280)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-crimson)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="url(#stroke-crimson)" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="98" height="20" rx="10" fill="#36101c" stroke="#ff354f" stroke-width="0.8"/>
+      <text x="10" y="14" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">SPRINT HACK</text>
+      <circle cx="166" cy="10" r="3.5" fill="#ff354f" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      CODESTORM
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      Hackathon
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      STATUS: Participation
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      6 Hours Sprint Hack
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">
+      📅 7 Nov 2025
+    </text>
+  </g>
+
+  <!-- CARD 6: Core and Advanced Java (IIHT) -->
+  <g transform="translate(264, 280)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-blue)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="url(#stroke-gold)" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="98" height="20" rx="10" fill="#3b2d13" stroke="#f59e0b" stroke-width="0.8"/>
+      <text x="8" y="14" fill="#fbbf24" font-family="'Segoe UI', monospace" font-size="9" font-weight="800">⭐ GRADE A+</text>
+      <circle cx="166" cy="10" r="3.5" fill="#fbbf24" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      Core &amp; Advanced
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      Java (IIHT)
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      IIHT Accomplishment
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      Enterprise Java Architecture
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9">
+      📅 20 Jun – 1 Oct 2024
+    </text>
+  </g>
+
+  <!-- CARD 7: PHYSIKA-2025 -->
+  <g transform="translate(480, 280)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-cyan)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="url(#stroke-cyan)" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="94" height="20" rx="10" fill="#0d293d" stroke="#00f2fe" stroke-width="0.8"/>
+      <text x="10" y="14" fill="#00f2fe" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">EXHIBITION</text>
+      <circle cx="166" cy="10" r="3.5" fill="#00f2fe" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      PHYSIKA-2025
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      Exhibition
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      STATUS: Participation
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      Intercollegiate Project Expo
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">
+      📅 5–6 June 2025
+    </text>
+  </g>
+
+  <!-- CARD 8: C and C++ (IIHT) -->
+  <g transform="translate(696, 280)">
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="url(#cert-card-purple)" filter="url(#cert-shadow)"/>
+    <rect x="0" y="0" width="202" height="180" rx="14" fill="none" stroke="url(#stroke-gold)" stroke-width="1.2"/>
+
+    <!-- Pill Tag -->
+    <g transform="translate(14, 16)">
+      <rect x="0" y="0" width="98" height="20" rx="10" fill="#3b2d13" stroke="#f59e0b" stroke-width="0.8"/>
+      <text x="8" y="14" fill="#fbbf24" font-family="'Segoe UI', monospace" font-size="9" font-weight="800">⭐ GRADE A+</text>
+      <circle cx="166" cy="10" r="3.5" fill="#fbbf24" class="badge-glow"/>
+    </g>
+
+    <!-- Title -->
+    <text x="14" y="58" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13.5" font-weight="800">
+      C and C++
+    </text>
+    <text x="14" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800">
+      Programming
+    </text>
+
+    <!-- Meta Details -->
+    <text x="14" y="100" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">
+      IIHT Accomplishment
+    </text>
+    <text x="14" y="118" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">
+      Systems &amp; OOP Foundations
+    </text>
+    <line x1="14" y1="132" x2="188" y2="132" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="14" y="154" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9">
+      📅 20 Apr – 7 Jun 2022
+    </text>
+  </g>
+</svg>
