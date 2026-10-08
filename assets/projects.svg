@@ -1,306 +1,413 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 540" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 980" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="proj-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070b16"/>
-      <stop offset="50%" stop-color="#0a1226"/>
-      <stop offset="100%" stop-color="#050811"/>
+    
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#0b1329"/>
     </linearGradient>
 
-    <!-- Card Backgrounds -->
-    <linearGradient id="proj-card-blue" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1b38"/>
-      <stop offset="100%" stop-color="#070e1c"/>
-    </linearGradient>
-    <linearGradient id="proj-card-crimson" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#26101c"/>
-      <stop offset="100%" stop-color="#0d0812"/>
-    </linearGradient>
-    <linearGradient id="proj-card-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b2236"/>
-      <stop offset="100%" stop-color="#06121c"/>
-    </linearGradient>
-    <linearGradient id="proj-card-purple" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1233"/>
-      <stop offset="100%" stop-color="#0b0817"/>
-    </linearGradient>
-    <linearGradient id="proj-card-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d261e"/>
-      <stop offset="100%" stop-color="#061410"/>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101935" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090e1f" stop-opacity="0.9"/>
     </linearGradient>
 
-    <!-- Border Gradients -->
-    <linearGradient id="stroke-neon-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <linearGradient id="blueGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#247bff"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
-    <linearGradient id="stroke-neon-crimson" x1="0%" y1="0%" x2="100%" y2="0%">
+
+    <linearGradient id="crimsonGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ff354f"/>
-      <stop offset="100%" stop-color="#ff758c"/>
-    </linearGradient>
-    <linearGradient id="stroke-neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#ff7b91"/>
     </linearGradient>
 
     <!-- Filters -->
-    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.65"/>
+    <filter id="glowBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
 
-    <style>
-      @keyframes pulseBeacon {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.35; transform: scale(0.85); }
-      }
-      @keyframes borderGlow {
-        0%, 100% { stroke-opacity: 0.85; }
-        50% { stroke-opacity: 0.4; }
-      }
-      .beacon { animation: pulseBeacon 2.5s ease-in-out infinite; }
-      .glow-border { animation: borderGlow 3s ease-in-out infinite; }
+    <filter id="glowCrimson" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
 
-      @media (prefers-reduced-motion: reduce) {
-        .beacon, .glow-border { animation: none !important; }
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="futuristicGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#247bff" stroke-width="0.75" stroke-opacity="0.12"/>
+      <circle cx="40" cy="0" r="1.2" fill="#247bff" fill-opacity="0.25"/>
+    </pattern>
+
+    <pattern id="dotPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#f5f7ff" fill-opacity="0.08"/>
+    </pattern>
+
+    <style>
+      
+    /* Deep Futuristic Keyframes */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
+      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+    }
+    @keyframes crimsonPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.85; filter: drop-shadow(0 0 16px rgba(255,53,79,0.8)); }
+    }
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(0px); opacity: 0; }
+      15% { opacity: 0.7; }
+      85% { opacity: 0.7; }
+      100% { transform: translateY(460px); opacity: 0; }
+    }
+    @keyframes orbitRotate1 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounter1 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+    @keyframes orbitRotate2 {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounter2 {
+      from { transform: rotate(-360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes idSwing {
+      0% { transform: rotate(-6deg); }
+      15% { transform: rotate(5deg); }
+      30% { transform: rotate(-3.5deg); }
+      45% { transform: rotate(2.2deg); }
+      60% { transform: rotate(-1.7deg); }
+      75% { transform: rotate(1.7deg); }
+      90% { transform: rotate(-1.7deg); }
+      100% { transform: rotate(1.7deg); }
+    }
+    @keyframes foilSweep {
+      0% { transform: translateX(-180%) skewX(-20deg); opacity: 0; }
+      20% { opacity: 0.45; }
+      40% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+      100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+    }
+    @keyframes pointPulse {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(8px); }
+    }
+    @keyframes cardGlow {
+      0%, 100% { stroke: rgba(36,123,255,0.4); }
+      50% { stroke: rgba(255,53,79,0.7); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
       }
+    }
+
     </style>
   </defs>
 
-  <!-- Base Canvas -->
-  <rect x="0" y="0" width="940" height="540" rx="24" fill="url(#proj-bg)"/>
-  <rect x="2" y="2" width="936" height="536" rx="23" fill="none" stroke="#247bff" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect width="1000" height="980" fill="url(#bgGrad)"/>
+  <rect width="1000" height="980" fill="url(#futuristicGrid)"/>
 
-  <!-- Cyber Corners -->
-  <path d="M 16 34 L 16 16 L 34 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 924 34 L 924 16 L 906 16" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 16 506 L 16 524 L 34 524" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 924 506 L 924 524 L 906 524" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
-
-  <!-- SECTION TITLE HEADER -->
-  <g transform="translate(48, 42)">
-    <rect x="0" y="-12" width="28" height="24" rx="4" fill="#0f1f42" stroke="#247bff" stroke-width="1"/>
-    <text x="7" y="5" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="12" font-weight="800">04</text>
-    <text x="38" y="5" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="800" letter-spacing="1">
-      FEATURED PROJECTS // REAL-WORLD ARCHITECTURES
-    </text>
-    <text x="560" y="5" fill="#64748b" font-family="'Segoe UI', monospace" font-size="11">
-      5 ACTIVE REPOSITORIES: AI/ML • FULL STACK • COMPUTER VISION
-    </text>
-  </g>
-
-  <!-- ================= ROW 1 (y: 80, height: 200, 3 CARDS) ================= -->
-
-  <!-- CARD 1: TowerLens AI -->
-  <g transform="translate(48, 80)">
-    <rect x="0" y="0" width="268" height="200" rx="16" fill="url(#proj-card-crimson)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="268" height="200" rx="16" fill="none" stroke="url(#stroke-neon-crimson)" stroke-width="1.3" class="glow-border"/>
-
-    <!-- Header Badge -->
-    <g transform="translate(16, 20)">
-      <rect x="0" y="-8" width="24" height="20" rx="4" fill="#38101e"/>
-      <text x="5" y="6" font-size="11">🏗️</text>
-      <text x="32" y="6" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">TowerLens AI</text>
-      <circle cx="230" cy="4" r="4" fill="#ff354f" class="beacon"/>
+  
+    <g transform="translate(60, 50)">
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#ff354f"/>
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#247bff" opacity="0.6" filter="url(#glowBlue)"/>
+      <text x="24" y="14" fill="#247bff" font-size="12" font-weight="700" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PRODUCTION SYSTEMS</text>
+      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">FEATURED PROJECTS</text>
+      <text x="24" y="60" fill="#8c9dbd" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">High-impact AI, Computer Vision and Enterprise Full-Stack Applications</text>
     </g>
-    <text x="16" y="44" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">CV INSPECTION // YOLO PIPELINE</text>
-    <line x1="16" y1="52" x2="252" y2="52" stroke="#1e293b" stroke-width="1"/>
+  
 
-    <!-- Description -->
-    <text x="16" y="72" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      Automated structural detection system
-    </text>
-    <text x="16" y="88" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      for telecom tower components using
-    </text>
-    <text x="16" y="104" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      custom deep learning &amp; OpenCV.
-    </text>
-
-    <!-- Tech Stack Pills -->
-    <g transform="translate(16, 126)">
-      <rect x="0" y="0" width="56" height="22" rx="6" fill="#33101c" stroke="#ff354f" stroke-width="0.8"/>
-      <text x="10" y="15" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">YOLO</text>
-
-      <rect x="62" y="0" width="68" height="22" rx="6" fill="#1b122e" stroke="#a855f7" stroke-width="0.8"/>
-      <text x="10" y="15" fill="#d8b4fe" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">OpenCV</text>
-
-      <rect x="136" y="0" width="60" height="22" rx="6" fill="#0d2438" stroke="#00f2fe" stroke-width="0.8"/>
-      <text x="10" y="15" fill="#7dd3fc" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">FastAPI</text>
-
-      <rect x="0" y="28" width="58" height="22" rx="6" fill="#0c2336" stroke="#38bdf8" stroke-width="0.8"/>
-      <text x="10" y="43" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">React</text>
+  <!-- Project 01: TowerLens AI (Large Featured Top Card) -->
+  
+      <g transform="translate(60, 130)">
+        
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="880" height="210" rx="16" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="880" height="210" rx="16" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 864 0 L 880 0 L 880 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 194 L 0 210 L 16 210" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 864 210 L 880 210 L 880 194" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
     </g>
+  
+        
+        <g transform="translate(26, 26)">
+          <!-- Number and Tag -->
+          <rect x="0" y="0" width="80" height="22" rx="4" fill="#ff354f" fill-opacity="0.15"/>
+          <text x="10" y="15" fill="#ff354f" font-size="11" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PROJECT 01</text>
+          
+          <text x="0" y="48" fill="#f5f7ff" font-size="20" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">TowerLens AI</text>
+          
+          <text x="0" y="78" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI-powered transmission tower component detection and inspection platform.</text>
+          <text x="0" y="98" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Engineered with YOLO, OpenCV, FastAPI and modern React frontend.</text>
 
-    <text x="16" y="184" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">&gt; REPO: gowtham-cr/TowerLens</text>
-  </g>
+          <!-- Tech Chips -->
+          <g transform="translate(0, 126)">
+            
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#ff354f" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">YOLO</text>
+      </g>
+    
+      <g transform="translate(78, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#ff354f" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">OpenCV</text>
+      </g>
+    
+      <g transform="translate(156, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#ff354f" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">FastAPI</text>
+      </g>
+    
+      <g transform="translate(234, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#ff354f" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">React</text>
+      </g>
+    
+          </g>
+        </g>
+      </g>
+    
 
-  <!-- CARD 2: NextStep AI -->
-  <g transform="translate(336, 80)">
-    <rect x="0" y="0" width="268" height="200" rx="16" fill="url(#proj-card-cyan)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="268" height="200" rx="16" fill="none" stroke="url(#stroke-neon-cyan)" stroke-width="1.3" class="glow-border"/>
-
-    <!-- Header Badge -->
-    <g transform="translate(16, 20)">
-      <rect x="0" y="-8" width="24" height="20" rx="4" fill="#0c2d3d"/>
-      <text x="5" y="6" font-size="11">🎯</text>
-      <text x="32" y="6" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">NextStep AI</text>
-      <circle cx="230" cy="4" r="4" fill="#00f2fe" class="beacon"/>
+  <!-- Project 02: NextStep AI (Row 2, Left) -->
+  
+      <g transform="translate(60, 370)">
+        
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 0 L 425 0 L 425 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 214 L 0 230 L 16 230" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 230 L 425 230 L 425 214" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
     </g>
-    <text x="16" y="44" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">PLACEMENT COPILOT // NLP</text>
-    <line x1="16" y1="52" x2="252" y2="52" stroke="#1e293b" stroke-width="1"/>
+  
+        
+        <g transform="translate(26, 26)">
+          <!-- Number and Tag -->
+          <rect x="0" y="0" width="80" height="22" rx="4" fill="#247bff" fill-opacity="0.15"/>
+          <text x="10" y="15" fill="#247bff" font-size="11" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PROJECT 02</text>
+          
+          <text x="0" y="48" fill="#f5f7ff" font-size="20" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">NextStep AI</text>
+          
+          <text x="0" y="78" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI Placement Readiness Copilot for resume improvement,</text>
+          <text x="0" y="98" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">job matching, skill-gap analysis, study planning and interviews.</text>
 
-    <!-- Description -->
-    <text x="16" y="72" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      Intelligent career copilot for students
-    </text>
-    <text x="16" y="88" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      with automated resume review, skill
-    </text>
-    <text x="16" y="104" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      gap analysis &amp; interview roadmap.
-    </text>
+          <!-- Tech Chips -->
+          <g transform="translate(0, 126)">
+            
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI/ML</text>
+      </g>
+    
+      <g transform="translate(78, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Python</text>
+      </g>
+    
+      <g transform="translate(156, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">React</text>
+      </g>
+    
+      <g transform="translate(234, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">NLP</text>
+      </g>
+    
+          </g>
+        </g>
+      </g>
+    
 
-    <!-- Tech Stack Pills -->
-    <g transform="translate(16, 126)">
-      <rect x="0" y="0" width="60" height="22" rx="6" fill="#1b122e" stroke="#a855f7" stroke-width="0.8"/>
-      <text x="10" y="15" fill="#d8b4fe" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">AI / ML</text>
-
-      <rect x="66" y="0" width="46" height="22" rx="6" fill="#0d2438" stroke="#00f2fe" stroke-width="0.8"/>
-      <text x="10" y="15" fill="#7dd3fc" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">NLP</text>
-
-      <rect x="118" y="0" width="62" height="22" rx="6" fill="#0c1f3d" stroke="#247bff" stroke-width="0.8"/>
-      <text x="10" y="15" fill="#93c5fd" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">Python</text>
-
-      <rect x="0" y="28" width="58" height="22" rx="6" fill="#0c2336" stroke="#38bdf8" stroke-width="0.8"/>
-      <text x="10" y="43" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">React</text>
+  <!-- Project 03: AMC College AI Chatbot (Row 2, Right) -->
+  
+      <g transform="translate(515, 370)">
+        
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 0 L 425 0 L 425 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 214 L 0 230 L 16 230" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 230 L 425 230 L 425 214" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
     </g>
+  
+        
+        <g transform="translate(26, 26)">
+          <!-- Number and Tag -->
+          <rect x="0" y="0" width="80" height="22" rx="4" fill="#247bff" fill-opacity="0.15"/>
+          <text x="10" y="15" fill="#247bff" font-size="11" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PROJECT 03</text>
+          
+          <text x="0" y="48" fill="#f5f7ff" font-size="20" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AMC College AI Chatbot</text>
+          
+          <text x="0" y="78" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI-powered campus and student assistance system for</text>
+          <text x="0" y="98" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AMC Engineering College streamlining academic guidance.</text>
 
-    <text x="16" y="184" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">&gt; REPO: gowtham-cr/NextStep-AI</text>
-  </g>
+          <!-- Tech Chips -->
+          <g transform="translate(0, 126)">
+            
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI / NLP</text>
+      </g>
+    
+      <g transform="translate(78, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Python</text>
+      </g>
+    
+      <g transform="translate(156, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">REST APIs</text>
+      </g>
+    
+          </g>
+        </g>
+      </g>
+    
 
-  <!-- CARD 3: AMC College AI Chatbot -->
-  <g transform="translate(624, 80)">
-    <rect x="0" y="0" width="268" height="200" rx="16" fill="url(#proj-card-purple)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="268" height="200" rx="16" fill="none" stroke="#a855f7" stroke-width="1.3" class="glow-border"/>
-
-    <!-- Header Badge -->
-    <g transform="translate(16, 20)">
-      <rect x="0" y="-8" width="24" height="20" rx="4" fill="#28113a"/>
-      <text x="5" y="6" font-size="11">🤖</text>
-      <text x="32" y="6" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">AMC AI Chatbot</text>
-      <circle cx="230" cy="4" r="4" fill="#a855f7" class="beacon"/>
+  <!-- Project 04: Inventory Management System (Row 3, Left) -->
+  
+      <g transform="translate(60, 630)">
+        
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 0 L 425 0 L 425 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 214 L 0 230 L 16 230" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 230 L 425 230 L 425 214" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
     </g>
-    <text x="16" y="44" fill="#c084fc" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">CAMPUS ASSISTANT // 24/7 BOT</text>
-    <line x1="16" y1="52" x2="252" y2="52" stroke="#1e293b" stroke-width="1"/>
+  
+        
+        <g transform="translate(26, 26)">
+          <!-- Number and Tag -->
+          <rect x="0" y="0" width="80" height="22" rx="4" fill="#247bff" fill-opacity="0.15"/>
+          <text x="10" y="15" fill="#247bff" font-size="11" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PROJECT 04</text>
+          
+          <text x="0" y="48" fill="#f5f7ff" font-size="20" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Inventory Management System</text>
+          
+          <text x="0" y="78" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Full-stack enterprise employee inventory and asset</text>
+          <text x="0" y="98" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">tracking application with relational database persistence.</text>
 
-    <!-- Description -->
-    <text x="16" y="72" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      24/7 conversational assistance system
-    </text>
-    <text x="16" y="88" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      for AMC Engineering College students
-    </text>
-    <text x="16" y="104" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="500">
-      for schedules, syllabus &amp; facilities.
-    </text>
+          <!-- Tech Chips -->
+          <g transform="translate(0, 126)">
+            
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">React</text>
+      </g>
+    
+      <g transform="translate(78, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Node.js</text>
+      </g>
+    
+      <g transform="translate(156, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Express</text>
+      </g>
+    
+      <g transform="translate(234, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#247bff" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">MySQL</text>
+      </g>
+    
+          </g>
+        </g>
+      </g>
+    
 
-    <!-- Tech Stack Pills -->
-    <g transform="translate(16, 126)">
-      <rect x="0" y="0" width="75" height="22" rx="6" fill="#20112e" stroke="#c084fc" stroke-width="0.8"/>
-      <text x="8" y="15" fill="#e9d5ff" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">AI Chatbot</text>
-
-      <rect x="81" y="0" width="60" height="22" rx="6" fill="#0c1f3d" stroke="#247bff" stroke-width="0.8"/>
-      <text x="8" y="15" fill="#93c5fd" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">Python</text>
-
-      <rect x="147" y="0" width="75" height="22" rx="6" fill="#0d2438" stroke="#00f2fe" stroke-width="0.8"/>
-      <text x="8" y="15" fill="#7dd3fc" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">REST APIs</text>
+  <!-- Project 05: AI Disease Prediction System (Row 3, Right) -->
+  
+      <g transform="translate(515, 630)">
+        
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="425" height="230" rx="16" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 0 L 425 0 L 425 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 214 L 0 230 L 16 230" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 409 230 L 425 230 L 425 214" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
     </g>
+  
+        
+        <g transform="translate(26, 26)">
+          <!-- Number and Tag -->
+          <rect x="0" y="0" width="80" height="22" rx="4" fill="#ff354f" fill-opacity="0.15"/>
+          <text x="10" y="15" fill="#ff354f" font-size="11" font-weight="800" letter-spacing="1.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PROJECT 05</text>
+          
+          <text x="0" y="48" fill="#f5f7ff" font-size="20" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI Disease Prediction System</text>
+          
+          <text x="0" y="78" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Machine-learning based clinical disease prediction</text>
+          <text x="0" y="98" fill="#9cb0cf" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">and assistive healthcare diagnostics engine.</text>
 
-    <text x="16" y="184" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9.5">&gt; REPO: gowtham-cr/AMC-Chatbot</text>
-  </g>
+          <!-- Tech Chips -->
+          <g transform="translate(0, 126)">
+            
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#ff354f" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Python</text>
+      </g>
+    
+      <g transform="translate(78, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#ff354f" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ML Models</text>
+      </g>
+    
+      <g transform="translate(156, 0)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#0e1733" stroke="#ff354f" stroke-width="0.8"/>
+        <text x="35" y="16" text-anchor="middle" fill="#c4d1eb" font-size="10.5" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Predictive</text>
+      </g>
+    
+          </g>
+        </g>
+      </g>
+    
 
-  <!-- ================= ROW 2 (y: 300, height: 200, 2 CARDS) ================= -->
-
-  <!-- CARD 4: Inventory Management System -->
-  <g transform="translate(48, 300)">
-    <rect x="0" y="0" width="420" height="200" rx="16" fill="url(#proj-card-blue)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="420" height="200" rx="16" fill="none" stroke="url(#stroke-neon-blue)" stroke-width="1.3" class="glow-border"/>
-
-    <!-- Header Badge -->
-    <g transform="translate(20, 20)">
-      <rect x="0" y="-8" width="24" height="20" rx="4" fill="#13274f"/>
-      <text x="5" y="6" font-size="11">📦</text>
-      <text x="32" y="6" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">Inventory Management System</text>
-      <circle cx="380" cy="4" r="4" fill="#247bff" class="beacon"/>
-    </g>
-    <text x="20" y="44" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">ENTERPRISE WEB // CRUD ARCHITECTURE</text>
-    <line x1="20" y1="52" x2="400" y2="52" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Description -->
-    <text x="20" y="72" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="500">
-      Full-stack enterprise application designed to track, allocate, and audit
-    </text>
-    <text x="20" y="88" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="500">
-      organizational inventory and employee hardware asset operations.
-    </text>
-
-    <!-- Tech Stack Pills -->
-    <g transform="translate(20, 114)">
-      <rect x="0" y="0" width="60" height="24" rx="8" fill="#0c2336" stroke="#38bdf8" stroke-width="0.8"/>
-      <text x="12" y="16" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">React</text>
-
-      <rect x="68" y="0" width="74" height="24" rx="8" fill="#0d281e" stroke="#10b981" stroke-width="0.8"/>
-      <text x="12" y="16" fill="#6ee7b7" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">Node.js</text>
-
-      <rect x="150" y="0" width="86" height="24" rx="8" fill="#1c1f38" stroke="#60a5fa" stroke-width="0.8"/>
-      <text x="12" y="16" fill="#93c5fd" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">Express.js</text>
-
-      <rect x="244" y="0" width="66" height="24" rx="8" fill="#0c1f3d" stroke="#247bff" stroke-width="0.8"/>
-      <text x="12" y="16" fill="#93c5fd" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">MySQL</text>
-    </g>
-
-    <text x="20" y="178" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">
-      &gt; RELATIONAL SCHEMA • MODULAR REST ENDPOINTS • ASSET TRACKING
-    </text>
-  </g>
-
-  <!-- CARD 5: AI Disease Prediction System -->
-  <g transform="translate(482, 300)">
-    <rect x="0" y="0" width="420" height="200" rx="16" fill="url(#proj-card-emerald)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="420" height="200" rx="16" fill="none" stroke="#10b981" stroke-width="1.3" class="glow-border"/>
-
-    <!-- Header Badge -->
-    <g transform="translate(20, 20)">
-      <rect x="0" y="-8" width="24" height="20" rx="4" fill="#0e281e"/>
-      <text x="5" y="6" font-size="11">🏥</text>
-      <text x="32" y="6" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800">AI Disease Prediction System</text>
-      <circle cx="380" cy="4" r="4" fill="#10b981" class="beacon"/>
-    </g>
-    <text x="20" y="44" fill="#6ee7b7" font-family="'Segoe UI', monospace" font-size="9.5" font-weight="700">HEALTHCARE AI // PREDICTIVE MODELLING</text>
-    <line x1="20" y1="52" x2="400" y2="52" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Description -->
-    <text x="20" y="72" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="500">
-      Healthcare predictive analytics platform engineered to forecast disease
-    </text>
-    <text x="20" y="88" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="500">
-      risks utilizing supervised machine learning classification algorithms.
-    </text>
-
-    <!-- Tech Stack Pills -->
-    <g transform="translate(20, 114)">
-      <rect x="0" y="0" width="66" height="24" rx="8" fill="#0c1f3d" stroke="#247bff" stroke-width="0.8"/>
-      <text x="12" y="16" fill="#93c5fd" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">Python</text>
-
-      <rect x="74" y="0" width="130" height="24" rx="8" fill="#28111e" stroke="#ff354f" stroke-width="0.8"/>
-      <text x="12" y="16" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">Machine Learning</text>
-
-      <rect x="212" y="0" width="112" height="24" rx="8" fill="#0c2d22" stroke="#10b981" stroke-width="0.8"/>
-      <text x="12" y="16" fill="#6ee7b7" font-family="'Segoe UI', monospace" font-size="10" font-weight="700">Healthcare AI</text>
-    </g>
-
-    <text x="20" y="178" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">
-      &gt; CLINICAL DATA PROCESSING • INTERPRETABLE DIAGNOSTIC REPORTS
+  <!-- Bottom Accessibility Notice -->
+  <g transform="translate(60, 890)">
+    <rect x="0" y="0" width="880" height="42" rx="10" fill="#080e21" stroke="rgba(36,123,255,0.25)" stroke-width="1"/>
+    <text x="24" y="26" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      REPOSITORY VERIFICATION // All listed projects are self-built architectures. See markdown table below for source availability.
     </text>
   </g>
 </svg>

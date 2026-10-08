@@ -1,266 +1,337 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 440" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="hack-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070b16"/>
-      <stop offset="50%" stop-color="#0a1226"/>
-      <stop offset="100%" stop-color="#050811"/>
+    
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#0b1329"/>
     </linearGradient>
 
-    <!-- Card Backgrounds -->
-    <linearGradient id="hack-card-1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#26101c"/>
-      <stop offset="100%" stop-color="#0d0812"/>
-    </linearGradient>
-    <linearGradient id="hack-card-2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1b38"/>
-      <stop offset="100%" stop-color="#070e1c"/>
-    </linearGradient>
-    <linearGradient id="hack-card-3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b2236"/>
-      <stop offset="100%" stop-color="#06121c"/>
-    </linearGradient>
-    <linearGradient id="hack-card-4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1233"/>
-      <stop offset="100%" stop-color="#0b0817"/>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101935" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090e1f" stop-opacity="0.9"/>
     </linearGradient>
 
-    <!-- Border Gradients -->
-    <linearGradient id="stroke-crimson" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ff354f"/>
-      <stop offset="100%" stop-color="#ff758c"/>
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.5"/>
     </linearGradient>
-    <linearGradient id="stroke-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+
+    <linearGradient id="blueGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#247bff"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
-    <linearGradient id="stroke-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
-    </linearGradient>
-    <linearGradient id="stroke-purple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+
+    <linearGradient id="crimsonGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff354f"/>
+      <stop offset="100%" stop-color="#ff7b91"/>
     </linearGradient>
 
     <!-- Filters -->
-    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    <filter id="glowBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
 
-    <style>
-      @keyframes beaconPulse {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.4; transform: scale(0.85); }
-      }
-      .beacon { animation: beaconPulse 2.4s ease-in-out infinite; }
+    <filter id="glowCrimson" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
 
-      @media (prefers-reduced-motion: reduce) {
-        .beacon { animation: none !important; }
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="futuristicGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#247bff" stroke-width="0.75" stroke-opacity="0.12"/>
+      <circle cx="40" cy="0" r="1.2" fill="#247bff" fill-opacity="0.25"/>
+    </pattern>
+
+    <pattern id="dotPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#f5f7ff" fill-opacity="0.08"/>
+    </pattern>
+
+    <style>
+      
+    /* Deep Futuristic Keyframes */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
+      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+    }
+    @keyframes crimsonPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.85; filter: drop-shadow(0 0 16px rgba(255,53,79,0.8)); }
+    }
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(0px); opacity: 0; }
+      15% { opacity: 0.7; }
+      85% { opacity: 0.7; }
+      100% { transform: translateY(460px); opacity: 0; }
+    }
+    @keyframes orbitRotate1 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounter1 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+    @keyframes orbitRotate2 {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounter2 {
+      from { transform: rotate(-360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes idSwing {
+      0% { transform: rotate(-6deg); }
+      15% { transform: rotate(5deg); }
+      30% { transform: rotate(-3.5deg); }
+      45% { transform: rotate(2.2deg); }
+      60% { transform: rotate(-1.7deg); }
+      75% { transform: rotate(1.7deg); }
+      90% { transform: rotate(-1.7deg); }
+      100% { transform: rotate(1.7deg); }
+    }
+    @keyframes foilSweep {
+      0% { transform: translateX(-180%) skewX(-20deg); opacity: 0; }
+      20% { opacity: 0.45; }
+      40% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+      100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+    }
+    @keyframes pointPulse {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(8px); }
+    }
+    @keyframes cardGlow {
+      0%, 100% { stroke: rgba(36,123,255,0.4); }
+      50% { stroke: rgba(255,53,79,0.7); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
       }
+    }
+
     </style>
   </defs>
 
-  <!-- Base Canvas -->
-  <rect x="0" y="0" width="940" height="440" rx="24" fill="url(#hack-bg)"/>
-  <rect x="2" y="2" width="936" height="436" rx="23" fill="none" stroke="#247bff" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect width="1000" height="760" fill="url(#bgGrad)"/>
+  <rect width="1000" height="760" fill="url(#futuristicGrid)"/>
 
-  <!-- Cyber Corners -->
-  <path d="M 16 34 L 16 16 L 34 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 924 34 L 924 16 L 906 16" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 16 406 L 16 424 L 34 424" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 924 406 L 924 424 L 906 424" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+  
+    <g transform="translate(60, 50)">
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#ff354f"/>
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#247bff" opacity="0.6" filter="url(#glowBlue)"/>
+      <text x="24" y="14" fill="#247bff" font-size="12" font-weight="700" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">SPRINT ENGINEERING</text>
+      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HACKATHONS &amp; EXPEDITIONS</text>
+      <text x="24" y="60" fill="#8c9dbd" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">High-pressure 24-hour sprints, prototyping &amp; technical exhibitions</text>
+    </g>
+  
 
-  <!-- SECTION TITLE HEADER -->
-  <g transform="translate(48, 42)">
-    <rect x="0" y="-12" width="28" height="24" rx="4" fill="#0f1f42" stroke="#247bff" stroke-width="1"/>
-    <text x="7" y="5" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="12" font-weight="800">06</text>
-    <text x="38" y="5" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="800" letter-spacing="1">
-      HACKATHONS &amp; ENGINEERING ETHOS
-    </text>
-    <text x="500" y="5" fill="#64748b" font-family="'Segoe UI', monospace" font-size="11">
-      HIGH-INTENSITY PROTOTYPING: CONCEPT TO DEPLOYABLE MVP
-    </text>
+  <!-- 4 Strategic Pillars Top Bar -->
+  <g transform="translate(60, 115)">
+    <!-- Pillar 1 -->
+    <rect x="0" y="0" width="205" height="34" rx="8" fill="#0e1736" stroke="#ff354f" stroke-width="1"/>
+    <text x="102" y="21" text-anchor="middle" fill="#ff7b91" font-size="11" font-weight="800" letter-spacing="1">⚡ RAPID BUILD</text>
+
+    <!-- Pillar 2 -->
+    <rect x="225" y="0" width="205" height="34" rx="8" fill="#0e1736" stroke="#247bff" stroke-width="1"/>
+    <text x="327" y="21" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="800" letter-spacing="1">🧠 PROBLEM SOLVE</text>
+
+    <!-- Pillar 3 -->
+    <rect x="450" y="0" width="205" height="34" rx="8" fill="#0e1736" stroke="#247bff" stroke-width="1"/>
+    <text x="552" y="21" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="800" letter-spacing="1">🚀 MODERN STACK</text>
+
+    <!-- Pillar 4 -->
+    <rect x="675" y="0" width="205" height="34" rx="8" fill="#0e1736" stroke="#00e676" stroke-width="1"/>
+    <text x="777" y="21" text-anchor="middle" fill="#00e676" font-size="11" font-weight="800" letter-spacing="1">🎯 CAREER GOAL</text>
   </g>
 
-  <!-- METRICS TOP STRIP (y: 72) -->
-  <g transform="translate(48, 72)">
-    <rect x="0" y="0" width="202" height="34" rx="8" fill="#131e36" stroke="#247bff" stroke-width="0.8"/>
-    <text x="14" y="21" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="10.5" font-weight="800">⚡ 5+ EVENTS VERIFIED</text>
+  <!-- Timeline Events -->
+  <g transform="translate(0, 35)">
+    
+      <g transform="translate(60, 140)">
+        <!-- Node &amp; Line Point -->
+        <circle cx="20" cy="35" r="12" fill="#09122c" stroke="#ff354f" stroke-width="2" filter="url(#glowBlue)"/>
+        <circle cx="20" cy="35" r="5" fill="#ff354f"/>
+        <line x1="20" y1="47" x2="20" y2="130" stroke="#247bff" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>
 
-    <rect x="216" y="0" width="202" height="34" rx="8" fill="#2d1222" stroke="#ff354f" stroke-width="0.8"/>
-    <text x="14" y="21" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="10.5" font-weight="800">⏱️ 24–48H SPRINT CLOCK</text>
+        <!-- Card Body -->
+        <g transform="translate(55, 0)">
+          
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 0 L 825 0 L 825 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 56 L 0 72 L 16 72" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 72 L 825 72 L 825 56" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+          <g transform="translate(24, 24)">
+            <text x="0" y="0" fill="#f5f7ff" font-size="16" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Blaze Hackathon 2026</text>
+            <text x="0" y="24" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Dept. of ISE, AMC Engineering College</text>
+            
+            <rect x="520" y="-12" width="120" height="24" rx="6" fill="#0d1838" stroke="#ff354f" stroke-width="0.8"/>
+            <text x="580" y="4" text-anchor="middle" fill="#ff354f" font-size="10.5" font-weight="800" letter-spacing="1">RAPID BUILD</text>
 
-    <rect x="432" y="0" width="202" height="34" rx="8" fill="#0d2638" stroke="#00f2fe" stroke-width="0.8"/>
-    <text x="14" y="21" fill="#7dd3fc" font-family="'Segoe UI', monospace" font-size="10.5" font-weight="800">🤖 AI/ML + FULL STACK</text>
+            <text x="760" y="5" text-anchor="end" fill="#60a5fa" font-size="13" font-weight="700">🗓 May 2026</text>
+          </g>
+        </g>
+      </g>
+    
+      <g transform="translate(60, 235)">
+        <!-- Node &amp; Line Point -->
+        <circle cx="20" cy="35" r="12" fill="#09122c" stroke="#247bff" stroke-width="2" filter="url(#glowBlue)"/>
+        <circle cx="20" cy="35" r="5" fill="#247bff"/>
+        <line x1="20" y1="47" x2="20" y2="130" stroke="#247bff" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>
 
-    <rect x="648" y="0" width="202" height="34" rx="8" fill="#221133" stroke="#a855f7" stroke-width="0.8"/>
-    <text x="14" y="21" fill="#d8b4fe" font-family="'Segoe UI', monospace" font-size="10.5" font-weight="800">🤝 AGILE GIT WORKFLOW</text>
+        <!-- Card Body -->
+        <g transform="translate(55, 0)">
+          
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 0 L 825 0 L 825 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 56 L 0 72 L 16 72" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 72 L 825 72 L 825 56" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+          <g transform="translate(24, 24)">
+            <text x="0" y="0" fill="#f5f7ff" font-size="16" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">DECIPHER-X 2026</text>
+            <text x="0" y="24" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">National Level 24-Hour Hackathon</text>
+            
+            <rect x="520" y="-12" width="120" height="24" rx="6" fill="#0d1838" stroke="#247bff" stroke-width="0.8"/>
+            <text x="580" y="4" text-anchor="middle" fill="#247bff" font-size="10.5" font-weight="800" letter-spacing="1">PROBLEM SOLVE</text>
+
+            <text x="760" y="5" text-anchor="end" fill="#60a5fa" font-size="13" font-weight="700">🗓 September 2026</text>
+          </g>
+        </g>
+      </g>
+    
+      <g transform="translate(60, 330)">
+        <!-- Node &amp; Line Point -->
+        <circle cx="20" cy="35" r="12" fill="#09122c" stroke="#ff354f" stroke-width="2" filter="url(#glowBlue)"/>
+        <circle cx="20" cy="35" r="5" fill="#ff354f"/>
+        <line x1="20" y1="47" x2="20" y2="130" stroke="#247bff" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>
+
+        <!-- Card Body -->
+        <g transform="translate(55, 0)">
+          
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 0 L 825 0 L 825 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 56 L 0 72 L 16 72" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 72 L 825 72 L 825 56" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+          <g transform="translate(24, 24)">
+            <text x="0" y="0" fill="#f5f7ff" font-size="16" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HACKTOPUS 2025</text>
+            <text x="0" y="24" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AMC Engineering College</text>
+            
+            <rect x="520" y="-12" width="120" height="24" rx="6" fill="#0d1838" stroke="#ff354f" stroke-width="0.8"/>
+            <text x="580" y="4" text-anchor="middle" fill="#ff354f" font-size="10.5" font-weight="800" letter-spacing="1">MODERN STACK</text>
+
+            <text x="760" y="5" text-anchor="end" fill="#60a5fa" font-size="13" font-weight="700">🗓 May 2025</text>
+          </g>
+        </g>
+      </g>
+    
+      <g transform="translate(60, 425)">
+        <!-- Node &amp; Line Point -->
+        <circle cx="20" cy="35" r="12" fill="#09122c" stroke="#247bff" stroke-width="2" filter="url(#glowBlue)"/>
+        <circle cx="20" cy="35" r="5" fill="#247bff"/>
+        <line x1="20" y1="47" x2="20" y2="130" stroke="#247bff" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>
+
+        <!-- Card Body -->
+        <g transform="translate(55, 0)">
+          
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 0 L 825 0 L 825 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 56 L 0 72 L 16 72" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 72 L 825 72 L 825 56" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+          <g transform="translate(24, 24)">
+            <text x="0" y="0" fill="#f5f7ff" font-size="16" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CODESTORM 2025</text>
+            <text x="0" y="24" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">6-Hour Hackathon Sprint</text>
+            
+            <rect x="520" y="-12" width="120" height="24" rx="6" fill="#0d1838" stroke="#247bff" stroke-width="0.8"/>
+            <text x="580" y="4" text-anchor="middle" fill="#247bff" font-size="10.5" font-weight="800" letter-spacing="1">RAPID BUILD</text>
+
+            <text x="760" y="5" text-anchor="end" fill="#60a5fa" font-size="13" font-weight="700">🗓 November 2025</text>
+          </g>
+        </g>
+      </g>
+    
+      <g transform="translate(60, 520)">
+        <!-- Node &amp; Line Point -->
+        <circle cx="20" cy="35" r="12" fill="#09122c" stroke="#00d8ff" stroke-width="2" filter="url(#glowBlue)"/>
+        <circle cx="20" cy="35" r="5" fill="#00d8ff"/>
+        
+
+        <!-- Card Body -->
+        <g transform="translate(55, 0)">
+          
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="825" height="72" rx="12" fill="url(#cardGrad)" stroke="url(#glassBorder)" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 0 L 825 0 L 825 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 56 L 0 72 L 16 72" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 809 72 L 825 72 L 825 56" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+          <g transform="translate(24, 24)">
+            <text x="0" y="0" fill="#f5f7ff" font-size="16" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PHYSIKA-2025</text>
+            <text x="0" y="24" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Intercollegiate Project Exhibition</text>
+            
+            <rect x="520" y="-12" width="120" height="24" rx="6" fill="#0d1838" stroke="#00d8ff" stroke-width="0.8"/>
+            <text x="580" y="4" text-anchor="middle" fill="#00d8ff" font-size="10.5" font-weight="800" letter-spacing="1">CAREER GOAL</text>
+
+            <text x="760" y="5" text-anchor="end" fill="#60a5fa" font-size="13" font-weight="700">🗓 June 2025</text>
+          </g>
+        </g>
+      </g>
+    
   </g>
 
-  <!-- ================= 4 PILLAR CARDS (y: 124, height: 275) ================= -->
-
-  <!-- PILLAR 1: Rapid Prototyping -->
-  <g transform="translate(48, 124)">
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="url(#hack-card-1)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="none" stroke="url(#stroke-crimson)" stroke-width="1.2"/>
-
-    <!-- Header -->
-    <g transform="translate(14, 20)">
-      <rect x="0" y="-8" width="26" height="22" rx="4" fill="#38101e"/>
-      <text x="6" y="8" font-size="12">⚡</text>
-      <text x="34" y="8" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="11" font-weight="800">RAPID BUILD</text>
-      <circle cx="166" cy="4" r="3.5" fill="#ff354f" class="beacon"/>
-    </g>
-    <line x1="14" y1="44" x2="188" y2="44" stroke="#1e293b" stroke-width="0.8"/>
-
-    <text x="14" y="68" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">
-      Sprint Prototyping
+  <!-- Bottom Telemetry Status -->
+  <g transform="translate(60, 680)">
+    <rect x="0" y="0" width="880" height="42" rx="10" fill="#080e21" stroke="rgba(36,123,255,0.25)" stroke-width="1"/>
+    <text x="24" y="26" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      HACKATHON PROTOCOL // Proven ability to conceptualize, architect, and deploy production-grade prototypes under sprint constraints.
     </text>
-    <text x="14" y="90" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      Translating conceptual
-    </text>
-    <text x="14" y="106" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      ideas into working MVPs
-    </text>
-    <text x="14" y="122" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      under tight 24–48 hour
-    </text>
-    <text x="14" y="138" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      hackathon clocks.
-    </text>
-
-    <!-- Highlight Box -->
-    <g transform="translate(14, 160)">
-      <rect x="0" y="0" width="174" height="64" rx="8" fill="#1e0e18" stroke="#ff354f" stroke-width="0.8"/>
-      <text x="10" y="18" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">PROVEN PARTICIPATIONS:</text>
-      <text x="10" y="34" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• Blaze Hackathon '26</text>
-      <text x="10" y="50" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• DECIPHER-X '26 (24H)</text>
-    </g>
-
-    <text x="14" y="252" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9">&gt; SPEED + EXECUTION</text>
-  </g>
-
-  <!-- PILLAR 2: Real-World Utility -->
-  <g transform="translate(264, 124)">
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="url(#hack-card-2)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="none" stroke="url(#stroke-blue)" stroke-width="1.2"/>
-
-    <!-- Header -->
-    <g transform="translate(14, 20)">
-      <rect x="0" y="-8" width="26" height="22" rx="4" fill="#13274f"/>
-      <text x="6" y="8" font-size="12">🧩</text>
-      <text x="34" y="8" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="11" font-weight="800">PROBLEM SOLVE</text>
-      <circle cx="166" cy="4" r="3.5" fill="#247bff" class="beacon"/>
-    </g>
-    <line x1="14" y1="44" x2="188" y2="44" stroke="#1e293b" stroke-width="0.8"/>
-
-    <text x="14" y="68" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">
-      Practical Impact
-    </text>
-    <text x="14" y="90" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      Focusing directly on high-
-    </text>
-    <text x="14" y="106" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      impact pain points in
-    </text>
-    <text x="14" y="122" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      campus, edtech, and
-    </text>
-    <text x="14" y="138" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      enterprise operations.
-    </text>
-
-    <!-- Highlight Box -->
-    <g transform="translate(14, 160)">
-      <rect x="0" y="0" width="174" height="64" rx="8" fill="#0d1b33" stroke="#247bff" stroke-width="0.8"/>
-      <text x="10" y="18" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">REAL-WORLD BUILDS:</text>
-      <text x="10" y="34" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• TowerLens AI (Vision)</text>
-      <text x="10" y="50" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• NextStep AI (Copilot)</text>
-    </g>
-
-    <text x="14" y="252" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9">&gt; PRAGMATIC CODE</text>
-  </g>
-
-  <!-- PILLAR 3: Modern Tech Stacks -->
-  <g transform="translate(480, 124)">
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="url(#hack-card-3)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="none" stroke="url(#stroke-cyan)" stroke-width="1.2"/>
-
-    <!-- Header -->
-    <g transform="translate(14, 20)">
-      <rect x="0" y="-8" width="26" height="22" rx="4" fill="#0d283d"/>
-      <text x="6" y="8" font-size="12">🔬</text>
-      <text x="34" y="8" fill="#00f2fe" font-family="'Segoe UI', monospace" font-size="11" font-weight="800">MODERN STACK</text>
-      <circle cx="166" cy="4" r="3.5" fill="#00f2fe" class="beacon"/>
-    </g>
-    <line x1="14" y1="44" x2="188" y2="44" stroke="#1e293b" stroke-width="0.8"/>
-
-    <text x="14" y="68" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">
-      AI + Full Stack
-    </text>
-    <text x="14" y="90" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      Pairing YOLO object
-    </text>
-    <text x="14" y="106" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      detection pipelines with
-    </text>
-    <text x="14" y="122" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      Spring Boot &amp; React to
-    </text>
-    <text x="14" y="138" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      maximize product impact.
-    </text>
-
-    <!-- Highlight Box -->
-    <g transform="translate(14, 160)">
-      <rect x="0" y="0" width="174" height="64" rx="8" fill="#071b29" stroke="#00f2fe" stroke-width="0.8"/>
-      <text x="10" y="18" fill="#00f2fe" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">PROVEN PARTICIPATIONS:</text>
-      <text x="10" y="34" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• HACKTOPUS '25</text>
-      <text x="10" y="50" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• CODESTORM '25 (6H)</text>
-    </g>
-
-    <text x="14" y="252" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9">&gt; FULL-STACK INTEGRATION</text>
-  </g>
-
-  <!-- PILLAR 4: SDE Placement Target -->
-  <g transform="translate(696, 124)">
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="url(#hack-card-4)" filter="url(#card-shadow)"/>
-    <rect x="0" y="0" width="202" height="275" rx="14" fill="none" stroke="url(#stroke-purple)" stroke-width="1.2"/>
-
-    <!-- Header -->
-    <g transform="translate(14, 20)">
-      <rect x="0" y="-8" width="26" height="22" rx="4" fill="#28113a"/>
-      <text x="6" y="8" font-size="12">🚀</text>
-      <text x="34" y="8" fill="#c084fc" font-family="'Segoe UI', monospace" font-size="11" font-weight="800">CAREER GOAL</text>
-      <circle cx="166" cy="4" r="3.5" fill="#a855f7" class="beacon"/>
-    </g>
-    <line x1="14" y1="44" x2="188" y2="44" stroke="#1e293b" stroke-width="0.8"/>
-
-    <text x="14" y="68" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">
-      Target: SDE Role
-    </text>
-    <text x="14" y="90" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      Preparing rigorously for
-    </text>
-    <text x="14" y="106" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      software engineering
-    </text>
-    <text x="14" y="122" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      campus placements via
-    </text>
-    <text x="14" y="138" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="11">
-      daily DSA &amp; system craft.
-    </text>
-
-    <!-- Highlight Box -->
-    <g transform="translate(14, 160)">
-      <rect x="0" y="0" width="174" height="64" rx="8" fill="#1a0f2b" stroke="#a855f7" stroke-width="0.8"/>
-      <text x="10" y="18" fill="#d8b4fe" font-family="'Segoe UI', monospace" font-size="9" font-weight="700">ACADEMICS &amp; EXPO:</text>
-      <text x="10" y="34" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• AMC Engg College (ISE)</text>
-      <text x="10" y="50" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="10.5" font-weight="600">• PHYSIKA-2025 Expo</text>
-    </g>
-
-    <text x="14" y="252" fill="#64748b" font-family="'Segoe UI', monospace" font-size="9">&gt; PLACEMENT READY 🎯</text>
   </g>
 </svg>

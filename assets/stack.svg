@@ -1,402 +1,419 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 680" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="stack-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070b16"/>
-      <stop offset="45%" stop-color="#0a1226"/>
-      <stop offset="100%" stop-color="#050812"/>
+    
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#0b1329"/>
     </linearGradient>
 
-    <!-- Core Gradients -->
-    <linearGradient id="core-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101935" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090e1f" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <linearGradient id="blueGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#247bff"/>
-      <stop offset="50%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#ff354f"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
 
-    <radialGradient id="orbit-center-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#247bff" stop-opacity="0.25"/>
-      <stop offset="50%" stop-color="#ff354f" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Card Background Gradients -->
-    <linearGradient id="chip-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e172e"/>
-      <stop offset="100%" stop-color="#070d1c"/>
-    </linearGradient>
-
-    <!-- Chip Pills Gradients -->
-    <linearGradient id="chip-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10254c"/>
-      <stop offset="100%" stop-color="#0b1730"/>
-    </linearGradient>
-    <linearGradient id="chip-crimson" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3d1222"/>
-      <stop offset="100%" stop-color="#1e0912"/>
-    </linearGradient>
-    <linearGradient id="chip-purple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2a1442"/>
-      <stop offset="100%" stop-color="#140a24"/>
-    </linearGradient>
-    <linearGradient id="chip-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0d2b3d"/>
-      <stop offset="100%" stop-color="#061721"/>
-    </linearGradient>
-    <linearGradient id="chip-green" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0d2e24"/>
-      <stop offset="100%" stop-color="#061712"/>
+    <linearGradient id="crimsonGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff354f"/>
+      <stop offset="100%" stop-color="#ff7b91"/>
     </linearGradient>
 
     <!-- Filters -->
-    <filter id="stack-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.65"/>
+    <filter id="glowBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
 
-    <filter id="orbit-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="glowCrimson" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="futuristicGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#247bff" stroke-width="0.75" stroke-opacity="0.12"/>
+      <circle cx="40" cy="0" r="1.2" fill="#247bff" fill-opacity="0.25"/>
+    </pattern>
+
+    <pattern id="dotPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#f5f7ff" fill-opacity="0.08"/>
+    </pattern>
 
     <style>
-      @keyframes orbitRotate1 {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+      
+    /* Deep Futuristic Keyframes */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
+      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+    }
+    @keyframes crimsonPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.85; filter: drop-shadow(0 0 16px rgba(255,53,79,0.8)); }
+    }
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(0px); opacity: 0; }
+      15% { opacity: 0.7; }
+      85% { opacity: 0.7; }
+      100% { transform: translateY(460px); opacity: 0; }
+    }
+    @keyframes orbitRotate1 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounter1 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+    @keyframes orbitRotate2 {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounter2 {
+      from { transform: rotate(-360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes idSwing {
+      0% { transform: rotate(-6deg); }
+      15% { transform: rotate(5deg); }
+      30% { transform: rotate(-3.5deg); }
+      45% { transform: rotate(2.2deg); }
+      60% { transform: rotate(-1.7deg); }
+      75% { transform: rotate(1.7deg); }
+      90% { transform: rotate(-1.7deg); }
+      100% { transform: rotate(1.7deg); }
+    }
+    @keyframes foilSweep {
+      0% { transform: translateX(-180%) skewX(-20deg); opacity: 0; }
+      20% { opacity: 0.45; }
+      40% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+      100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+    }
+    @keyframes pointPulse {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(8px); }
+    }
+    @keyframes cardGlow {
+      0%, 100% { stroke: rgba(36,123,255,0.4); }
+      50% { stroke: rgba(255,53,79,0.7); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
       }
-      @keyframes orbitRotate2 {
-        from { transform: rotate(360deg); }
-        to { transform: rotate(0deg); }
-      }
-      @keyframes coreGlow {
-        0%, 100% { filter: drop-shadow(0 0 10px rgba(36,123,255,0.5)); }
-        50% { filter: drop-shadow(0 0 20px rgba(255,53,79,0.6)); }
-      }
-      @keyframes satelliteGlow {
-        0%, 100% { stroke-opacity: 0.9; }
-        50% { stroke-opacity: 0.4; }
-      }
+    }
 
-      .orbit-ring-outer { animation: orbitRotate1 45s linear infinite; transform-origin: 470px 175px; }
-      .orbit-ring-inner { animation: orbitRotate2 35s linear infinite; transform-origin: 470px 175px; }
-      .core-hub { animation: coreGlow 4s ease-in-out infinite; }
-      .sat-pulse { animation: satelliteGlow 3s ease-in-out infinite; }
-
-      @media (prefers-reduced-motion: reduce) {
-        .orbit-ring-outer, .orbit-ring-inner, .core-hub, .sat-pulse {
-          animation: none !important;
-        }
+      .orbit-group-1 {
+        transform-origin: 500px 340px;
+        animation: orbitRotate1 35s infinite linear;
+      }
+      .counter-group-1 {
+        transform-origin: 500px 340px;
+        animation: orbitCounter1 35s infinite linear;
+      }
+      .orbit-group-2 {
+        transform-origin: 500px 340px;
+        animation: orbitRotate2 45s infinite linear;
+      }
+      .counter-group-2 {
+        transform-origin: 500px 340px;
+        animation: orbitCounter2 45s infinite linear;
       }
     </style>
   </defs>
 
-  <!-- Base Canvas -->
-  <rect x="0" y="0" width="940" height="680" rx="24" fill="url(#stack-bg)"/>
-  <rect x="2" y="2" width="936" height="676" rx="23" fill="none" stroke="#247bff" stroke-width="1.5" stroke-opacity="0.3"/>
+  <rect width="1000" height="620" fill="url(#bgGrad)"/>
+  <rect width="1000" height="620" fill="url(#futuristicGrid)"/>
 
-  <!-- Cyber Corners -->
-  <path d="M 16 34 L 16 16 L 34 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 924 34 L 924 16 L 906 16" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 16 646 L 16 664 L 34 664" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M 924 646 L 924 664 L 906 664" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+  
+    <g transform="translate(60, 50)">
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#ff354f"/>
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#247bff" opacity="0.6" filter="url(#glowBlue)"/>
+      <text x="24" y="14" fill="#247bff" font-size="12" font-weight="700" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">TELEMETRY &amp; TOOLKIT</text>
+      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">TECH STACK // 3D ORBITS</text>
+      <text x="24" y="60" fill="#8c9dbd" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Architectural foundation across Full Stack, AI/Computer Vision &amp; Tooling</text>
+    </g>
+  
 
-  <!-- SECTION HEADER -->
-  <g transform="translate(48, 42)">
-    <rect x="0" y="-12" width="28" height="24" rx="4" fill="#0f1f42" stroke="#247bff" stroke-width="1"/>
-    <text x="7" y="5" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="12" font-weight="800">02</text>
-    <text x="38" y="5" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="800" letter-spacing="1">
-      TECH ARSENAL // 3D SYSTEM ARCHITECTURE
-    </text>
-    <text x="510" y="5" fill="#64748b" font-family="'Segoe UI', monospace" font-size="11">
-      COMPONENTS: JAVA CORE + ML ENGINE + REACT UI
-    </text>
+  <!-- Central Core Hologram -->
+  <g transform="translate(500, 340)">
+    <circle cx="0" cy="0" r="75" fill="#0b142d" stroke="#247bff" stroke-width="2" filter="url(#glowBlue)"/>
+    <circle cx="0" cy="0" r="58" fill="#101935" stroke="#ff354f" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <circle cx="0" cy="0" r="42" fill="#070b16"/>
+    <text x="0" y="-8" text-anchor="middle" fill="#247bff" font-size="11" font-weight="800" letter-spacing="2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CORE</text>
+    <text x="0" y="14" text-anchor="middle" fill="#f5f7ff" font-size="16" font-weight="900" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">DEV HUB</text>
+    <text x="0" y="30" text-anchor="middle" fill="#ff354f" font-size="10" font-weight="700" letter-spacing="1">v3.8</text>
   </g>
 
-  <!-- ================= 3D TILTED ORBIT SYSTEM ================= -->
-  <g transform="translate(0, 0)">
-    <!-- Ambient Core Glow -->
-    <ellipse cx="470" cy="175" rx="360" ry="90" fill="url(#orbit-center-glow)"/>
-
-    <!-- 3D Perspective Elliptical Orbit Rings (Tilted) -->
-    <g transform="rotate(-8 470 175)">
-      <!-- Outer Orbit Ring -->
-      <ellipse cx="470" cy="175" rx="370" ry="78" fill="none" stroke="#247bff" stroke-width="1.4" stroke-dasharray="14 18 6 12" stroke-opacity="0.4" class="orbit-ring-outer"/>
-
-      <!-- Inner Orbit Ring -->
-      <ellipse cx="470" cy="175" rx="230" ry="48" fill="none" stroke="#ff354f" stroke-width="1.4" stroke-dasharray="10 14" stroke-opacity="0.4" class="orbit-ring-inner"/>
-
-      <!-- Perspective Horizon Depth Grid -->
-      <line x1="100" y1="175" x2="840" y2="175" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.2" stroke-dasharray="4 8"/>
-    </g>
-
-    <!-- Orbiting Satellite Satellites / Anchors (3D Positioned) -->
-    <!-- Anchor 1: Java & Spring (Far Left: 90, 150) -->
-    <g transform="translate(90, 150)">
-      <rect x="0" y="0" width="138" height="34" rx="17" fill="#0d1f3d" stroke="#247bff" stroke-width="1.4" class="sat-pulse"/>
-      <circle cx="17" cy="17" r="5" fill="#ff354f"/>
-      <text x="30" y="21" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">☕ Java / Spring</text>
-    </g>
-
-    <!-- Anchor 2: AI / ML & YOLO (Far Right: 712, 150) -->
-    <g transform="translate(712, 150)">
-      <rect x="0" y="0" width="138" height="34" rx="17" fill="#2d101f" stroke="#ff354f" stroke-width="1.4" class="sat-pulse"/>
-      <circle cx="17" cy="17" r="5" fill="#38bdf8"/>
-      <text x="30" y="21" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">🧠 AI / ML YOLO</text>
-    </g>
-
-    <!-- Anchor 3: React & Node (Top Center-Right: 560, 102) -->
-    <g transform="translate(560, 102)">
-      <rect x="0" y="0" width="130" height="30" rx="15" fill="#0a2636" stroke="#00f2fe" stroke-width="1.2" class="sat-pulse"/>
-      <circle cx="15" cy="15" r="4" fill="#00f2fe"/>
-      <text x="26" y="19" fill="#e0f2fe" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">⚛️ React &amp; Node</text>
-    </g>
-
-    <!-- Anchor 4: Python & FastAPI (Bottom Center-Left: 250, 215) -->
-    <g transform="translate(250, 215)">
-      <rect x="0" y="0" width="140" height="30" rx="15" fill="#1b1236" stroke="#a855f7" stroke-width="1.2" class="sat-pulse"/>
-      <circle cx="15" cy="15" r="4" fill="#a855f7"/>
-      <text x="26" y="19" fill="#f3e8ff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🐍 Python / API</text>
-    </g>
-
-    <!-- Central 3D Core Hub (Center: 355, 145) -->
-    <g class="core-hub" transform="translate(355, 145)">
-      <rect x="0" y="0" width="230" height="58" rx="29" fill="url(#chip-card-bg)" stroke="url(#core-grad)" stroke-width="2.5" filter="url(#stack-shadow)"/>
-      <!-- Inner Glow Ring -->
-      <rect x="4" y="4" width="222" height="50" rx="25" fill="none" stroke="#247bff" stroke-width="0.8" stroke-opacity="0.5"/>
-      <circle cx="28" cy="29" r="7" fill="#00f2fe" filter="url(#orbit-glow)"/>
-      <circle cx="28" cy="29" r="4" fill="#ffffff"/>
-      <text x="44" y="27" fill="#ffffff" font-family="'Segoe UI', monospace" font-size="12" font-weight="900" letter-spacing="1">
-        CORE NEXUS
-      </text>
-      <text x="44" y="43" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">
-        Java • AI/ML • Full Stack
-      </text>
-      <circle cx="202" cy="29" r="5" fill="#ff354f"/>
-    </g>
+  <!-- Orbit 1: Inner Elliptical Ring (Rx=220, Ry=100, rotated -20deg) -->
+  <g transform="translate(500, 340) rotate(-18)">
+    <ellipse cx="0" cy="0" rx="230" ry="95" fill="none" stroke="#247bff" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
   </g>
 
-  <!-- ================= GROUPED TECH CARDS (GRID) ================= -->
-
-  <!-- ROW 1 (y: 295, 3 CARDS) -->
-
-  <!-- CARD 1: LANGUAGES -->
-  <g transform="translate(48, 295)">
-    <rect x="0" y="0" width="268" height="180" rx="16" fill="url(#chip-card-bg)" filter="url(#stack-shadow)"/>
-    <rect x="0" y="0" width="268" height="180" rx="16" fill="none" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.5"/>
-
-    <!-- Header -->
-    <g transform="translate(16, 20)">
-      <rect x="0" y="-8" width="26" height="20" rx="4" fill="#13274f"/>
-      <text x="7" y="6" fill="#38bdf8" font-size="11">💻</text>
-      <text x="34" y="6" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="11.5" font-weight="800" letter-spacing="1">
-        LANGUAGES
-      </text>
-    </g>
-    <line x1="16" y1="38" x2="252" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Chips -->
-    <g transform="translate(16, 52)">
-      <!-- Java -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="110" height="30" rx="8" fill="url(#chip-blue)" stroke="#247bff" stroke-width="1"/>
-        <text x="12" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">☕ Java</text>
-      </g>
-      <!-- Python -->
-      <g transform="translate(120, 0)">
-        <rect x="0" y="0" width="116" height="30" rx="8" fill="url(#chip-purple)" stroke="#a855f7" stroke-width="1"/>
-        <text x="12" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">🐍 Python</text>
-      </g>
-      <!-- JavaScript -->
-      <g transform="translate(0, 40)">
-        <rect x="0" y="0" width="124" height="30" rx="8" fill="url(#chip-cyan)" stroke="#00f2fe" stroke-width="1"/>
-        <text x="12" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">⚡ JavaScript</text>
-      </g>
-      <!-- C / C++ -->
-      <g transform="translate(134, 40)">
-        <rect x="0" y="0" width="102" height="30" rx="8" fill="url(#chip-crimson)" stroke="#ff354f" stroke-width="1"/>
-        <text x="12" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">⚙️ C / C++</text>
-      </g>
-    </g>
-
-    <text x="16" y="162" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">
-      &gt; OOP • ALGORITHMS • SCRIPTING
-    </text>
+  <!-- Orbit 2: Outer Elliptical Ring (Rx=380, Ry=155, rotated 22deg) -->
+  <g transform="translate(500, 340) rotate(22)">
+    <ellipse cx="0" cy="0" rx="390" ry="160" fill="none" stroke="#ff354f" stroke-width="1.5" stroke-dasharray="10,8" opacity="0.45"/>
   </g>
 
-  <!-- CARD 2: FRAMEWORKS & LIBRARIES -->
-  <g transform="translate(336, 295)">
-    <rect x="0" y="0" width="268" height="180" rx="16" fill="url(#chip-card-bg)" filter="url(#stack-shadow)"/>
-    <rect x="0" y="0" width="268" height="180" rx="16" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
-
-    <!-- Header -->
-    <g transform="translate(16, 20)">
-      <rect x="0" y="-8" width="26" height="20" rx="4" fill="#0c2d3d"/>
-      <text x="7" y="6" fill="#00f2fe" font-size="11">🌐</text>
-      <text x="34" y="6" fill="#00f2fe" font-family="'Segoe UI', monospace" font-size="11.5" font-weight="800" letter-spacing="1">
-        FRAMEWORKS
-      </text>
-    </g>
-    <line x1="16" y1="38" x2="252" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Chips -->
-    <g transform="translate(16, 50)">
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="96" height="28" rx="8" fill="url(#chip-cyan)" stroke="#00f2fe" stroke-width="1"/>
-        <text x="10" y="18" fill="#e0f2fe" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">⚛️ React</text>
-      </g>
-      <g transform="translate(104, 0)">
-        <rect x="0" y="0" width="132" height="28" rx="8" fill="url(#chip-blue)" stroke="#247bff" stroke-width="1"/>
-        <text x="10" y="18" fill="#e0f2fe" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🍃 Spring Boot</text>
-      </g>
-      <g transform="translate(0, 36)">
-        <rect x="0" y="0" width="102" height="28" rx="8" fill="url(#chip-green)" stroke="#10b981" stroke-width="1"/>
-        <text x="10" y="18" fill="#e0f2fe" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🟢 Node.js</text>
-      </g>
-      <g transform="translate(110, 36)">
-        <rect x="0" y="0" width="126" height="28" rx="8" fill="url(#chip-blue)" stroke="#60a5fa" stroke-width="1"/>
-        <text x="10" y="18" fill="#e0f2fe" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🚀 Express.js</text>
-      </g>
-      <g transform="translate(0, 72)">
-        <rect x="0" y="0" width="112" height="28" rx="8" fill="url(#chip-purple)" stroke="#a855f7" stroke-width="1"/>
-        <text x="10" y="18" fill="#e0f2fe" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">⚡ FastAPI</text>
-      </g>
-    </g>
-
-    <text x="16" y="165" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">
-      &gt; REST APIS • MICROSERVICES • SPA
-    </text>
+  <!-- Orbit 3: Middle Circular Depth Ring -->
+  <g transform="translate(500, 340)">
+    <ellipse cx="0" cy="0" rx="310" ry="130" fill="none" stroke="#60a5fa" stroke-width="1.2" opacity="0.3"/>
   </g>
 
-  <!-- CARD 3: AI / ML & VISION -->
-  <g transform="translate(624, 295)">
-    <rect x="0" y="0" width="268" height="180" rx="16" fill="url(#chip-card-bg)" filter="url(#stack-shadow)"/>
-    <rect x="0" y="0" width="268" height="180" rx="16" fill="none" stroke="#ff354f" stroke-width="1.2" stroke-opacity="0.5"/>
+  <!-- Positioned Tech Badges around Orbits (Clean, perfectly readable, no text overlap) -->
 
-    <!-- Header -->
-    <g transform="translate(16, 20)">
-      <rect x="0" y="-8" width="26" height="20" rx="4" fill="#38101e"/>
-      <text x="7" y="6" fill="#ff354f" font-size="11">🧠</text>
-      <text x="34" y="6" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="11.5" font-weight="800" letter-spacing="1">
-        AI / ML &amp; VISION
-      </text>
-    </g>
-    <line x1="16" y1="38" x2="252" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Chips -->
-    <g transform="translate(16, 52)">
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="138" height="30" rx="8" fill="url(#chip-crimson)" stroke="#ff354f" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🎯 YOLO</text>
+  <!-- GROUP 1: PROGRAMMING &amp; CORE BACKEND -->
+  <!-- Java -->
+  
+      <g transform="translate(310, 250)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#247bff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#247bff" d="M12 2C8 2 5.5 3.5 5.5 4.5c0 .7.8 1.4 2.2 1.8-.4.3-.8.6-.8 1 0 1.2 3.2 2 5.1 2 2.2 0 5-.9 5-2 0-.4-.4-.7-.9-1 1.4-.4 2.2-1.1 2.2-1.8C18.3 3.5 15.8 2 12 2zM7.2 12.5c.8 1.2 2.8 2 4.8 2 2.2 0 4.1-.8 4.8-2 0 1.5-2.2 3.5-4.8 3.5s-4.8-2-4.8-3.5zm-1 3.5c1.2 1.5 3.5 2.5 5.8 2.5s4.6-1 5.8-2.5c0 1.8-2.6 4-5.8 4s-5.8-2.2-5.8-4z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Java</text>
       </g>
-      <g transform="translate(146, 0)">
-        <rect x="0" y="0" width="90" height="30" rx="8" fill="url(#chip-purple)" stroke="#c084fc" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🐍 Python</text>
+    
+  <!-- Spring Boot -->
+  
+      <g transform="translate(690, 250)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#6db33f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#6db33f" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.8 14.5l-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Spring Boot</text>
       </g>
-      <g transform="translate(0, 40)">
-        <rect x="0" y="0" width="156" height="30" rx="8" fill="url(#chip-blue)" stroke="#38bdf8" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">👁️ Ultralytics</text>
+    
+  <!-- Python -->
+  
+      <g transform="translate(260, 350)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#247bff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#247bff" d="M11.9 2c-3.1 0-2.9 1.3-2.9 1.3l.01 1.4h3v.4H6.2s-2.2.2-2.2 3.2 1.9 3.1 1.9 3.1h1.1V10s-.1-1.3 1.3-1.3h4.4s1.2-.02 1.2-1.2V3.2S14.2 2 11.9 2zm-1.7 1a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4zm1.9 19c3.1 0 2.9-1.3 2.9-1.3l-.01-1.4h-3v-.4h5.8s2.2-.2 2.2-3.2-1.9-3.1-1.9-3.1h-1.1V14s.1 1.3-1.3 1.3H11.3s-1.2.02-1.2 1.2v4.3s-.3 1.2 2 1.2zm1.7-1a.7.7 0 1 1 0-1.4.7.7 0 0 1 0 1.4z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Python</text>
       </g>
-      <g transform="translate(0, 78)">
-        <rect x="0" y="0" width="236" height="28" rx="8" fill="url(#chip-crimson)" stroke="#ff758c" stroke-width="1"/>
-        <text x="10" y="18" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🤖 Machine Learning</text>
+    
+  <!-- FastAPI -->
+  
+      <g transform="translate(740, 350)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#05998b" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#05998b" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 14.5l-4.5-5h3V6.5l4.5 5h-3v5z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">FastAPI</text>
       </g>
-    </g>
+    
 
-    <text x="16" y="165" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">
-      &gt; DETECTION • COMPUTER VISION • MODELS
-    </text>
-  </g>
-
-  <!-- ROW 2 (y: 495, 2 CARDS) -->
-
-  <!-- CARD 4: DATABASES & STORAGE -->
-  <g transform="translate(48, 495)">
-    <rect x="0" y="0" width="410" height="150" rx="16" fill="url(#chip-card-bg)" filter="url(#stack-shadow)"/>
-    <rect x="0" y="0" width="410" height="150" rx="16" fill="none" stroke="#247bff" stroke-width="1.2" stroke-opacity="0.4"/>
-
-    <!-- Header -->
-    <g transform="translate(20, 20)">
-      <rect x="0" y="-8" width="26" height="20" rx="4" fill="#0f2142"/>
-      <text x="7" y="6" fill="#38bdf8" font-size="11">🗄️</text>
-      <text x="34" y="6" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="12" font-weight="800" letter-spacing="1">
-        DATABASES &amp; STORAGE
-      </text>
-    </g>
-    <line x1="20" y1="38" x2="390" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Chips -->
-    <g transform="translate(20, 54)">
-      <!-- MySQL -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="170" height="36" rx="10" fill="url(#chip-blue)" stroke="#247bff" stroke-width="1.2"/>
-        <circle cx="18" cy="18" r="4" fill="#38bdf8"/>
-        <text x="32" y="22" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">🐬 MySQL</text>
-        <text x="100" y="22" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">Relational</text>
+  <!-- GROUP 2: FRONTEND &amp; MODERN WEB -->
+  <!-- React -->
+  
+      <g transform="translate(360, 440)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#00d8ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#00d8ff" d="M12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm0-7.5c-3.6 0-6.8 1.2-8.6 3.1-1.9 1.9-2.4 4.5-1.4 7.2.9 2.7 3.3 5.4 6.6 7.5 1.1.7 2.3 1.2 3.4 1.7 1.1-.5 2.3-1 3.4-1.7 3.3-2.1 5.7-4.8 6.6-7.5 1-2.7.5-5.3-1.4-7.2C20.2 3.2 17 2 12 2zm0 1.5c4.3 0 7 1 8.3 2.4 1.4 1.4 1.7 3.4.9 5.5-.8 2.3-2.8 4.7-5.8 6.7-1 .6-2.1 1.1-3.4 1.5-1.3-.4-2.4-.9-3.4-1.5-3-2-5-4.4-5.8-6.7-.8-2.1-.5-4.1.9-5.5C5 4.5 7.7 3.5 12 3.5z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">React</text>
       </g>
-
-      <!-- Supabase -->
-      <g transform="translate(185, 0)">
-        <rect x="0" y="0" width="185" height="36" rx="10" fill="url(#chip-green)" stroke="#10b981" stroke-width="1.2"/>
-        <circle cx="18" cy="18" r="4" fill="#10b981"/>
-        <text x="32" y="22" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700">⚡ Supabase</text>
-        <text x="120" y="22" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">Postgres BaaS</text>
+    
+  <!-- JavaScript -->
+  
+      <g transform="translate(640, 440)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f7df1e" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#f7df1e" d="M3 3h18v18H3V3zm15.5 13.8c-.3-.2-.7-.4-1.2-.4-.6 0-1 .3-1 .8 0 .5.4.7 1.3 1.1 1.3.5 1.9 1.2 1.9 2.2 0 1.3-1 2.3-2.6 2.3-1.3 0-2-.6-2.4-1.3l1.1-.7c.3.5.7.8 1.3.8.6 0 1-.3 1-.7 0-.5-.4-.7-1.3-1.1-1.2-.5-1.9-1.1-1.9-2.2 0-1.2 1-2.1 2.4-2.1 1 0 1.7.4 2.1 1l-1.2.6zm-6.2-3.5h1.5v6.5c0 1.6-.9 2.4-2.4 2.4-.7 0-1.4-.2-1.8-.6l.7-1.2c.3.3.6.5 1.1.5.7 0 1-.4 1-1.1v-6.5z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">JavaScript</text>
       </g>
-    </g>
-
-    <text x="20" y="128" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">
-      &gt; DATA SCHEMAS • ACID TRANSACTIONS • REALTIME SYNC
-    </text>
-  </g>
-
-  <!-- CARD 5: DEVELOPER ENVIRONMENT & TOOLS -->
-  <g transform="translate(482, 495)">
-    <rect x="0" y="0" width="410" height="150" rx="16" fill="url(#chip-card-bg)" filter="url(#stack-shadow)"/>
-    <rect x="0" y="0" width="410" height="150" rx="16" fill="none" stroke="#ff354f" stroke-width="1.2" stroke-opacity="0.4"/>
-
-    <!-- Header -->
-    <g transform="translate(20, 20)">
-      <rect x="0" y="-8" width="26" height="20" rx="4" fill="#38101a"/>
-      <text x="7" y="6" fill="#ff354f" font-size="11">🛠️</text>
-      <text x="34" y="6" fill="#ff758c" font-family="'Segoe UI', monospace" font-size="12" font-weight="800" letter-spacing="1">
-        DEV TOOLS &amp; WORKFLOW
-      </text>
-    </g>
-    <line x1="20" y1="38" x2="390" y2="38" stroke="#1e293b" stroke-width="1"/>
-
-    <!-- Chips Row -->
-    <g transform="translate(20, 52)">
-      <!-- Git & GitHub -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="115" height="30" rx="8" fill="url(#chip-crimson)" stroke="#ff354f" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🐙 Git / GitHub</text>
+    
+  <!-- HTML5 -->
+  
+      <g transform="translate(140, 220)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#e34f26" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#e34f26" d="M4.2 2.5l1.4 16.2 6.4 1.8 6.4-1.8 1.4-16.2H4.2zm13 4.5H8.3l.2 2.2h8.3l-.6 6.6-4.2 1.2-4.2-1.2-.3-3.2h2.2l.1 1.5 2.2.6 2.2-.6.2-2.7H7.7L7 4.8h10.4l-.2 2.2z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HTML5</text>
       </g>
-      <!-- IntelliJ IDEA -->
-      <g transform="translate(122, 0)">
-        <rect x="0" y="0" width="124" height="30" rx="8" fill="url(#chip-purple)" stroke="#a855f7" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">💡 IntelliJ IDEA</text>
+    
+  <!-- CSS3 -->
+  
+      <g transform="translate(860, 220)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#1572b6" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#1572b6" d="M4.2 2.5l1.4 16.2 6.4 1.8 6.4-1.8 1.4-16.2H4.2zm13 4.5h-8l.2 2.2h7.6l-.6 6.6-4.4 1.2-4.4-1.2-.3-3.2h2.2l.1 1.5 2.4.6 2.4-.6.2-2.7H7.7L7.3 4.8h9.8l-.2 2.2z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CSS3</text>
       </g>
-      <!-- VS Code -->
-      <g transform="translate(254, 0)">
-        <rect x="0" y="0" width="112" height="30" rx="8" fill="url(#chip-blue)" stroke="#247bff" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">📝 VS Code</text>
+    
+  <!-- Vite -->
+  
+      <g transform="translate(500, 480)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#646cff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#646cff" d="M21.7 3.9L12.5 22 .3 4.1l8.5-.6 3.7 8.3 3.6-8.3 5.6.4z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Vite</text>
       </g>
+    
 
-      <!-- Postman -->
-      <g transform="translate(0, 38)">
-        <rect x="0" y="0" width="115" height="30" rx="8" fill="url(#chip-crimson)" stroke="#ff758c" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">📮 Postman</text>
+  <!-- GROUP 3: AI / COMPUTER VISION &amp; DATA -->
+  <!-- YOLO -->
+  
+      <g transform="translate(150, 420)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#ffb703" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#ffb703" d="M3 4h18v16H3V4zm4 4v8h2v-3h2v3h2V8h-2v3H9V8H7zm8 0v8h4V8h-4zm2 2h1v4h-1v-4z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">YOLO</text>
       </g>
-      <!-- Linux -->
-      <g transform="translate(122, 38)">
-        <rect x="0" y="0" width="100" height="30" rx="8" fill="url(#chip-cyan)" stroke="#00f2fe" stroke-width="1"/>
-        <text x="10" y="19" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="700">🐧 Linux</text>
+    
+  <!-- OpenCV -->
+  
+      <g transform="translate(850, 420)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#ff354f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#ff354f" d="M12 2a5 5 0 0 0-5 5c0 1.9 1 3.5 2.5 4.3L8 14.5A5 5 0 0 0 4 19a5 5 0 0 0 10 0 5 5 0 0 0-4-4.5l-1.5-3.2A4.9 4.9 0 0 0 17 7a5 5 0 0 0-5-5zm0 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm-5 13a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zm10 0a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">OpenCV</text>
       </g>
-    </g>
+    
+  <!-- AI / ML -->
+  
+      <g transform="translate(500, 180)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#ff354f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#247bff" d="M12 2a2 2 0 0 0-2 2v2.1A6 6 0 0 0 6.1 10H4a2 2 0 1 0 0 4h2.1A6 6 0 0 0 10 17.9V20a2 2 0 1 0 4 0v-2.1a6 6 0 0 0 3.9-3.9H20a2 2 0 1 0 0-4h-2.1A6 6 0 0 0 14 6.1V4a2 2 0 0 0-2-2zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI / ML</text>
+      </g>
+    
+  <!-- Node.js -->
+  
+      <g transform="translate(300, 160)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#339933" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#339933" d="M12 2l9 5.2v10.4L12 23 3 17.6V7.2L12 2zm0 2.3L4.8 8.5v7l7.2 4.2 7.2-4.2v-7L12 4.3z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Node.js</text>
+      </g>
+    
+  <!-- Express.js -->
+  
+      <g transform="translate(700, 160)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f5f7ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#f5f7ff" d="M5 8h3l2 4 2-4h3l-3.5 6 3.7 6h-3.2L10 16l-2 4H5l3.6-6L5 8zm10 0h4v2h-4V8zm0 5h4v2h-4v-2zm0 5h4v2h-4v-2z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Express.js</text>
+      </g>
+    
 
-    <text x="20" y="132" fill="#64748b" font-family="'Segoe UI', monospace" font-size="10">
-      &gt; UNIX TERMINAL • API TESTING • CI/CD &amp; VERSION CONTROL
-    </text>
+  <!-- GROUP 4: DATABASE &amp; DEV TOOLS -->
+  <!-- MySQL -->
+  
+      <g transform="translate(120, 320)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#00758f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#00758f" d="M12 3C7 3 3 6.8 3 11.5c0 2.5 1.1 4.7 3 6.2v3.3l3.2-1.6c.9.4 1.8.6 2.8.6 5 0 9-3.8 9-8.5S17 3 12 3zm0 15c-1 0-1.9-.2-2.7-.6L7 18.5v-2c-1.5-1.2-2.5-3-2.5-5 0-3.9 3.4-7 7.5-7s7.5 3.1 7.5 7-3.4 7-7.5 7z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">MySQL</text>
+      </g>
+    
+  <!-- Supabase -->
+  
+      <g transform="translate(880, 320)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#3ecf8e" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#3ecf8e" d="M13.4 2.1c-.5-.7-1.5-.7-2 0L3.5 13.5c-.6.8 0 2 .9 2H12l-1.4 6.4c-.5.7.5 1.4 1.1.8l7.9-11.4c.6-.8 0-2-.9-2H13l.4-7.2z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Supabase</text>
+      </g>
+    
+  <!-- Git -->
+  
+      <g transform="translate(120, 520)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f05032" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#f05032" d="M21.7 10.7L13.3 2.3a1.9 1.9 0 0 0-2.7 0L8.8 4.1l3.5 3.5a2.2 2.2 0 0 1 2.8 2.8l3.3 3.3a2.3 2.3 0 1 1-1.3 1.3l-3.2-3.2v5.3a2.3 2.3 0 1 1-2 0V9.8L8.4 6.3 2.3 12.4a1.9 1.9 0 0 0 0 2.7l8.4 8.4a1.9 1.9 0 0 0 2.7 0l8.3-8.4a1.9 1.9 0 0 0 0-2.7z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Git</text>
+      </g>
+    
+  <!-- GitHub -->
+  
+      <g transform="translate(880, 520)">
+        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f5f7ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+        <g transform="translate(-52, -12) scale(1)">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="#f5f7ff" d="M12 2A10 10 0 0 0 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1.1a9.7 9.7 0 0 1 5.2 0c2-1.4 2.8-1.1 2.8-1.1.5 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 22 12c0-5.5-4.5-10-10-10z"/>
+          </svg>
+        </g>
+        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">GitHub</text>
+      </g>
+    
+
+  <!-- Footer Orbit Legend -->
+  <g transform="translate(60, 580)">
+    <circle cx="6" cy="6" r="4" fill="#247bff"/>
+    <text x="18" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 1 // Core Engines</text>
+    
+    <circle cx="210" cy="6" r="4" fill="#ff354f"/>
+    <text x="222" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 2 // AI &amp; CV Accelerators</text>
+
+    <circle cx="450" cy="6" r="4" fill="#00d8ff"/>
+    <text x="462" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 3 // Frontend, Data &amp; Tooling</text>
   </g>
 </svg>
