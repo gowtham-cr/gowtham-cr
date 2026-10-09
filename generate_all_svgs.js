@@ -13,7 +13,7 @@ const sharedAnimationStyles = `
     /* Deep Futuristic Keyframes */
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
-      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+      50% { opacity: 0.95; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
     }
     @keyframes crimsonPulse {
       0%, 100% { opacity: 0.4; }
@@ -29,21 +29,37 @@ const sharedAnimationStyles = `
       85% { opacity: 0.7; }
       100% { transform: translateY(460px); opacity: 0; }
     }
-    @keyframes orbitRotate1 {
+    @keyframes ringSpinCW {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-    @keyframes orbitCounter1 {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
-    }
-    @keyframes orbitRotate2 {
+    @keyframes ringSpinCCW {
       from { transform: rotate(360deg); }
       to { transform: rotate(0deg); }
     }
-    @keyframes orbitCounter2 {
-      from { transform: rotate(-360deg); }
-      to { transform: rotate(0deg); }
+    @keyframes orbitSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    @keyframes orbitSpin2 {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounterSpin2 {
+      0% { transform: rotate(-360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
     }
     @keyframes idSwing {
       0% { transform: rotate(-6deg); }
@@ -65,9 +81,9 @@ const sharedAnimationStyles = `
       0%, 100% { transform: translateX(0px); }
       50% { transform: translateX(8px); }
     }
-    @keyframes cardGlow {
-      0%, 100% { stroke: rgba(36,123,255,0.4); }
-      50% { stroke: rgba(255,53,79,0.7); }
+    @keyframes radarSweep {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
@@ -77,7 +93,7 @@ const sharedAnimationStyles = `
     }
 `;
 
-// Helper: Grid &amp; Background Filter Definitions
+// Helper: Grid & Background Filter Definitions
 const sharedDefs = `
     <!-- Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -168,7 +184,7 @@ function sectionHeader(eyebrow, title, subtitle) {
 }
 
 // ==========================================
-// 1. HERO SVG
+// 1. HERO SVG (Enhanced Bold Display Typography & Rotating Portrait Orbits)
 // ==========================================
 function buildHero() {
   const width = 1000;
@@ -179,10 +195,6 @@ function buildHero() {
     ${sharedDefs}
     <style>
       ${sharedAnimationStyles}
-      @keyframes heroNameReveal {
-        0% { opacity: 0; transform: translateY(20px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
       @keyframes heroRole1 {
         0%, 20% { opacity: 1; transform: translateY(0); }
         25%, 95% { opacity: 0; transform: translateY(-16px); }
@@ -209,6 +221,14 @@ function buildHero() {
       .role-text-4 { animation: heroRole4 12s infinite; }
       .pulse-radar { animation: pulseGlow 3s infinite ease-in-out; }
       .hero-portrait-frame { animation: subtleFloat 6s infinite ease-in-out; }
+      .portrait-orbit-cw {
+        transform-origin: 785px 275px;
+        animation: ringSpinCW 20s infinite linear;
+      }
+      .portrait-orbit-ccw {
+        transform-origin: 785px 275px;
+        animation: ringSpinCCW 28s infinite linear;
+      }
     </style>
     <linearGradient id="portraitBorder" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#247bff"/>
@@ -220,7 +240,7 @@ function buildHero() {
     </clipPath>
   </defs>
 
-  <!-- Background Base &amp; Depth Grid -->
+  <!-- Background Base & Depth Grid -->
   <rect width="${width}" height="${height}" fill="url(#bgGrad)"/>
   <rect width="${width}" height="${height}" fill="url(#futuristicGrid)"/>
 
@@ -240,7 +260,7 @@ function buildHero() {
 
   <!-- Ambient Cinematic Spotlights -->
   <circle cx="220" cy="180" r="180" fill="#247bff" opacity="0.12" filter="url(#glowBlue)"/>
-  <circle cx="780" cy="270" r="220" fill="#ff354f" opacity="0.1" filter="url(#glowCrimson)"/>
+  <circle cx="780" cy="270" r="220" fill="#ff354f" opacity="0.12" filter="url(#glowCrimson)"/>
 
   <!-- Top Status Bar HUD -->
   <g transform="translate(60, 40)">
@@ -257,18 +277,18 @@ function buildHero() {
   <g transform="translate(60, 115)">
     <!-- Subtitle Greeting -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="105" height="24" rx="4" fill="#247bff" opacity="0.15"/>
-      <text x="10" y="16" fill="#247bff" font-size="12" font-weight="800" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HELLO, I'M</text>
+      <rect x="0" y="0" width="115" height="24" rx="4" fill="#247bff" opacity="0.18"/>
+      <text x="10" y="16" fill="#247bff" font-size="12" font-weight="800" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HELLO, I&apos;M</text>
     </g>
 
-    <!-- Hero Big Name -->
-    <text x="0" y="65" fill="#f5f7ff" font-size="52" font-weight="900" letter-spacing="2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-      GOWTHAM <tspan fill="#247bff">R</tspan>
+    <!-- Hero Bold Display Name with 3D Depth & Glow -->
+    <text x="0" y="66" fill="#f5f7ff" font-size="54" font-weight="900" letter-spacing="3" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      GOWTHAM <tspan fill="#247bff" filter="url(#glowBlue)">R</tspan>
     </text>
 
     <!-- Ambient name glow underline -->
-    <rect x="0" y="80" width="340" height="3" rx="1.5" fill="url(#blueGlowGrad)"/>
-    <rect x="345" y="80" width="18" height="3" rx="1.5" fill="#ff354f"/>
+    <rect x="0" y="82" width="340" height="3.5" rx="1.75" fill="url(#blueGlowGrad)"/>
+    <rect x="345" y="82" width="20" height="3.5" rx="1.75" fill="#ff354f"/>
 
     <!-- Dynamic Animated Cycling Role HUD Box -->
     <g transform="translate(0, 105)">
@@ -300,10 +320,10 @@ function buildHero() {
     <g transform="translate(0, 185)">
       <rect x="0" y="0" width="510" height="68" rx="12" fill="#101935" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
       <text x="20" y="28" fill="#c4d1eb" font-size="13.5" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-        "I build practical full-stack applications and AI-powered solutions
+        &quot;I build practical full-stack applications and AI-powered solutions
       </text>
       <text x="20" y="49" fill="#c4d1eb" font-size="13.5" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-        while continuously improving my software engineering and problem-solving skills."
+        while continuously improving my software engineering and problem-solving skills.&quot;
       </text>
     </g>
 
@@ -325,10 +345,22 @@ function buildHero() {
     </g>
   </g>
 
-  <!-- Right Character Portrait (Using id.png) with 3D Holographic Frame -->
+  <!-- Right Character Portrait (Using id.png) with Rotating Orbit Rings & Electric/Crimson Rim -->
   <g class="hero-portrait-frame">
+    <!-- Rotating Ambient Orbit Rings around Portrait -->
+    <g class="portrait-orbit-cw">
+      <ellipse cx="785" cy="275" rx="215" ry="215" fill="none" stroke="#247bff" stroke-width="1.2" stroke-dasharray="14,10,4,10" opacity="0.55"/>
+      <circle cx="1000" cy="275" r="4" fill="#247bff" filter="url(#glowBlue)"/>
+      <circle cx="570" cy="275" r="3" fill="#60a5fa"/>
+    </g>
+    <g class="portrait-orbit-ccw">
+      <ellipse cx="785" cy="275" rx="232" ry="232" fill="none" stroke="#ff354f" stroke-width="1" stroke-dasharray="8,12" opacity="0.45"/>
+      <circle cx="785" cy="43" r="3.5" fill="#ff354f" filter="url(#glowCrimson)"/>
+      <circle cx="785" cy="507" r="3" fill="#ff7b91"/>
+    </g>
+
     <!-- Backing 3D Frame Outer Glow -->
-    <rect x="625" y="75" width="320" height="400" rx="30" fill="none" stroke="url(#portraitBorder)" stroke-width="2" opacity="0.8" filter="url(#glowBlue)"/>
+    <rect x="625" y="75" width="320" height="400" rx="30" fill="none" stroke="url(#portraitBorder)" stroke-width="2.5" opacity="0.9" filter="url(#glowBlue)"/>
     <rect x="628" y="78" width="314" height="394" rx="28" fill="#091024" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
 
     <!-- HUD Brackets on Portrait -->
@@ -358,7 +390,7 @@ function buildHero() {
 }
 
 // ==========================================
-// 2. ABOUT &amp; LIFE SVG
+// 2. ABOUT & LIFE SVG
 // ==========================================
 function buildAboutLife() {
   const width = 1000;
@@ -414,7 +446,7 @@ function buildAboutLife() {
   ${sectionHeader("Intelligence &amp; Profile", "ABOUT ME &amp; FOCUS", "Information Science &amp; Engineering • AMC Engineering College, Bengaluru")}
 
   <!-- Content Split Layout -->
-  <!-- Left Side: Core Areas &amp; Engineering Capabilities (480px width) -->
+  <!-- Left Side: Core Areas & Engineering Capabilities (480px width) -->
   <g transform="translate(60, 130)">
     ${hudCard(0, 0, 480, 410, 18)}
     
@@ -480,7 +512,7 @@ function buildAboutLife() {
     ${hudCard(0, 0, 380, 410, 18, "url(#glassBorder)")}
 
     <g transform="translate(25, 28)">
-      <!-- Carousel Title &amp; Header -->
+      <!-- Carousel Title & Header -->
       <text x="0" y="0" fill="#ff354f" font-size="12" font-weight="800" letter-spacing="2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">DYNAMIC RADAR</text>
       <text x="0" y="24" fill="#f5f7ff" font-size="19" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Interests &amp; Drive</text>
 
@@ -577,23 +609,25 @@ function buildAboutLife() {
 }
 
 // ==========================================
-// 3. TECH STACK (3D ORBIT SYSTEM) SVG
+// 3. TECH STACK (ACTIVELY ROTATING 3D ORBIT SYSTEM)
 // ==========================================
 function buildStack() {
   const width = 1000;
-  const height = 620;
+  const height = 640;
 
-  // Tech stack item builder
-  function techBadge(name, iconSvg, x, y, color = "#247bff") {
+  // Orbit node builder with counter-rotation to keep icons & text upright while orbiting
+  function rotatingOrbitNode(name, iconSvg, x, y, counterAnimClass, color = "#247bff") {
     return `
       <g transform="translate(${x}, ${y})">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="${color}" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            ${iconSvg}
-          </svg>
+        <g class="${counterAnimClass}">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="${color}" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              ${iconSvg}
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">${name}</text>
         </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">${name}</text>
       </g>
     `;
   }
@@ -603,21 +637,37 @@ function buildStack() {
     ${sharedDefs}
     <style>
       ${sharedAnimationStyles}
-      .orbit-group-1 {
+      /* Continuous 3D Orbital Rotations */
+      .orbit-ring-1 {
         transform-origin: 500px 340px;
-        animation: orbitRotate1 35s infinite linear;
+        animation: orbitSpin1 42s infinite linear;
       }
-      .counter-group-1 {
-        transform-origin: 500px 340px;
-        animation: orbitCounter1 35s infinite linear;
+      .node-counter-1 {
+        animation: orbitCounterSpin1 42s infinite linear;
       }
-      .orbit-group-2 {
+
+      .orbit-ring-2 {
         transform-origin: 500px 340px;
-        animation: orbitRotate2 45s infinite linear;
+        animation: orbitSpin2 55s infinite linear;
       }
-      .counter-group-2 {
+      .node-counter-2 {
+        animation: orbitCounterSpin2 55s infinite linear;
+      }
+
+      .orbit-ring-3 {
         transform-origin: 500px 340px;
-        animation: orbitCounter2 45s infinite linear;
+        animation: orbitSpin3 68s infinite linear;
+      }
+      .node-counter-3 {
+        animation: orbitCounterSpin3 68s infinite linear;
+      }
+
+      .core-pulse {
+        animation: pulseGlow 4s infinite ease-in-out;
+      }
+      .radar-sweep-beam {
+        transform-origin: 500px 340px;
+        animation: radarSweep 10s infinite linear;
       }
     </style>
   </defs>
@@ -625,95 +675,100 @@ function buildStack() {
   <rect width="${width}" height="${height}" fill="url(#bgGrad)"/>
   <rect width="${width}" height="${height}" fill="url(#futuristicGrid)"/>
 
-  ${sectionHeader("Telemetry &amp; Toolkit", "TECH STACK // 3D ORBITS", "Architectural foundation across Full Stack, AI/Computer Vision &amp; Tooling")}
+  ${sectionHeader("Continuous Dynamic Engine", "3D ROTATING ORBIT SYSTEM", "Multi-tier orbital architecture across Core Engines, AI/Vision &amp; Modern Frameworks")}
 
-  <!-- Central Core Hologram -->
-  <g transform="translate(500, 340)">
-    <circle cx="0" cy="0" r="75" fill="#0b142d" stroke="#247bff" stroke-width="2" filter="url(#glowBlue)"/>
+  <!-- Radar Scanning HUD Sweep -->
+  <g class="radar-sweep-beam" opacity="0.15">
+    <path d="M 500 340 L 920 340 A 420 420 0 0 0 880 200 Z" fill="url(#blueGlowGrad)"/>
+  </g>
+
+  <!-- Central Holographic Core Hub -->
+  <g transform="translate(500, 340)" class="core-pulse">
+    <circle cx="0" cy="0" r="76" fill="#0b142d" stroke="#247bff" stroke-width="2.5" filter="url(#glowBlue)"/>
     <circle cx="0" cy="0" r="58" fill="#101935" stroke="#ff354f" stroke-width="1.5" stroke-dasharray="6,4"/>
     <circle cx="0" cy="0" r="42" fill="#070b16"/>
     <text x="0" y="-8" text-anchor="middle" fill="#247bff" font-size="11" font-weight="800" letter-spacing="2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CORE</text>
     <text x="0" y="14" text-anchor="middle" fill="#f5f7ff" font-size="16" font-weight="900" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">DEV HUB</text>
-    <text x="0" y="30" text-anchor="middle" fill="#ff354f" font-size="10" font-weight="700" letter-spacing="1">v3.8</text>
+    <text x="0" y="30" text-anchor="middle" fill="#ff354f" font-size="10" font-weight="700" letter-spacing="1">ORBITAL</text>
   </g>
 
-  <!-- Orbit 1: Inner Elliptical Ring (Rx=220, Ry=100, rotated -20deg) -->
-  <g transform="translate(500, 340) rotate(-18)">
-    <ellipse cx="0" cy="0" rx="230" ry="95" fill="none" stroke="#247bff" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  <!-- ================= ORBIT 1: INNER TILTED ELLIPSE (-20deg) ================= -->
+  <!-- Static Orbit Track Guide -->
+  <g transform="translate(500, 340) rotate(-20)">
+    <ellipse cx="0" cy="0" rx="200" ry="115" fill="none" stroke="#247bff" stroke-width="1.8" stroke-dasharray="10,6" opacity="0.55"/>
+  </g>
+  <!-- Actively Rotating Group with Nodes (Rx=200, Ry=115) -->
+  <g class="orbit-ring-1">
+    <!-- Java (0 deg) -->
+    ${rotatingOrbitNode("Java", icons.java, 700, 340, "node-counter-1", "#247bff")}
+    <!-- Spring Boot (90 deg) -->
+    ${rotatingOrbitNode("Spring Boot", icons.springboot, 500, 455, "node-counter-1", "#6db33f")}
+    <!-- Python (180 deg) -->
+    ${rotatingOrbitNode("Python", icons.python, 300, 340, "node-counter-1", "#247bff")}
+    <!-- FastAPI (270 deg) -->
+    ${rotatingOrbitNode("FastAPI", icons.fastapi, 500, 225, "node-counter-1", "#05998b")}
   </g>
 
-  <!-- Orbit 2: Outer Elliptical Ring (Rx=380, Ry=155, rotated 22deg) -->
+  <!-- ================= ORBIT 2: MIDDLE TILTED ELLIPSE (+22deg) ================= -->
+  <!-- Static Orbit Track Guide -->
   <g transform="translate(500, 340) rotate(22)">
-    <ellipse cx="0" cy="0" rx="390" ry="160" fill="none" stroke="#ff354f" stroke-width="1.5" stroke-dasharray="10,8" opacity="0.45"/>
+    <ellipse cx="0" cy="0" rx="310" ry="165" fill="none" stroke="#ff354f" stroke-width="1.8" stroke-dasharray="12,8" opacity="0.5"/>
+  </g>
+  <!-- Actively Rotating Group with Nodes (Rx=310, Ry=165) -->
+  <g class="orbit-ring-2">
+    <!-- React (0 deg) -->
+    ${rotatingOrbitNode("React", icons.react, 810, 340, "node-counter-2", "#00d8ff")}
+    <!-- Node.js (60 deg) -->
+    ${rotatingOrbitNode("Node.js", icons.nodejs, 655, 482, "node-counter-2", "#339933")}
+    <!-- Express (120 deg) -->
+    ${rotatingOrbitNode("Express.js", icons.express, 345, 482, "node-counter-2", "#f5f7ff")}
+    <!-- YOLO (180 deg) -->
+    ${rotatingOrbitNode("YOLO", icons.yolo, 190, 340, "node-counter-2", "#ffb703")}
+    <!-- OpenCV (240 deg) -->
+    ${rotatingOrbitNode("OpenCV", icons.opencv, 345, 198, "node-counter-2", "#ff354f")}
+    <!-- AI / ML (300 deg) -->
+    ${rotatingOrbitNode("AI / ML", icons.aiml, 655, 198, "node-counter-2", "#ff354f")}
   </g>
 
-  <!-- Orbit 3: Middle Circular Depth Ring -->
-  <g transform="translate(500, 340)">
-    <ellipse cx="0" cy="0" rx="310" ry="130" fill="none" stroke="#60a5fa" stroke-width="1.2" opacity="0.3"/>
+  <!-- ================= ORBIT 3: OUTER TILTED ELLIPSE (-10deg) ================= -->
+  <!-- Static Orbit Track Guide -->
+  <g transform="translate(500, 340) rotate(-10)">
+    <ellipse cx="0" cy="0" rx="415" ry="215" fill="none" stroke="#00e676" stroke-width="1.4" stroke-dasharray="14,10" opacity="0.45"/>
+  </g>
+  <!-- Actively Rotating Group with Nodes (Rx=415, Ry=215) -->
+  <g class="orbit-ring-3">
+    <!-- JavaScript (0 deg) -->
+    ${rotatingOrbitNode("JavaScript", icons.javascript, 915, 340, "node-counter-3", "#f7df1e")}
+    <!-- Vite (51 deg) -->
+    ${rotatingOrbitNode("Vite", icons.vite, 760, 507, "node-counter-3", "#646cff")}
+    <!-- MySQL (102 deg) -->
+    ${rotatingOrbitNode("MySQL", icons.mysql, 413, 550, "node-counter-3", "#00758f")}
+    <!-- Supabase (154 deg) -->
+    ${rotatingOrbitNode("Supabase", icons.supabase, 126, 434, "node-counter-3", "#3ecf8e")}
+    <!-- HTML5 (205 deg) -->
+    ${rotatingOrbitNode("HTML5", icons.html5, 126, 246, "node-counter-3", "#e34f26")}
+    <!-- CSS3 (257 deg) -->
+    ${rotatingOrbitNode("CSS3", icons.css3, 413, 130, "node-counter-3", "#1572b6")}
+    <!-- Git (308 deg) -->
+    ${rotatingOrbitNode("Git", icons.git, 760, 173, "node-counter-3", "#f05032")}
   </g>
 
-  <!-- Positioned Tech Badges around Orbits (Clean, perfectly readable, no text overlap) -->
-
-  <!-- GROUP 1: PROGRAMMING &amp; CORE BACKEND -->
-  <!-- Java -->
-  ${techBadge("Java", icons.java, 310, 250, "#247bff")}
-  <!-- Spring Boot -->
-  ${techBadge("Spring Boot", icons.springboot, 690, 250, "#6db33f")}
-  <!-- Python -->
-  ${techBadge("Python", icons.python, 260, 350, "#247bff")}
-  <!-- FastAPI -->
-  ${techBadge("FastAPI", icons.fastapi, 740, 350, "#05998b")}
-
-  <!-- GROUP 2: FRONTEND &amp; MODERN WEB -->
-  <!-- React -->
-  ${techBadge("React", icons.react, 360, 440, "#00d8ff")}
-  <!-- JavaScript -->
-  ${techBadge("JavaScript", icons.javascript, 640, 440, "#f7df1e")}
-  <!-- HTML5 -->
-  ${techBadge("HTML5", icons.html5, 140, 220, "#e34f26")}
-  <!-- CSS3 -->
-  ${techBadge("CSS3", icons.css3, 860, 220, "#1572b6")}
-  <!-- Vite -->
-  ${techBadge("Vite", icons.vite, 500, 480, "#646cff")}
-
-  <!-- GROUP 3: AI / COMPUTER VISION &amp; DATA -->
-  <!-- YOLO -->
-  ${techBadge("YOLO", icons.yolo, 150, 420, "#ffb703")}
-  <!-- OpenCV -->
-  ${techBadge("OpenCV", icons.opencv, 850, 420, "#ff354f")}
-  <!-- AI / ML -->
-  ${techBadge("AI / ML", icons.aiml, 500, 180, "#ff354f")}
-  <!-- Node.js -->
-  ${techBadge("Node.js", icons.nodejs, 300, 160, "#339933")}
-  <!-- Express.js -->
-  ${techBadge("Express.js", icons.express, 700, 160, "#f5f7ff")}
-
-  <!-- GROUP 4: DATABASE &amp; DEV TOOLS -->
-  <!-- MySQL -->
-  ${techBadge("MySQL", icons.mysql, 120, 320, "#00758f")}
-  <!-- Supabase -->
-  ${techBadge("Supabase", icons.supabase, 880, 320, "#3ecf8e")}
-  <!-- Git -->
-  ${techBadge("Git", icons.git, 120, 520, "#f05032")}
-  <!-- GitHub -->
-  ${techBadge("GitHub", icons.github, 880, 520, "#f5f7ff")}
-
-  <!-- Footer Orbit Legend -->
-  <g transform="translate(60, 580)">
-    <circle cx="6" cy="6" r="4" fill="#247bff"/>
-    <text x="18" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 1 // Core Engines</text>
+  <!-- Footer Orbit Telemetry Legend -->
+  <g transform="translate(60, 600)">
+    <circle cx="6" cy="6" r="4" fill="#247bff" filter="url(#glowBlue)"/>
+    <text x="18" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 1 [CW 42s] // Java • Spring Boot • Python • FastAPI</text>
     
-    <circle cx="210" cy="6" r="4" fill="#ff354f"/>
-    <text x="222" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 2 // AI &amp; CV Accelerators</text>
+    <circle cx="370" cy="6" r="4" fill="#ff354f" filter="url(#glowCrimson)"/>
+    <text x="382" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 2 [CCW 55s] // React • Node • Express • YOLO • OpenCV • AI/ML</text>
 
-    <circle cx="450" cy="6" r="4" fill="#00d8ff"/>
-    <text x="462" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 3 // Frontend, Data &amp; Tooling</text>
+    <circle cx="780" cy="6" r="4" fill="#00e676"/>
+    <text x="792" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 3 [CW 68s] // JS • Vite • SQL • Tools</text>
   </g>
 </svg>`;
 }
 
 // ==========================================
-// 4. 3D ID DASHBOARD SVG
+// 4. 3D ID DASHBOARD SVG (Hanging Credential)
 // ==========================================
 function buildIdDashboard() {
   const width = 1000;
@@ -821,12 +876,12 @@ function buildIdDashboard() {
     <path d="M 482 0 L 492 110 L 508 110 L 518 0" fill="url(#lanyardStrap)" stroke="#247bff" stroke-width="0.5"/>
     <text x="500" y="60" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="800" letter-spacing="2" transform="rotate(90 500 60)">DEVELOPER</text>
 
-    <!-- Metal Clasp &amp; Ring -->
+    <!-- Metal Clasp & Ring -->
     <rect x="491" y="108" width="18" height="16" rx="4" fill="#718096" stroke="#e2e8f0" stroke-width="1.5"/>
     <circle cx="500" cy="128" r="9" fill="none" stroke="#cbd5e1" stroke-width="3"/>
     <rect x="493" y="133" width="14" height="12" rx="3" fill="#475569" stroke="#94a3b8" stroke-width="1"/>
 
-    <!-- ID Card Main Shell (with Glass, Shadow &amp; Holographic Foil) -->
+    <!-- ID Card Main Shell (with Glass, Shadow & Holographic Foil) -->
     <g filter="url(#cardShadow)">
       <!-- Outer Card Rim -->
       <rect x="330" y="140" width="340" height="490" rx="24" fill="#080e21" stroke="url(#glassBorder)" stroke-width="2"/>
@@ -886,7 +941,7 @@ function buildIdDashboard() {
       <text x="8" y="16" transform="translate(206, 0)" fill="#ff7b91" font-size="10" font-weight="700">Hackathons</text>
     </g>
 
-    <!-- Holographic Barcode &amp; Security Microchip -->
+    <!-- Holographic Barcode & Security Microchip -->
     <g transform="translate(355, 465)">
       <!-- Microchip -->
       <rect x="0" y="0" width="46" height="34" rx="6" fill="#d97706" stroke="#f59e0b" stroke-width="1"/>
@@ -950,7 +1005,252 @@ function buildIdDashboard() {
 }
 
 // ==========================================
-// 5. PROJECTS SECTION SVG
+// 5. DEVELOPER TELEMETRY SVG (Verified Information Only)
+// ==========================================
+function buildTelemetry() {
+  const width = 1000;
+  const height = 480;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
+  <defs>
+    ${sharedDefs}
+    <style>
+      ${sharedAnimationStyles}
+      .node-pulse-blue { animation: pulseGlow 3s infinite ease-in-out; }
+      .node-pulse-crimson { animation: crimsonPulse 3s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <rect width="${width}" height="${height}" fill="url(#bgGrad)"/>
+  <rect width="${width}" height="${height}" fill="url(#futuristicGrid)"/>
+
+  ${sectionHeader("Verified Telemetry &amp; Intelligence", "DEVELOPER TELEMETRY DASHBOARD", "Engineering benchmarks across GitHub, DSA, Architecture &amp; Hackathons")}
+
+  <!-- 5 Column Telemetry Matrix -->
+  <!-- Col 1: GitHub -->
+  <g transform="translate(60, 130)">
+    ${hudCard(0, 0, 164, 275, 14, "#247bff")}
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#247bff" opacity="0.15"/>
+      <g transform="translate(4, 4) scale(1)">
+        <svg width="24" height="24" viewBox="0 0 24 24">${icons.github}</svg>
+      </g>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">GitHub</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(36,123,255,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">IDENTITY</text>
+      <text x="0" y="82" fill="#60a5fa" font-size="12" font-weight="700">@gowtham-cr</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">PIPELINE</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">Active CI/CD</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">REPOSITORY</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Open Source</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#247bff" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#00e676" font-size="10" font-weight="800">● LIVE REPO</text>
+    </g>
+  </g>
+
+  <!-- Col 2: LeetCode -->
+  <g transform="translate(239, 130)">
+    ${hudCard(0, 0, 164, 275, 14, "#ffa116")}
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#ffa116" opacity="0.15"/>
+      <g transform="translate(4, 4) scale(1)">
+        <svg width="24" height="24" viewBox="0 0 24 24">${icons.leetcode}</svg>
+      </g>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">LeetCode</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(255,161,22,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">IDENTITY</text>
+      <text x="0" y="82" fill="#ffa116" font-size="12" font-weight="700">@gowtham-cr</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">FOCUS</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">DSA &amp; Logic</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">LANGUAGE</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Java / C++</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#ffa116" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#ffa116" font-size="10" font-weight="800">PROBLEM SOLVING</text>
+    </g>
+  </g>
+
+  <!-- Col 3: Projects -->
+  <g transform="translate(418, 130)">
+    ${hudCard(0, 0, 164, 275, 14, "#ff354f")}
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#ff354f" opacity="0.15"/>
+      <text x="9" y="22" fill="#ff354f" font-size="16">⚡</text>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">Projects</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(255,53,79,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">FEATURED</text>
+      <text x="0" y="82" fill="#ff7b91" font-size="12" font-weight="700">TowerLens AI</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">AI / ML SUITE</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">NextStep AI</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">ENTERPRISE</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Inventory Sys</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#ff354f" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#ff7b91" font-size="10" font-weight="800">FULL-STACK</text>
+    </g>
+  </g>
+
+  <!-- Col 4: Skills -->
+  <g transform="translate(597, 130)">
+    ${hudCard(0, 0, 164, 275, 14, "#247bff")}
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#247bff" opacity="0.15"/>
+      <text x="9" y="22" fill="#247bff" font-size="16">🧠</text>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">Skills</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(36,123,255,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">CORE</text>
+      <text x="0" y="82" fill="#60a5fa" font-size="12" font-weight="700">Java Full Stack</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">AI &amp; VISION</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">YOLO • OpenCV</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">FRAMEWORKS</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Spring • React</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#247bff" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#247bff" font-size="10" font-weight="800">VERIFIED STACK</text>
+    </g>
+  </g>
+
+  <!-- Col 5: Hackathons -->
+  <g transform="translate(776, 130)">
+    ${hudCard(0, 0, 164, 275, 14, "#00e676")}
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#00e676" opacity="0.15"/>
+      <text x="9" y="22" fill="#00e676" font-size="16">🚀</text>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">Hackathons</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(0,230,118,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">NATIONAL SPRINT</text>
+      <text x="0" y="82" fill="#00e676" font-size="12" font-weight="700">DECIPHER-X</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">RAPID BUILD</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">Blaze • HACKTOPUS</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">EXHIBITIONS</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">PHYSIKA-2025</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#00e676" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#00e676" font-size="10" font-weight="800">24H SPRINT READY</text>
+    </g>
+  </g>
+
+  <!-- Bottom Notice -->
+  <g transform="translate(60, 425)">
+    <rect x="0" y="0" width="880" height="30" rx="8" fill="#080e21" stroke="rgba(36,123,255,0.2)" stroke-width="1"/>
+    <text x="20" y="19" fill="#8c9dbd" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      VERIFIED TELEMETRY PROTOCOL // Pre-native GitHub telemetry layer displaying verified engineering disciplines without fabricated statistics.
+    </text>
+  </g>
+</svg>`;
+}
+
+// ==========================================
+// 6. LEETCODE SECTION SVG (DSA & Problem-Solving Focus)
+// ==========================================
+function buildLeetcode() {
+  const width = 1000;
+  const height = 460;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="100%" height="100%">
+  <defs>
+    ${sharedDefs}
+    <style>
+      ${sharedAnimationStyles}
+      .leetcode-orbit {
+        transform-origin: 260px 240px;
+        animation: ringSpinCW 30s infinite linear;
+      }
+      .leetcode-pulse {
+        animation: pulseGlow 3s infinite ease-in-out;
+      }
+    </style>
+  </defs>
+
+  <rect width="${width}" height="${height}" fill="url(#bgGrad)"/>
+  <rect width="${width}" height="${height}" fill="url(#futuristicGrid)"/>
+
+  ${sectionHeader("Algorithmic Intelligence", "LEETCODE // DSA &amp; PROBLEM SOLVING", "Structured problem solving, complexity optimization &amp; competitive programming")}
+
+  <!-- Left Side: Algorithmic Orbit Telemetry (x=60, w=400) -->
+  <g transform="translate(60, 130)">
+    ${hudCard(0, 0, 400, 290, 16, "#ffa116")}
+    
+    <!-- Central LeetCode Hologram Orb -->
+    <g transform="translate(200, 145)">
+      <!-- Rotating outer ring -->
+      <g class="leetcode-orbit">
+        <circle cx="0" cy="0" r="95" fill="none" stroke="#ffa116" stroke-width="1.2" stroke-dasharray="10,6" opacity="0.6"/>
+        <circle cx="95" cy="0" r="4.5" fill="#ffa116" filter="url(#glowBlue)"/>
+        <circle cx="-95" cy="0" r="3.5" fill="#f5f7ff"/>
+      </g>
+      <circle cx="0" cy="0" r="65" fill="#0d1838" stroke="#ffa116" stroke-width="2" filter="url(#cardShadow)"/>
+      <g transform="translate(-24, -24) scale(2)">
+        <svg width="24" height="24" viewBox="0 0 24 24">${icons.leetcode}</svg>
+      </g>
+    </g>
+
+    <!-- Corner Tag -->
+    <text x="24" y="32" fill="#ffa116" font-size="11" font-weight="800" letter-spacing="2">DSA ENGINE</text>
+    <text x="24" y="265" fill="#8c9dbd" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBITAL RESOLVER // LOGIC MATRIX</text>
+  </g>
+
+  <!-- Right Side: Focus Pillars & Profile Identity (x=480, w=460) -->
+  <g transform="translate(480, 130)">
+    ${hudCard(0, 0, 460, 290, 16, "url(#glassBorder)")}
+
+    <g transform="translate(28, 28)">
+      <text x="0" y="0" fill="#ffa116" font-size="11" font-weight="800" letter-spacing="2">PROFILE IDENTITY</text>
+      <text x="0" y="24" fill="#f5f7ff" font-size="22" font-weight="900">gowtham-cr</text>
+      <text x="0" y="46" fill="#8c9dbd" font-size="12">leetcode.com/u/gowtham-cr</text>
+      
+      <line x1="0" y1="62" x2="404" y2="62" stroke="rgba(255,161,22,0.3)" stroke-width="1"/>
+
+      <!-- DSA Problem-Solving Pillars -->
+      <g transform="translate(0, 80)">
+        <!-- Pillar 1 -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="195" height="58" rx="10" fill="#0d1736" stroke="#247bff" stroke-width="0.8"/>
+          <text x="14" y="22" fill="#60a5fa" font-size="12" font-weight="700">● Data Structures</text>
+          <text x="14" y="42" fill="#8c9dbd" font-size="10.5">Arrays, Trees, Graphs, Heaps</text>
+        </g>
+        <!-- Pillar 2 -->
+        <g transform="translate(208, 0)">
+          <rect x="0" y="0" width="195" height="58" rx="10" fill="#0d1736" stroke="#ff354f" stroke-width="0.8"/>
+          <text x="14" y="22" fill="#ff7b91" font-size="12" font-weight="700">● Algorithms</text>
+          <text x="14" y="42" fill="#8c9dbd" font-size="10.5">DP, Two Pointers, BFS/DFS</text>
+        </g>
+        <!-- Pillar 3 -->
+        <g transform="translate(0, 68)">
+          <rect x="0" y="0" width="195" height="58" rx="10" fill="#0d1736" stroke="#ffa116" stroke-width="0.8"/>
+          <text x="14" y="22" fill="#ffa116" font-size="12" font-weight="700">● Language Mastery</text>
+          <text x="14" y="42" fill="#8c9dbd" font-size="10.5">Java Core &amp; C++ STL</text>
+        </g>
+        <!-- Pillar 4 -->
+        <g transform="translate(208, 68)">
+          <rect x="0" y="0" width="195" height="58" rx="10" fill="#0d1736" stroke="#00e676" stroke-width="0.8"/>
+          <text x="14" y="22" fill="#00e676" font-size="12" font-weight="700">● Optimization</text>
+          <text x="14" y="42" fill="#8c9dbd" font-size="10.5">Time &amp; Space Complexity</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>`;
+}
+
+// ==========================================
+// 7. PROJECTS SECTION SVG (3D Depth, Glowing Borders & Perspective Cards)
 // ==========================================
 function buildProjects() {
   const width = 1000;
@@ -1054,14 +1354,14 @@ function buildProjects() {
   <g transform="translate(60, 890)">
     <rect x="0" y="0" width="880" height="42" rx="10" fill="#080e21" stroke="rgba(36,123,255,0.25)" stroke-width="1"/>
     <text x="24" y="26" fill="#8c9dbd" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-      REPOSITORY VERIFICATION // All listed projects are self-built architectures. See markdown table below for source availability.
+      REPOSITORY VERIFICATION // All listed projects are self-built architectures without unverified external repositories.
     </text>
   </g>
 </svg>`;
 }
 
 // ==========================================
-// 6. CERTIFICATES SECTION SVG
+// 8. CERTIFICATES SECTION SVG
 // ==========================================
 function buildCertificates() {
   const width = 1000;
@@ -1089,7 +1389,7 @@ function buildCertificates() {
         ${hudCard(0, 0, 425, 145, 14)}
         
         <g transform="translate(22, 22)">
-          <!-- Top Row: Num &amp; Badge -->
+          <!-- Top Row: Num & Badge -->
           <rect x="0" y="0" width="30" height="20" rx="4" fill="${c.accent}" fill-opacity="0.15"/>
           <text x="15" y="14" text-anchor="middle" fill="${c.accent}" font-size="11" font-weight="800">${c.num}</text>
 
@@ -1137,7 +1437,7 @@ function buildCertificates() {
 }
 
 // ==========================================
-// 7. HACKATHONS &amp; ACHIEVEMENTS SVG
+// 9. HACKATHONS & ACHIEVEMENTS SVG
 // ==========================================
 function buildHackathons() {
   const width = 1000;
@@ -1155,7 +1455,7 @@ function buildHackathons() {
     const y = 140 + idx * 95;
     return `
       <g transform="translate(60, ${y})">
-        <!-- Node &amp; Line Point -->
+        <!-- Node & Line Point -->
         <circle cx="20" cy="35" r="12" fill="#09122c" stroke="${e.accent}" stroke-width="2" filter="url(#glowBlue)"/>
         <circle cx="20" cy="35" r="5" fill="${e.accent}"/>
         ${idx < timelineEvents.length - 1 ? `<line x1="20" y1="47" x2="20" y2="130" stroke="#247bff" stroke-width="2" stroke-dasharray="4,4" opacity="0.4"/>` : ''}
@@ -1225,7 +1525,7 @@ function buildHackathons() {
 }
 
 // ==========================================
-// 8. CONNECT SECTION SVG
+// 10. CONNECT SECTION SVG
 // ==========================================
 function buildConnect() {
   const width = 1000;
@@ -1251,7 +1551,7 @@ function buildConnect() {
   <rect width="${width}" height="${height}" fill="url(#bgGrad)"/>
   <rect width="${width}" height="${height}" fill="url(#futuristicGrid)"/>
 
-  ${sectionHeader("Global Transmission", "LET'S CONNECT &amp; COLLABORATE", "Open for Full-Stack, AI/ML engineering, and Hackathon opportunities")}
+  ${sectionHeader("Global Transmission", "LET&apos;S CONNECT &amp; COLLABORATE", "Open for Full-Stack, AI/ML engineering, and Hackathon opportunities")}
 
   <!-- Left Side: Character Asset right_pointing.png (Pointing to the RIGHT towards the links) -->
   <g class="pointer-nudge">
@@ -1345,12 +1645,14 @@ function buildConnect() {
 </svg>`;
 }
 
-// Generate and write all 8 SVG files
+// Generate and write all 10 SVG files
 const svgs = [
   { name: 'hero.svg', content: buildHero() },
   { name: 'about-life.svg', content: buildAboutLife() },
   { name: 'stack.svg', content: buildStack() },
   { name: 'id-dashboard.svg', content: buildIdDashboard() },
+  { name: 'telemetry.svg', content: buildTelemetry() },
+  { name: 'leetcode.svg', content: buildLeetcode() },
   { name: 'projects.svg', content: buildProjects() },
   { name: 'certificates.svg', content: buildCertificates() },
   { name: 'hackathons.svg', content: buildHackathons() },
@@ -1363,4 +1665,4 @@ svgs.forEach(s => {
   console.log(`Successfully generated ${targetPath} (${s.content.length} bytes)`);
 });
 
-console.log('ALL 8 SVGs GENERATED SUCCESSFULLY.');
+console.log('ALL 10 SVGs GENERATED SUCCESSFULLY.');

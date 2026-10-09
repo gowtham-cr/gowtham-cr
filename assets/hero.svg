@@ -59,7 +59,7 @@
     /* Deep Futuristic Keyframes */
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
-      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+      50% { opacity: 0.95; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
     }
     @keyframes crimsonPulse {
       0%, 100% { opacity: 0.4; }
@@ -75,21 +75,37 @@
       85% { opacity: 0.7; }
       100% { transform: translateY(460px); opacity: 0; }
     }
-    @keyframes orbitRotate1 {
+    @keyframes ringSpinCW {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-    @keyframes orbitCounter1 {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
-    }
-    @keyframes orbitRotate2 {
+    @keyframes ringSpinCCW {
       from { transform: rotate(360deg); }
       to { transform: rotate(0deg); }
     }
-    @keyframes orbitCounter2 {
-      from { transform: rotate(-360deg); }
-      to { transform: rotate(0deg); }
+    @keyframes orbitSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    @keyframes orbitSpin2 {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounterSpin2 {
+      0% { transform: rotate(-360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
     }
     @keyframes idSwing {
       0% { transform: rotate(-6deg); }
@@ -111,9 +127,9 @@
       0%, 100% { transform: translateX(0px); }
       50% { transform: translateX(8px); }
     }
-    @keyframes cardGlow {
-      0%, 100% { stroke: rgba(36,123,255,0.4); }
-      50% { stroke: rgba(255,53,79,0.7); }
+    @keyframes radarSweep {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
@@ -122,10 +138,6 @@
       }
     }
 
-      @keyframes heroNameReveal {
-        0% { opacity: 0; transform: translateY(20px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
       @keyframes heroRole1 {
         0%, 20% { opacity: 1; transform: translateY(0); }
         25%, 95% { opacity: 0; transform: translateY(-16px); }
@@ -152,6 +164,14 @@
       .role-text-4 { animation: heroRole4 12s infinite; }
       .pulse-radar { animation: pulseGlow 3s infinite ease-in-out; }
       .hero-portrait-frame { animation: subtleFloat 6s infinite ease-in-out; }
+      .portrait-orbit-cw {
+        transform-origin: 785px 275px;
+        animation: ringSpinCW 20s infinite linear;
+      }
+      .portrait-orbit-ccw {
+        transform-origin: 785px 275px;
+        animation: ringSpinCCW 28s infinite linear;
+      }
     </style>
     <linearGradient id="portraitBorder" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#247bff"/>
@@ -163,7 +183,7 @@
     </clipPath>
   </defs>
 
-  <!-- Background Base &amp; Depth Grid -->
+  <!-- Background Base & Depth Grid -->
   <rect width="1000" height="540" fill="url(#bgGrad)"/>
   <rect width="1000" height="540" fill="url(#futuristicGrid)"/>
 
@@ -183,7 +203,7 @@
 
   <!-- Ambient Cinematic Spotlights -->
   <circle cx="220" cy="180" r="180" fill="#247bff" opacity="0.12" filter="url(#glowBlue)"/>
-  <circle cx="780" cy="270" r="220" fill="#ff354f" opacity="0.1" filter="url(#glowCrimson)"/>
+  <circle cx="780" cy="270" r="220" fill="#ff354f" opacity="0.12" filter="url(#glowCrimson)"/>
 
   <!-- Top Status Bar HUD -->
   <g transform="translate(60, 40)">
@@ -200,18 +220,18 @@
   <g transform="translate(60, 115)">
     <!-- Subtitle Greeting -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="105" height="24" rx="4" fill="#247bff" opacity="0.15"/>
-      <text x="10" y="16" fill="#247bff" font-size="12" font-weight="800" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HELLO, I'M</text>
+      <rect x="0" y="0" width="115" height="24" rx="4" fill="#247bff" opacity="0.18"/>
+      <text x="10" y="16" fill="#247bff" font-size="12" font-weight="800" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HELLO, I&apos;M</text>
     </g>
 
-    <!-- Hero Big Name -->
-    <text x="0" y="65" fill="#f5f7ff" font-size="52" font-weight="900" letter-spacing="2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-      GOWTHAM <tspan fill="#247bff">R</tspan>
+    <!-- Hero Bold Display Name with 3D Depth & Glow -->
+    <text x="0" y="66" fill="#f5f7ff" font-size="54" font-weight="900" letter-spacing="3" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      GOWTHAM <tspan fill="#247bff" filter="url(#glowBlue)">R</tspan>
     </text>
 
     <!-- Ambient name glow underline -->
-    <rect x="0" y="80" width="340" height="3" rx="1.5" fill="url(#blueGlowGrad)"/>
-    <rect x="345" y="80" width="18" height="3" rx="1.5" fill="#ff354f"/>
+    <rect x="0" y="82" width="340" height="3.5" rx="1.75" fill="url(#blueGlowGrad)"/>
+    <rect x="345" y="82" width="20" height="3.5" rx="1.75" fill="#ff354f"/>
 
     <!-- Dynamic Animated Cycling Role HUD Box -->
     <g transform="translate(0, 105)">
@@ -243,10 +263,10 @@
     <g transform="translate(0, 185)">
       <rect x="0" y="0" width="510" height="68" rx="12" fill="#101935" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
       <text x="20" y="28" fill="#c4d1eb" font-size="13.5" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-        "I build practical full-stack applications and AI-powered solutions
+        &quot;I build practical full-stack applications and AI-powered solutions
       </text>
       <text x="20" y="49" fill="#c4d1eb" font-size="13.5" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
-        while continuously improving my software engineering and problem-solving skills."
+        while continuously improving my software engineering and problem-solving skills.&quot;
       </text>
     </g>
 
@@ -268,10 +288,22 @@
     </g>
   </g>
 
-  <!-- Right Character Portrait (Using id.png) with 3D Holographic Frame -->
+  <!-- Right Character Portrait (Using id.png) with Rotating Orbit Rings & Electric/Crimson Rim -->
   <g class="hero-portrait-frame">
+    <!-- Rotating Ambient Orbit Rings around Portrait -->
+    <g class="portrait-orbit-cw">
+      <ellipse cx="785" cy="275" rx="215" ry="215" fill="none" stroke="#247bff" stroke-width="1.2" stroke-dasharray="14,10,4,10" opacity="0.55"/>
+      <circle cx="1000" cy="275" r="4" fill="#247bff" filter="url(#glowBlue)"/>
+      <circle cx="570" cy="275" r="3" fill="#60a5fa"/>
+    </g>
+    <g class="portrait-orbit-ccw">
+      <ellipse cx="785" cy="275" rx="232" ry="232" fill="none" stroke="#ff354f" stroke-width="1" stroke-dasharray="8,12" opacity="0.45"/>
+      <circle cx="785" cy="43" r="3.5" fill="#ff354f" filter="url(#glowCrimson)"/>
+      <circle cx="785" cy="507" r="3" fill="#ff7b91"/>
+    </g>
+
     <!-- Backing 3D Frame Outer Glow -->
-    <rect x="625" y="75" width="320" height="400" rx="30" fill="none" stroke="url(#portraitBorder)" stroke-width="2" opacity="0.8" filter="url(#glowBlue)"/>
+    <rect x="625" y="75" width="320" height="400" rx="30" fill="none" stroke="url(#portraitBorder)" stroke-width="2.5" opacity="0.9" filter="url(#glowBlue)"/>
     <rect x="628" y="78" width="314" height="394" rx="28" fill="#091024" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
 
     <!-- HUD Brackets on Portrait -->

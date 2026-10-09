@@ -59,7 +59,7 @@
     /* Deep Futuristic Keyframes */
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
-      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+      50% { opacity: 0.95; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
     }
     @keyframes crimsonPulse {
       0%, 100% { opacity: 0.4; }
@@ -75,21 +75,37 @@
       85% { opacity: 0.7; }
       100% { transform: translateY(460px); opacity: 0; }
     }
-    @keyframes orbitRotate1 {
+    @keyframes ringSpinCW {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-    @keyframes orbitCounter1 {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
-    }
-    @keyframes orbitRotate2 {
+    @keyframes ringSpinCCW {
       from { transform: rotate(360deg); }
       to { transform: rotate(0deg); }
     }
-    @keyframes orbitCounter2 {
-      from { transform: rotate(-360deg); }
-      to { transform: rotate(0deg); }
+    @keyframes orbitSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    @keyframes orbitSpin2 {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounterSpin2 {
+      0% { transform: rotate(-360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
     }
     @keyframes idSwing {
       0% { transform: rotate(-6deg); }
@@ -111,9 +127,9 @@
       0%, 100% { transform: translateX(0px); }
       50% { transform: translateX(8px); }
     }
-    @keyframes cardGlow {
-      0%, 100% { stroke: rgba(36,123,255,0.4); }
-      50% { stroke: rgba(255,53,79,0.7); }
+    @keyframes radarSweep {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
@@ -142,7 +158,7 @@
       <rect x="0" y="0" width="8" height="38" rx="4" fill="#ff354f"/>
       <rect x="0" y="0" width="8" height="38" rx="4" fill="#247bff" opacity="0.6" filter="url(#glowBlue)"/>
       <text x="24" y="14" fill="#247bff" font-size="12" font-weight="700" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">GLOBAL TRANSMISSION</text>
-      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">LET&apos;S CONNECT &amp; COLLABORATE</text>
+      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">LET&amp;apos;S CONNECT &amp; COLLABORATE</text>
       <text x="24" y="60" fill="#8c9dbd" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Open for Full-Stack, AI/ML engineering, and Hackathon opportunities</text>
     </g>
   

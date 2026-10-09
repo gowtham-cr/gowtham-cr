@@ -123,62 +123,6 @@
       height: auto;
     }
 
-    /* Projects Table */
-    .projects-table-card {
-      background: #0c142b;
-      border: 1px solid rgba(36, 123, 255, 0.25);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .table-title {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 16px;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 13.5px;
-    }
-
-    th {
-      background: rgba(36, 123, 255, 0.1);
-      color: var(--accent-blue);
-      font-weight: 700;
-      padding: 12px 16px;
-      border-bottom: 2px solid rgba(36, 123, 255, 0.25);
-    }
-
-    td {
-      padding: 14px 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-muted);
-    }
-
-    td strong {
-      color: var(--text-main);
-    }
-
-    .code-badge {
-      display: inline-block;
-      background: rgba(36, 123, 255, 0.15);
-      color: #60a5fa;
-      border: 1px solid rgba(36, 123, 255, 0.3);
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 600;
-      margin-right: 4px;
-    }
-
     /* Social Connect Action Row */
     .social-actions {
       display: flex;
@@ -235,7 +179,7 @@
       <div class="status-dot"></div>
       <span class="brand-title">GOWTHAM R // 3D PROFILE SYSTEM</span>
     </div>
-    <div class="badge-info">PREVIEW ENVIRONMENT // 8 SECTIONS LOADED</div>
+    <div class="badge-info">PREVIEW ENVIRONMENT // 10 SECTIONS LOADED</div>
   </header>
 
   <main class="profile-container">
@@ -243,90 +187,61 @@
     <!-- 1. Hero Section -->
     <section class="section-wrapper" id="hero-sec">
       <div class="section-tag">01 // HERO</div>
-      <img src="./assets/hero.svg?v=1" alt="Gowtham R Hero" class="profile-svg">
+      <img src="./assets/hero.svg?v=2" alt="Gowtham R Hero" class="profile-svg">
     </section>
 
     <!-- 2. About Life Section -->
     <section class="section-wrapper" id="about-sec">
       <div class="section-tag">02 // ABOUT &amp; FOCUS</div>
-      <img src="./assets/about-life.svg?v=1" alt="About and Life" class="profile-svg">
+      <img src="./assets/about-life.svg?v=2" alt="About and Life" class="profile-svg">
     </section>
 
-    <!-- 3. Tech Stack 3D Orbit -->
+    <!-- 3. Tech Stack 3D Rotating Orbit System -->
     <section class="section-wrapper" id="stack-sec">
-      <div class="section-tag">03 // TECH STACK ORBITS</div>
-      <img src="./assets/stack.svg?v=1" alt="Tech Stack" class="profile-svg">
+      <div class="section-tag">03 // 3D STACK ORBITS</div>
+      <img src="./assets/stack.svg?v=2" alt="3D Stack Orbits" class="profile-svg">
     </section>
 
     <!-- 4. 3D ID Dashboard -->
     <section class="section-wrapper" id="id-sec">
       <div class="section-tag">04 // 3D ID DASHBOARD</div>
-      <img src="./assets/id-dashboard.svg?v=1" alt="ID Dashboard" class="profile-svg">
+      <img src="./assets/id-dashboard.svg?v=2" alt="ID Dashboard" class="profile-svg">
     </section>
 
-    <!-- 5. Projects Section -->
+    <!-- 5. Developer Telemetry -->
+    <section class="section-wrapper" id="telemetry-sec">
+      <div class="section-tag">05 // DEVELOPER TELEMETRY</div>
+      <img src="./assets/telemetry.svg?v=2" alt="Developer Telemetry" class="profile-svg">
+    </section>
+
+    <!-- 6. LeetCode Section -->
+    <section class="section-wrapper" id="leetcode-sec">
+      <div class="section-tag">06 // LEETCODE // DSA</div>
+      <img src="./assets/leetcode.svg?v=2" alt="LeetCode DSA" class="profile-svg">
+    </section>
+
+    <!-- 7. Projects Section (3D Holographic Cards) -->
     <section class="section-wrapper" id="projects-sec">
-      <div class="section-tag">05 // PRODUCTION SYSTEMS</div>
-      <img src="./assets/projects.svg?v=1" alt="Featured Projects" class="profile-svg">
+      <div class="section-tag">07 // PRODUCTION SYSTEMS</div>
+      <img src="./assets/projects.svg?v=2" alt="Featured Projects" class="profile-svg">
     </section>
 
-    <!-- Projects Accessible Matrix Table -->
-    <div class="projects-table-card">
-      <div class="table-title">⚡ Verified Project Specification Matrix</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Description</th>
-            <th>Tech Stack</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>TowerLens AI</strong></td>
-            <td>AI-powered transmission tower component detection &amp; structural safety inspection platform.</td>
-            <td><span class="code-badge">YOLO</span><span class="code-badge">OpenCV</span><span class="code-badge">FastAPI</span><span class="code-badge">React</span></td>
-          </tr>
-          <tr>
-            <td><strong>NextStep AI</strong></td>
-            <td>AI Placement Readiness Copilot for resume improvement, skill-gap analysis, study planning &amp; mock interviews.</td>
-            <td><span class="code-badge">AI/ML</span><span class="code-badge">Python</span><span class="code-badge">React</span><span class="code-badge">NLP</span></td>
-          </tr>
-          <tr>
-            <td><strong>AMC College AI Chatbot</strong></td>
-            <td>AI-powered student query and campus assistance system for AMC Engineering College.</td>
-            <td><span class="code-badge">Conversational AI</span><span class="code-badge">Python</span><span class="code-badge">REST APIs</span></td>
-          </tr>
-          <tr>
-            <td><strong>Inventory Management System</strong></td>
-            <td>Full-stack employee inventory and organizational asset management portal with relational persistence.</td>
-            <td><span class="code-badge">React</span><span class="code-badge">Node.js</span><span class="code-badge">Express</span><span class="code-badge">MySQL</span></td>
-          </tr>
-          <tr>
-            <td><strong>AI Disease Prediction System</strong></td>
-            <td>Machine-learning based healthcare assistance and clinical diagnostic prediction engine.</td>
-            <td><span class="code-badge">Python</span><span class="code-badge">Machine Learning</span><span class="code-badge">Predictive AI</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 6. Certificates Section -->
+    <!-- 8. Certificates Section -->
     <section class="section-wrapper" id="certs-sec">
-      <div class="section-tag">06 // CREDENTIALS</div>
-      <img src="./assets/certificates.svg?v=1" alt="Certifications" class="profile-svg">
+      <div class="section-tag">08 // CREDENTIALS</div>
+      <img src="./assets/certificates.svg?v=2" alt="Certifications" class="profile-svg">
     </section>
 
-    <!-- 7. Hackathons Section -->
+    <!-- 9. Hackathons Section -->
     <section class="section-wrapper" id="hackathons-sec">
-      <div class="section-tag">07 // EXPEDITIONS</div>
-      <img src="./assets/hackathons.svg?v=1" alt="Hackathons &amp; Achievements" class="profile-svg">
+      <div class="section-tag">09 // EXPEDITIONS</div>
+      <img src="./assets/hackathons.svg?v=2" alt="Hackathons &amp; Achievements" class="profile-svg">
     </section>
 
-    <!-- 8. Connect Section -->
+    <!-- 10. Connect Section -->
     <section class="section-wrapper" id="connect-sec">
-      <div class="section-tag">08 // TRANSMISSION</div>
-      <img src="./assets/connect.svg?v=1" alt="Connect with Gowtham" class="profile-svg">
+      <div class="section-tag">10 // TRANSMISSION</div>
+      <img src="./assets/connect.svg?v=2" alt="Connect with Gowtham" class="profile-svg">
     </section>
 
     <!-- Connect Action Buttons -->

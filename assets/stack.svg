@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="100%" height="100%">
   <defs>
     
     <!-- Gradients -->
@@ -59,7 +59,7 @@
     /* Deep Futuristic Keyframes */
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
-      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+      50% { opacity: 0.95; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
     }
     @keyframes crimsonPulse {
       0%, 100% { opacity: 0.4; }
@@ -75,21 +75,37 @@
       85% { opacity: 0.7; }
       100% { transform: translateY(460px); opacity: 0; }
     }
-    @keyframes orbitRotate1 {
+    @keyframes ringSpinCW {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-    @keyframes orbitCounter1 {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
-    }
-    @keyframes orbitRotate2 {
+    @keyframes ringSpinCCW {
       from { transform: rotate(360deg); }
       to { transform: rotate(0deg); }
     }
-    @keyframes orbitCounter2 {
-      from { transform: rotate(-360deg); }
-      to { transform: rotate(0deg); }
+    @keyframes orbitSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    @keyframes orbitSpin2 {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounterSpin2 {
+      0% { transform: rotate(-360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
     }
     @keyframes idSwing {
       0% { transform: rotate(-6deg); }
@@ -111,9 +127,9 @@
       0%, 100% { transform: translateX(0px); }
       50% { transform: translateX(8px); }
     }
-    @keyframes cardGlow {
-      0%, 100% { stroke: rgba(36,123,255,0.4); }
-      50% { stroke: rgba(255,53,79,0.7); }
+    @keyframes radarSweep {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
     @media (prefers-reduced-motion: reduce) {
       *, ::before, ::after {
@@ -122,298 +138,343 @@
       }
     }
 
-      .orbit-group-1 {
+      /* Continuous 3D Orbital Rotations */
+      .orbit-ring-1 {
         transform-origin: 500px 340px;
-        animation: orbitRotate1 35s infinite linear;
+        animation: orbitSpin1 42s infinite linear;
       }
-      .counter-group-1 {
-        transform-origin: 500px 340px;
-        animation: orbitCounter1 35s infinite linear;
+      .node-counter-1 {
+        animation: orbitCounterSpin1 42s infinite linear;
       }
-      .orbit-group-2 {
+
+      .orbit-ring-2 {
         transform-origin: 500px 340px;
-        animation: orbitRotate2 45s infinite linear;
+        animation: orbitSpin2 55s infinite linear;
       }
-      .counter-group-2 {
+      .node-counter-2 {
+        animation: orbitCounterSpin2 55s infinite linear;
+      }
+
+      .orbit-ring-3 {
         transform-origin: 500px 340px;
-        animation: orbitCounter2 45s infinite linear;
+        animation: orbitSpin3 68s infinite linear;
+      }
+      .node-counter-3 {
+        animation: orbitCounterSpin3 68s infinite linear;
+      }
+
+      .core-pulse {
+        animation: pulseGlow 4s infinite ease-in-out;
+      }
+      .radar-sweep-beam {
+        transform-origin: 500px 340px;
+        animation: radarSweep 10s infinite linear;
       }
     </style>
   </defs>
 
-  <rect width="1000" height="620" fill="url(#bgGrad)"/>
-  <rect width="1000" height="620" fill="url(#futuristicGrid)"/>
+  <rect width="1000" height="640" fill="url(#bgGrad)"/>
+  <rect width="1000" height="640" fill="url(#futuristicGrid)"/>
 
   
     <g transform="translate(60, 50)">
       <rect x="0" y="0" width="8" height="38" rx="4" fill="#ff354f"/>
       <rect x="0" y="0" width="8" height="38" rx="4" fill="#247bff" opacity="0.6" filter="url(#glowBlue)"/>
-      <text x="24" y="14" fill="#247bff" font-size="12" font-weight="700" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">TELEMETRY &amp; TOOLKIT</text>
-      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">TECH STACK // 3D ORBITS</text>
-      <text x="24" y="60" fill="#8c9dbd" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Architectural foundation across Full Stack, AI/Computer Vision &amp; Tooling</text>
+      <text x="24" y="14" fill="#247bff" font-size="12" font-weight="700" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CONTINUOUS DYNAMIC ENGINE</text>
+      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">3D ROTATING ORBIT SYSTEM</text>
+      <text x="24" y="60" fill="#8c9dbd" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Multi-tier orbital architecture across Core Engines, AI/Vision &amp; Modern Frameworks</text>
     </g>
   
 
-  <!-- Central Core Hologram -->
-  <g transform="translate(500, 340)">
-    <circle cx="0" cy="0" r="75" fill="#0b142d" stroke="#247bff" stroke-width="2" filter="url(#glowBlue)"/>
+  <!-- Radar Scanning HUD Sweep -->
+  <g class="radar-sweep-beam" opacity="0.15">
+    <path d="M 500 340 L 920 340 A 420 420 0 0 0 880 200 Z" fill="url(#blueGlowGrad)"/>
+  </g>
+
+  <!-- Central Holographic Core Hub -->
+  <g transform="translate(500, 340)" class="core-pulse">
+    <circle cx="0" cy="0" r="76" fill="#0b142d" stroke="#247bff" stroke-width="2.5" filter="url(#glowBlue)"/>
     <circle cx="0" cy="0" r="58" fill="#101935" stroke="#ff354f" stroke-width="1.5" stroke-dasharray="6,4"/>
     <circle cx="0" cy="0" r="42" fill="#070b16"/>
     <text x="0" y="-8" text-anchor="middle" fill="#247bff" font-size="11" font-weight="800" letter-spacing="2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CORE</text>
     <text x="0" y="14" text-anchor="middle" fill="#f5f7ff" font-size="16" font-weight="900" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">DEV HUB</text>
-    <text x="0" y="30" text-anchor="middle" fill="#ff354f" font-size="10" font-weight="700" letter-spacing="1">v3.8</text>
+    <text x="0" y="30" text-anchor="middle" fill="#ff354f" font-size="10" font-weight="700" letter-spacing="1">ORBITAL</text>
   </g>
 
-  <!-- Orbit 1: Inner Elliptical Ring (Rx=220, Ry=100, rotated -20deg) -->
-  <g transform="translate(500, 340) rotate(-18)">
-    <ellipse cx="0" cy="0" rx="230" ry="95" fill="none" stroke="#247bff" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.6"/>
+  <!-- ================= ORBIT 1: INNER TILTED ELLIPSE (-20deg) ================= -->
+  <!-- Static Orbit Track Guide -->
+  <g transform="translate(500, 340) rotate(-20)">
+    <ellipse cx="0" cy="0" rx="200" ry="115" fill="none" stroke="#247bff" stroke-width="1.8" stroke-dasharray="10,6" opacity="0.55"/>
+  </g>
+  <!-- Actively Rotating Group with Nodes (Rx=200, Ry=115) -->
+  <g class="orbit-ring-1">
+    <!-- Java (0 deg) -->
+    
+      <g transform="translate(700, 340)">
+        <g class="node-counter-1">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#247bff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#247bff" d="M12 2C8 2 5.5 3.5 5.5 4.5c0 .7.8 1.4 2.2 1.8-.4.3-.8.6-.8 1 0 1.2 3.2 2 5.1 2 2.2 0 5-.9 5-2 0-.4-.4-.7-.9-1 1.4-.4 2.2-1.1 2.2-1.8C18.3 3.5 15.8 2 12 2zM7.2 12.5c.8 1.2 2.8 2 4.8 2 2.2 0 4.1-.8 4.8-2 0 1.5-2.2 3.5-4.8 3.5s-4.8-2-4.8-3.5zm-1 3.5c1.2 1.5 3.5 2.5 5.8 2.5s4.6-1 5.8-2.5c0 1.8-2.6 4-5.8 4s-5.8-2.2-5.8-4z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Java</text>
+        </g>
+      </g>
+    
+    <!-- Spring Boot (90 deg) -->
+    
+      <g transform="translate(500, 455)">
+        <g class="node-counter-1">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#6db33f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#6db33f" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.8 14.5l-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Spring Boot</text>
+        </g>
+      </g>
+    
+    <!-- Python (180 deg) -->
+    
+      <g transform="translate(300, 340)">
+        <g class="node-counter-1">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#247bff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#247bff" d="M11.9 2c-3.1 0-2.9 1.3-2.9 1.3l.01 1.4h3v.4H6.2s-2.2.2-2.2 3.2 1.9 3.1 1.9 3.1h1.1V10s-.1-1.3 1.3-1.3h4.4s1.2-.02 1.2-1.2V3.2S14.2 2 11.9 2zm-1.7 1a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4zm1.9 19c3.1 0 2.9-1.3 2.9-1.3l-.01-1.4h-3v-.4h5.8s2.2-.2 2.2-3.2-1.9-3.1-1.9-3.1h-1.1V14s.1 1.3-1.3 1.3H11.3s-1.2.02-1.2 1.2v4.3s-.3 1.2 2 1.2zm1.7-1a.7.7 0 1 1 0-1.4.7.7 0 0 1 0 1.4z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Python</text>
+        </g>
+      </g>
+    
+    <!-- FastAPI (270 deg) -->
+    
+      <g transform="translate(500, 225)">
+        <g class="node-counter-1">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#05998b" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#05998b" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 14.5l-4.5-5h3V6.5l4.5 5h-3v5z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">FastAPI</text>
+        </g>
+      </g>
+    
   </g>
 
-  <!-- Orbit 2: Outer Elliptical Ring (Rx=380, Ry=155, rotated 22deg) -->
+  <!-- ================= ORBIT 2: MIDDLE TILTED ELLIPSE (+22deg) ================= -->
+  <!-- Static Orbit Track Guide -->
   <g transform="translate(500, 340) rotate(22)">
-    <ellipse cx="0" cy="0" rx="390" ry="160" fill="none" stroke="#ff354f" stroke-width="1.5" stroke-dasharray="10,8" opacity="0.45"/>
+    <ellipse cx="0" cy="0" rx="310" ry="165" fill="none" stroke="#ff354f" stroke-width="1.8" stroke-dasharray="12,8" opacity="0.5"/>
+  </g>
+  <!-- Actively Rotating Group with Nodes (Rx=310, Ry=165) -->
+  <g class="orbit-ring-2">
+    <!-- React (0 deg) -->
+    
+      <g transform="translate(810, 340)">
+        <g class="node-counter-2">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#00d8ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#00d8ff" d="M12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm0-7.5c-3.6 0-6.8 1.2-8.6 3.1-1.9 1.9-2.4 4.5-1.4 7.2.9 2.7 3.3 5.4 6.6 7.5 1.1.7 2.3 1.2 3.4 1.7 1.1-.5 2.3-1 3.4-1.7 3.3-2.1 5.7-4.8 6.6-7.5 1-2.7.5-5.3-1.4-7.2C20.2 3.2 17 2 12 2zm0 1.5c4.3 0 7 1 8.3 2.4 1.4 1.4 1.7 3.4.9 5.5-.8 2.3-2.8 4.7-5.8 6.7-1 .6-2.1 1.1-3.4 1.5-1.3-.4-2.4-.9-3.4-1.5-3-2-5-4.4-5.8-6.7-.8-2.1-.5-4.1.9-5.5C5 4.5 7.7 3.5 12 3.5z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">React</text>
+        </g>
+      </g>
+    
+    <!-- Node.js (60 deg) -->
+    
+      <g transform="translate(655, 482)">
+        <g class="node-counter-2">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#339933" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#339933" d="M12 2l9 5.2v10.4L12 23 3 17.6V7.2L12 2zm0 2.3L4.8 8.5v7l7.2 4.2 7.2-4.2v-7L12 4.3z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Node.js</text>
+        </g>
+      </g>
+    
+    <!-- Express (120 deg) -->
+    
+      <g transform="translate(345, 482)">
+        <g class="node-counter-2">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#f5f7ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#f5f7ff" d="M5 8h3l2 4 2-4h3l-3.5 6 3.7 6h-3.2L10 16l-2 4H5l3.6-6L5 8zm10 0h4v2h-4V8zm0 5h4v2h-4v-2zm0 5h4v2h-4v-2z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Express.js</text>
+        </g>
+      </g>
+    
+    <!-- YOLO (180 deg) -->
+    
+      <g transform="translate(190, 340)">
+        <g class="node-counter-2">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#ffb703" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#ffb703" d="M3 4h18v16H3V4zm4 4v8h2v-3h2v3h2V8h-2v3H9V8H7zm8 0v8h4V8h-4zm2 2h1v4h-1v-4z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">YOLO</text>
+        </g>
+      </g>
+    
+    <!-- OpenCV (240 deg) -->
+    
+      <g transform="translate(345, 198)">
+        <g class="node-counter-2">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#ff354f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#ff354f" d="M12 2a5 5 0 0 0-5 5c0 1.9 1 3.5 2.5 4.3L8 14.5A5 5 0 0 0 4 19a5 5 0 0 0 10 0 5 5 0 0 0-4-4.5l-1.5-3.2A4.9 4.9 0 0 0 17 7a5 5 0 0 0-5-5zm0 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm-5 13a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zm10 0a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">OpenCV</text>
+        </g>
+      </g>
+    
+    <!-- AI / ML (300 deg) -->
+    
+      <g transform="translate(655, 198)">
+        <g class="node-counter-2">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#ff354f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#247bff" d="M12 2a2 2 0 0 0-2 2v2.1A6 6 0 0 0 6.1 10H4a2 2 0 1 0 0 4h2.1A6 6 0 0 0 10 17.9V20a2 2 0 1 0 4 0v-2.1a6 6 0 0 0 3.9-3.9H20a2 2 0 1 0 0-4h-2.1A6 6 0 0 0 14 6.1V4a2 2 0 0 0-2-2zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI / ML</text>
+        </g>
+      </g>
+    
   </g>
 
-  <!-- Orbit 3: Middle Circular Depth Ring -->
-  <g transform="translate(500, 340)">
-    <ellipse cx="0" cy="0" rx="310" ry="130" fill="none" stroke="#60a5fa" stroke-width="1.2" opacity="0.3"/>
+  <!-- ================= ORBIT 3: OUTER TILTED ELLIPSE (-10deg) ================= -->
+  <!-- Static Orbit Track Guide -->
+  <g transform="translate(500, 340) rotate(-10)">
+    <ellipse cx="0" cy="0" rx="415" ry="215" fill="none" stroke="#00e676" stroke-width="1.4" stroke-dasharray="14,10" opacity="0.45"/>
+  </g>
+  <!-- Actively Rotating Group with Nodes (Rx=415, Ry=215) -->
+  <g class="orbit-ring-3">
+    <!-- JavaScript (0 deg) -->
+    
+      <g transform="translate(915, 340)">
+        <g class="node-counter-3">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#f7df1e" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#f7df1e" d="M3 3h18v18H3V3zm15.5 13.8c-.3-.2-.7-.4-1.2-.4-.6 0-1 .3-1 .8 0 .5.4.7 1.3 1.1 1.3.5 1.9 1.2 1.9 2.2 0 1.3-1 2.3-2.6 2.3-1.3 0-2-.6-2.4-1.3l1.1-.7c.3.5.7.8 1.3.8.6 0 1-.3 1-.7 0-.5-.4-.7-1.3-1.1-1.2-.5-1.9-1.1-1.9-2.2 0-1.2 1-2.1 2.4-2.1 1 0 1.7.4 2.1 1l-1.2.6zm-6.2-3.5h1.5v6.5c0 1.6-.9 2.4-2.4 2.4-.7 0-1.4-.2-1.8-.6l.7-1.2c.3.3.6.5 1.1.5.7 0 1-.4 1-1.1v-6.5z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">JavaScript</text>
+        </g>
+      </g>
+    
+    <!-- Vite (51 deg) -->
+    
+      <g transform="translate(760, 507)">
+        <g class="node-counter-3">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#646cff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#646cff" d="M21.7 3.9L12.5 22 .3 4.1l8.5-.6 3.7 8.3 3.6-8.3 5.6.4z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Vite</text>
+        </g>
+      </g>
+    
+    <!-- MySQL (102 deg) -->
+    
+      <g transform="translate(413, 550)">
+        <g class="node-counter-3">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#00758f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#00758f" d="M12 3C7 3 3 6.8 3 11.5c0 2.5 1.1 4.7 3 6.2v3.3l3.2-1.6c.9.4 1.8.6 2.8.6 5 0 9-3.8 9-8.5S17 3 12 3zm0 15c-1 0-1.9-.2-2.7-.6L7 18.5v-2c-1.5-1.2-2.5-3-2.5-5 0-3.9 3.4-7 7.5-7s7.5 3.1 7.5 7-3.4 7-7.5 7z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">MySQL</text>
+        </g>
+      </g>
+    
+    <!-- Supabase (154 deg) -->
+    
+      <g transform="translate(126, 434)">
+        <g class="node-counter-3">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#3ecf8e" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#3ecf8e" d="M13.4 2.1c-.5-.7-1.5-.7-2 0L3.5 13.5c-.6.8 0 2 .9 2H12l-1.4 6.4c-.5.7.5 1.4 1.1.8l7.9-11.4c.6-.8 0-2-.9-2H13l.4-7.2z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Supabase</text>
+        </g>
+      </g>
+    
+    <!-- HTML5 (205 deg) -->
+    
+      <g transform="translate(126, 246)">
+        <g class="node-counter-3">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#e34f26" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#e34f26" d="M4.2 2.5l1.4 16.2 6.4 1.8 6.4-1.8 1.4-16.2H4.2zm13 4.5H8.3l.2 2.2h8.3l-.6 6.6-4.2 1.2-4.2-1.2-.3-3.2h2.2l.1 1.5 2.2.6 2.2-.6.2-2.7H7.7L7 4.8h10.4l-.2 2.2z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HTML5</text>
+        </g>
+      </g>
+    
+    <!-- CSS3 (257 deg) -->
+    
+      <g transform="translate(413, 130)">
+        <g class="node-counter-3">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#1572b6" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#1572b6" d="M4.2 2.5l1.4 16.2 6.4 1.8 6.4-1.8 1.4-16.2H4.2zm13 4.5h-8l.2 2.2h7.6l-.6 6.6-4.4 1.2-4.4-1.2-.3-3.2h2.2l.1 1.5 2.4.6 2.4-.6.2-2.7H7.7L7.3 4.8h9.8l-.2 2.2z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CSS3</text>
+        </g>
+      </g>
+    
+    <!-- Git (308 deg) -->
+    
+      <g transform="translate(760, 173)">
+        <g class="node-counter-3">
+          <rect x="-60" y="-18" width="120" height="36" rx="10" fill="#0c142b" stroke="#f05032" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
+          <g transform="translate(-48, -11) scale(0.92)">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#f05032" d="M21.7 10.7L13.3 2.3a1.9 1.9 0 0 0-2.7 0L8.8 4.1l3.5 3.5a2.2 2.2 0 0 1 2.8 2.8l3.3 3.3a2.3 2.3 0 1 1-1.3 1.3l-3.2-3.2v5.3a2.3 2.3 0 1 1-2 0V9.8L8.4 6.3 2.3 12.4a1.9 1.9 0 0 0 0 2.7l8.4 8.4a1.9 1.9 0 0 0 2.7 0l8.3-8.4a1.9 1.9 0 0 0 0-2.7z"/>
+            </svg>
+          </g>
+          <text x="4" y="5" fill="#f5f7ff" font-size="11.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Git</text>
+        </g>
+      </g>
+    
   </g>
 
-  <!-- Positioned Tech Badges around Orbits (Clean, perfectly readable, no text overlap) -->
+  <!-- Footer Orbit Telemetry Legend -->
+  <g transform="translate(60, 600)">
+    <circle cx="6" cy="6" r="4" fill="#247bff" filter="url(#glowBlue)"/>
+    <text x="18" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 1 [CW 42s] // Java • Spring Boot • Python • FastAPI</text>
+    
+    <circle cx="370" cy="6" r="4" fill="#ff354f" filter="url(#glowCrimson)"/>
+    <text x="382" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 2 [CCW 55s] // React • Node • Express • YOLO • OpenCV • AI/ML</text>
 
-  <!-- GROUP 1: PROGRAMMING &amp; CORE BACKEND -->
-  <!-- Java -->
-  
-      <g transform="translate(310, 250)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#247bff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#247bff" d="M12 2C8 2 5.5 3.5 5.5 4.5c0 .7.8 1.4 2.2 1.8-.4.3-.8.6-.8 1 0 1.2 3.2 2 5.1 2 2.2 0 5-.9 5-2 0-.4-.4-.7-.9-1 1.4-.4 2.2-1.1 2.2-1.8C18.3 3.5 15.8 2 12 2zM7.2 12.5c.8 1.2 2.8 2 4.8 2 2.2 0 4.1-.8 4.8-2 0 1.5-2.2 3.5-4.8 3.5s-4.8-2-4.8-3.5zm-1 3.5c1.2 1.5 3.5 2.5 5.8 2.5s4.6-1 5.8-2.5c0 1.8-2.6 4-5.8 4s-5.8-2.2-5.8-4z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Java</text>
-      </g>
-    
-  <!-- Spring Boot -->
-  
-      <g transform="translate(690, 250)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#6db33f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#6db33f" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.8 14.5l-3.5-3.5 1.4-1.4 2.1 2.1 5.6-5.6 1.4 1.4z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Spring Boot</text>
-      </g>
-    
-  <!-- Python -->
-  
-      <g transform="translate(260, 350)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#247bff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#247bff" d="M11.9 2c-3.1 0-2.9 1.3-2.9 1.3l.01 1.4h3v.4H6.2s-2.2.2-2.2 3.2 1.9 3.1 1.9 3.1h1.1V10s-.1-1.3 1.3-1.3h4.4s1.2-.02 1.2-1.2V3.2S14.2 2 11.9 2zm-1.7 1a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4zm1.9 19c3.1 0 2.9-1.3 2.9-1.3l-.01-1.4h-3v-.4h5.8s2.2-.2 2.2-3.2-1.9-3.1-1.9-3.1h-1.1V14s.1 1.3-1.3 1.3H11.3s-1.2.02-1.2 1.2v4.3s-.3 1.2 2 1.2zm1.7-1a.7.7 0 1 1 0-1.4.7.7 0 0 1 0 1.4z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Python</text>
-      </g>
-    
-  <!-- FastAPI -->
-  
-      <g transform="translate(740, 350)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#05998b" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#05998b" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 14.5l-4.5-5h3V6.5l4.5 5h-3v5z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">FastAPI</text>
-      </g>
-    
-
-  <!-- GROUP 2: FRONTEND &amp; MODERN WEB -->
-  <!-- React -->
-  
-      <g transform="translate(360, 440)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#00d8ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#00d8ff" d="M12 9.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm0-7.5c-3.6 0-6.8 1.2-8.6 3.1-1.9 1.9-2.4 4.5-1.4 7.2.9 2.7 3.3 5.4 6.6 7.5 1.1.7 2.3 1.2 3.4 1.7 1.1-.5 2.3-1 3.4-1.7 3.3-2.1 5.7-4.8 6.6-7.5 1-2.7.5-5.3-1.4-7.2C20.2 3.2 17 2 12 2zm0 1.5c4.3 0 7 1 8.3 2.4 1.4 1.4 1.7 3.4.9 5.5-.8 2.3-2.8 4.7-5.8 6.7-1 .6-2.1 1.1-3.4 1.5-1.3-.4-2.4-.9-3.4-1.5-3-2-5-4.4-5.8-6.7-.8-2.1-.5-4.1.9-5.5C5 4.5 7.7 3.5 12 3.5z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">React</text>
-      </g>
-    
-  <!-- JavaScript -->
-  
-      <g transform="translate(640, 440)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f7df1e" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#f7df1e" d="M3 3h18v18H3V3zm15.5 13.8c-.3-.2-.7-.4-1.2-.4-.6 0-1 .3-1 .8 0 .5.4.7 1.3 1.1 1.3.5 1.9 1.2 1.9 2.2 0 1.3-1 2.3-2.6 2.3-1.3 0-2-.6-2.4-1.3l1.1-.7c.3.5.7.8 1.3.8.6 0 1-.3 1-.7 0-.5-.4-.7-1.3-1.1-1.2-.5-1.9-1.1-1.9-2.2 0-1.2 1-2.1 2.4-2.1 1 0 1.7.4 2.1 1l-1.2.6zm-6.2-3.5h1.5v6.5c0 1.6-.9 2.4-2.4 2.4-.7 0-1.4-.2-1.8-.6l.7-1.2c.3.3.6.5 1.1.5.7 0 1-.4 1-1.1v-6.5z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">JavaScript</text>
-      </g>
-    
-  <!-- HTML5 -->
-  
-      <g transform="translate(140, 220)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#e34f26" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#e34f26" d="M4.2 2.5l1.4 16.2 6.4 1.8 6.4-1.8 1.4-16.2H4.2zm13 4.5H8.3l.2 2.2h8.3l-.6 6.6-4.2 1.2-4.2-1.2-.3-3.2h2.2l.1 1.5 2.2.6 2.2-.6.2-2.7H7.7L7 4.8h10.4l-.2 2.2z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HTML5</text>
-      </g>
-    
-  <!-- CSS3 -->
-  
-      <g transform="translate(860, 220)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#1572b6" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#1572b6" d="M4.2 2.5l1.4 16.2 6.4 1.8 6.4-1.8 1.4-16.2H4.2zm13 4.5h-8l.2 2.2h7.6l-.6 6.6-4.4 1.2-4.4-1.2-.3-3.2h2.2l.1 1.5 2.4.6 2.4-.6.2-2.7H7.7L7.3 4.8h9.8l-.2 2.2z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CSS3</text>
-      </g>
-    
-  <!-- Vite -->
-  
-      <g transform="translate(500, 480)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#646cff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#646cff" d="M21.7 3.9L12.5 22 .3 4.1l8.5-.6 3.7 8.3 3.6-8.3 5.6.4z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Vite</text>
-      </g>
-    
-
-  <!-- GROUP 3: AI / COMPUTER VISION &amp; DATA -->
-  <!-- YOLO -->
-  
-      <g transform="translate(150, 420)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#ffb703" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#ffb703" d="M3 4h18v16H3V4zm4 4v8h2v-3h2v3h2V8h-2v3H9V8H7zm8 0v8h4V8h-4zm2 2h1v4h-1v-4z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">YOLO</text>
-      </g>
-    
-  <!-- OpenCV -->
-  
-      <g transform="translate(850, 420)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#ff354f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#ff354f" d="M12 2a5 5 0 0 0-5 5c0 1.9 1 3.5 2.5 4.3L8 14.5A5 5 0 0 0 4 19a5 5 0 0 0 10 0 5 5 0 0 0-4-4.5l-1.5-3.2A4.9 4.9 0 0 0 17 7a5 5 0 0 0-5-5zm0 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm-5 13a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zm10 0a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">OpenCV</text>
-      </g>
-    
-  <!-- AI / ML -->
-  
-      <g transform="translate(500, 180)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#ff354f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#247bff" d="M12 2a2 2 0 0 0-2 2v2.1A6 6 0 0 0 6.1 10H4a2 2 0 1 0 0 4h2.1A6 6 0 0 0 10 17.9V20a2 2 0 1 0 4 0v-2.1a6 6 0 0 0 3.9-3.9H20a2 2 0 1 0 0-4h-2.1A6 6 0 0 0 14 6.1V4a2 2 0 0 0-2-2zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">AI / ML</text>
-      </g>
-    
-  <!-- Node.js -->
-  
-      <g transform="translate(300, 160)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#339933" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#339933" d="M12 2l9 5.2v10.4L12 23 3 17.6V7.2L12 2zm0 2.3L4.8 8.5v7l7.2 4.2 7.2-4.2v-7L12 4.3z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Node.js</text>
-      </g>
-    
-  <!-- Express.js -->
-  
-      <g transform="translate(700, 160)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f5f7ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#f5f7ff" d="M5 8h3l2 4 2-4h3l-3.5 6 3.7 6h-3.2L10 16l-2 4H5l3.6-6L5 8zm10 0h4v2h-4V8zm0 5h4v2h-4v-2zm0 5h4v2h-4v-2z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Express.js</text>
-      </g>
-    
-
-  <!-- GROUP 4: DATABASE &amp; DEV TOOLS -->
-  <!-- MySQL -->
-  
-      <g transform="translate(120, 320)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#00758f" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#00758f" d="M12 3C7 3 3 6.8 3 11.5c0 2.5 1.1 4.7 3 6.2v3.3l3.2-1.6c.9.4 1.8.6 2.8.6 5 0 9-3.8 9-8.5S17 3 12 3zm0 15c-1 0-1.9-.2-2.7-.6L7 18.5v-2c-1.5-1.2-2.5-3-2.5-5 0-3.9 3.4-7 7.5-7s7.5 3.1 7.5 7-3.4 7-7.5 7z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">MySQL</text>
-      </g>
-    
-  <!-- Supabase -->
-  
-      <g transform="translate(880, 320)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#3ecf8e" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#3ecf8e" d="M13.4 2.1c-.5-.7-1.5-.7-2 0L3.5 13.5c-.6.8 0 2 .9 2H12l-1.4 6.4c-.5.7.5 1.4 1.1.8l7.9-11.4c.6-.8 0-2-.9-2H13l.4-7.2z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Supabase</text>
-      </g>
-    
-  <!-- Git -->
-  
-      <g transform="translate(120, 520)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f05032" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#f05032" d="M21.7 10.7L13.3 2.3a1.9 1.9 0 0 0-2.7 0L8.8 4.1l3.5 3.5a2.2 2.2 0 0 1 2.8 2.8l3.3 3.3a2.3 2.3 0 1 1-1.3 1.3l-3.2-3.2v5.3a2.3 2.3 0 1 1-2 0V9.8L8.4 6.3 2.3 12.4a1.9 1.9 0 0 0 0 2.7l8.4 8.4a1.9 1.9 0 0 0 2.7 0l8.3-8.4a1.9 1.9 0 0 0 0-2.7z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Git</text>
-      </g>
-    
-  <!-- GitHub -->
-  
-      <g transform="translate(880, 520)">
-        <rect x="-65" y="-20" width="130" height="40" rx="10" fill="#0c142b" stroke="#f5f7ff" stroke-width="1.2" opacity="0.95" filter="url(#cardShadow)"/>
-        <g transform="translate(-52, -12) scale(1)">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="#f5f7ff" d="M12 2A10 10 0 0 0 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1.1a9.7 9.7 0 0 1 5.2 0c2-1.4 2.8-1.1 2.8-1.1.5 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 22 12c0-5.5-4.5-10-10-10z"/>
-          </svg>
-        </g>
-        <text x="2" y="5" fill="#f5f7ff" font-size="12" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">GitHub</text>
-      </g>
-    
-
-  <!-- Footer Orbit Legend -->
-  <g transform="translate(60, 580)">
-    <circle cx="6" cy="6" r="4" fill="#247bff"/>
-    <text x="18" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 1 // Core Engines</text>
-    
-    <circle cx="210" cy="6" r="4" fill="#ff354f"/>
-    <text x="222" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 2 // AI &amp; CV Accelerators</text>
-
-    <circle cx="450" cy="6" r="4" fill="#00d8ff"/>
-    <text x="462" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 3 // Frontend, Data &amp; Tooling</text>
+    <circle cx="780" cy="6" r="4" fill="#00e676"/>
+    <text x="792" y="10" fill="#8c9dbd" font-size="11" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ORBIT 3 [CW 68s] // JS • Vite • SQL • Tools</text>
   </g>
 </svg>

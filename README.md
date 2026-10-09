@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Intro](./assets/hero.svg?v=1)
+![Hero](./assets/hero.svg?v=2)
 
 </div>
 
@@ -10,7 +10,7 @@
 
 <div align="center">
 
-![About](./assets/about-life.svg?v=1)
+![About](./assets/about-life.svg?v=2)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 <div align="center">
 
-![Stack](./assets/stack.svg?v=1)
+![3D Stack Orbits](./assets/stack.svg?v=2)
 
 </div>
 
@@ -26,7 +26,7 @@
 
 <div align="center">
 
-![ID](./assets/id-dashboard.svg?v=1)
+![ID Dashboard](./assets/id-dashboard.svg?v=2)
 
 </div>
 
@@ -34,25 +34,7 @@
 
 <div align="center">
 
-![Projects](./assets/projects.svg?v=1)
-
-</div>
-
-### 🚀 Production Systems & Featured Projects
-
-| Project | Description | Technology Stack | Scope & Architecture |
-| :--- | :--- | :--- | :--- |
-| **TowerLens AI** | AI-powered transmission tower component detection and structural inspection platform | `YOLO` `OpenCV` `FastAPI` `React` | High-accuracy visual defect & component classification engine |
-| **NextStep AI** | AI Placement Readiness Copilot for resume improvement, skill-gap analysis & interview prep | `AI/ML` `Python` `React` `NLP` | Student diagnostic & career intelligence platform |
-| **AMC College AI Chatbot** | AI-powered student query and campus assistance system for AMC Engineering College | `Conversational AI` `Python` `REST APIs` | Multi-turn contextual response delivery system |
-| **Inventory Management System** | Full-stack employee inventory and organizational asset management portal | `React` `Node.js` `Express.js` `MySQL` | Enterprise role-based access & relational tracking |
-| **AI Disease Prediction System** | Machine-learning based healthcare assistance and clinical diagnostic prediction engine | `Python` `Machine Learning` `Predictive AI` | Predictive diagnostic modeling |
-
----
-
-<div align="center">
-
-![Certificates](./assets/certificates.svg?v=1)
+![Developer Telemetry](./assets/telemetry.svg?v=2)
 
 </div>
 
@@ -60,7 +42,7 @@
 
 <div align="center">
 
-![Hackathons](./assets/hackathons.svg?v=1)
+![LeetCode DSA](./assets/leetcode.svg?v=2)
 
 </div>
 
@@ -68,7 +50,31 @@
 
 <div align="center">
 
-![Connect](./assets/connect.svg?v=1)
+![Projects](./assets/projects.svg?v=2)
+
+</div>
+
+---
+
+<div align="center">
+
+![Certificates](./assets/certificates.svg?v=2)
+
+</div>
+
+---
+
+<div align="center">
+
+![Hackathons](./assets/hackathons.svg?v=2)
+
+</div>
+
+---
+
+<div align="center">
+
+![Connect](./assets/connect.svg?v=2)
 
 ### 🌐 Transmission Channels // Let's Connect
 
@@ -77,7 +83,7 @@
 [![LeetCode](https://img.shields.io/badge/LeetCode-gowtham--cr-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/gowtham-cr)
 [![Email](https://img.shields.io/badge/Email-rg3212703%40gmail.com-FF354F?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rg3212703@gmail.com)
 
-**Quick Links:**  
+**Direct Access:**  
 • **GitHub**: [github.com/gowtham-cr](https://github.com/gowtham-cr)  
 • **LinkedIn**: [linkedin.com/in/gowtham-r-1b8367315](https://www.linkedin.com/in/gowtham-r-1b8367315)  
 • **LeetCode**: [leetcode.com/u/gowtham-cr](https://leetcode.com/u/gowtham-cr)  

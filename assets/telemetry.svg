@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
+  <defs>
+    
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#0b1329"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101935" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090e1f" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#247bff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff354f" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <linearGradient id="blueGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#247bff"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+
+    <linearGradient id="crimsonGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff354f"/>
+      <stop offset="100%" stop-color="#ff7b91"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glowBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glowCrimson" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="futuristicGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#247bff" stroke-width="0.75" stroke-opacity="0.12"/>
+      <circle cx="40" cy="0" r="1.2" fill="#247bff" fill-opacity="0.25"/>
+    </pattern>
+
+    <pattern id="dotPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#f5f7ff" fill-opacity="0.08"/>
+    </pattern>
+
+    <style>
+      
+    /* Deep Futuristic Keyframes */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 10px rgba(36,123,255,0.4)); }
+      50% { opacity: 0.95; filter: drop-shadow(0 0 24px rgba(36,123,255,0.85)); }
+    }
+    @keyframes crimsonPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.85; filter: drop-shadow(0 0 16px rgba(255,53,79,0.8)); }
+    }
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(0px); opacity: 0; }
+      15% { opacity: 0.7; }
+      85% { opacity: 0.7; }
+      100% { transform: translateY(460px); opacity: 0; }
+    }
+    @keyframes ringSpinCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes ringSpinCCW {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes orbitSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin1 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    @keyframes orbitSpin2 {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitCounterSpin2 {
+      0% { transform: rotate(-360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes orbitSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes orbitCounterSpin3 {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    @keyframes idSwing {
+      0% { transform: rotate(-6deg); }
+      15% { transform: rotate(5deg); }
+      30% { transform: rotate(-3.5deg); }
+      45% { transform: rotate(2.2deg); }
+      60% { transform: rotate(-1.7deg); }
+      75% { transform: rotate(1.7deg); }
+      90% { transform: rotate(-1.7deg); }
+      100% { transform: rotate(1.7deg); }
+    }
+    @keyframes foilSweep {
+      0% { transform: translateX(-180%) skewX(-20deg); opacity: 0; }
+      20% { opacity: 0.45; }
+      40% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+      100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+    }
+    @keyframes pointPulse {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(8px); }
+    }
+    @keyframes radarSweep {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+
+      .node-pulse-blue { animation: pulseGlow 3s infinite ease-in-out; }
+      .node-pulse-crimson { animation: crimsonPulse 3s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="480" fill="url(#bgGrad)"/>
+  <rect width="1000" height="480" fill="url(#futuristicGrid)"/>
+
+  
+    <g transform="translate(60, 50)">
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#ff354f"/>
+      <rect x="0" y="0" width="8" height="38" rx="4" fill="#247bff" opacity="0.6" filter="url(#glowBlue)"/>
+      <text x="24" y="14" fill="#247bff" font-size="12" font-weight="700" letter-spacing="3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">VERIFIED TELEMETRY &amp; INTELLIGENCE</text>
+      <text x="24" y="38" fill="#f5f7ff" font-size="28" font-weight="800" letter-spacing="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">DEVELOPER TELEMETRY DASHBOARD</text>
+      <text x="24" y="60" fill="#8c9dbd" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Engineering benchmarks across GitHub, DSA, Architecture &amp; Hackathons</text>
+    </g>
+  
+
+  <!-- 5 Column Telemetry Matrix -->
+  <!-- Col 1: GitHub -->
+  <g transform="translate(60, 130)">
+    
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="url(#cardGrad)" stroke="#247bff" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 0 L 164 0 L 164 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 259 L 0 275 L 16 275" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 275 L 164 275 L 164 259" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#247bff" opacity="0.15"/>
+      <g transform="translate(4, 4) scale(1)">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#f5f7ff" d="M12 2A10 10 0 0 0 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1.1a9.7 9.7 0 0 1 5.2 0c2-1.4 2.8-1.1 2.8-1.1.5 1.4.2 2.4.1 2.7.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 22 12c0-5.5-4.5-10-10-10z"/></svg>
+      </g>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">GitHub</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(36,123,255,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">IDENTITY</text>
+      <text x="0" y="82" fill="#60a5fa" font-size="12" font-weight="700">@gowtham-cr</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">PIPELINE</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">Active CI/CD</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">REPOSITORY</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Open Source</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#247bff" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#00e676" font-size="10" font-weight="800">● LIVE REPO</text>
+    </g>
+  </g>
+
+  <!-- Col 2: LeetCode -->
+  <g transform="translate(239, 130)">
+    
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="url(#cardGrad)" stroke="#ffa116" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 0 L 164 0 L 164 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 259 L 0 275 L 16 275" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 275 L 164 275 L 164 259" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#ffa116" opacity="0.15"/>
+      <g transform="translate(4, 4) scale(1)">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#ffa116" d="M13.5 3.3a1.5 1.5 0 0 1 2.1.3l5.1 6.1a1.5 1.5 0 0 1-.2 2.1l-6.8 5.4a1.5 1.5 0 0 1-2.1-.3l-5-6.1a1.5 1.5 0 0 1 .2-2.1l6.7-5.4zm-1.8 14.5h6.3a1 1 0 1 1 0 2h-6.3a1 1 0 1 1 0-2zM4.5 12a4 4 0 0 1 2.5-3.7 1 1 0 1 1 .8 1.8 2 2 0 0 0-1.3 1.9 2 2 0 0 0 2 2h4.5a1 1 0 1 1 0 2H8.5a4 4 0 0 1-4-4z"/></svg>
+      </g>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">LeetCode</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(255,161,22,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">IDENTITY</text>
+      <text x="0" y="82" fill="#ffa116" font-size="12" font-weight="700">@gowtham-cr</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">FOCUS</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">DSA &amp; Logic</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">LANGUAGE</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Java / C++</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#ffa116" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#ffa116" font-size="10" font-weight="800">PROBLEM SOLVING</text>
+    </g>
+  </g>
+
+  <!-- Col 3: Projects -->
+  <g transform="translate(418, 130)">
+    
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="url(#cardGrad)" stroke="#ff354f" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 0 L 164 0 L 164 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 259 L 0 275 L 16 275" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 275 L 164 275 L 164 259" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#ff354f" opacity="0.15"/>
+      <text x="9" y="22" fill="#ff354f" font-size="16">⚡</text>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">Projects</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(255,53,79,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">FEATURED</text>
+      <text x="0" y="82" fill="#ff7b91" font-size="12" font-weight="700">TowerLens AI</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">AI / ML SUITE</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">NextStep AI</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">ENTERPRISE</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Inventory Sys</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#ff354f" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#ff7b91" font-size="10" font-weight="800">FULL-STACK</text>
+    </g>
+  </g>
+
+  <!-- Col 4: Skills -->
+  <g transform="translate(597, 130)">
+    
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="url(#cardGrad)" stroke="#247bff" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 0 L 164 0 L 164 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 259 L 0 275 L 16 275" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 275 L 164 275 L 164 259" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#247bff" opacity="0.15"/>
+      <text x="9" y="22" fill="#247bff" font-size="16">🧠</text>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">Skills</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(36,123,255,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">CORE</text>
+      <text x="0" y="82" fill="#60a5fa" font-size="12" font-weight="700">Java Full Stack</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">AI &amp; VISION</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">YOLO • OpenCV</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">FRAMEWORKS</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">Spring • React</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#247bff" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#247bff" font-size="10" font-weight="800">VERIFIED STACK</text>
+    </g>
+  </g>
+
+  <!-- Col 5: Hackathons -->
+  <g transform="translate(776, 130)">
+    
+    <g class="hud-panel">
+      <!-- Glow Underlay -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="#0d1630" fill-opacity="0.5" filter="url(#cardShadow)"/>
+      <!-- Main Glass Body -->
+      <rect x="0" y="0" width="164" height="275" rx="14" fill="url(#cardGrad)" stroke="#00e676" stroke-width="1.2"/>
+      <!-- HUD Corner Accents -->
+      <path d="M 0 16 L 0 0 L 16 0" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 0 L 164 0 L 164 16" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 0 259 L 0 275 L 16 275" fill="none" stroke="#ff354f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 148 275 L 164 275 L 164 259" fill="none" stroke="#247bff" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  
+    <g transform="translate(18, 24)">
+      <circle cx="16" cy="16" r="14" fill="#00e676" opacity="0.15"/>
+      <text x="9" y="22" fill="#00e676" font-size="16">🚀</text>
+      <text x="36" y="21" fill="#f5f7ff" font-size="14" font-weight="800">Hackathons</text>
+      <line x1="0" y1="42" x2="128" y2="42" stroke="rgba(0,230,118,0.3)" stroke-width="1"/>
+
+      <text x="0" y="65" fill="#8c9dbd" font-size="10" font-weight="700">NATIONAL SPRINT</text>
+      <text x="0" y="82" fill="#00e676" font-size="12" font-weight="700">DECIPHER-X</text>
+
+      <text x="0" y="112" fill="#8c9dbd" font-size="10" font-weight="700">RAPID BUILD</text>
+      <text x="0" y="129" fill="#f5f7ff" font-size="11.5" font-weight="600">Blaze • HACKTOPUS</text>
+
+      <text x="0" y="159" fill="#8c9dbd" font-size="10" font-weight="700">EXHIBITIONS</text>
+      <text x="0" y="176" fill="#f5f7ff" font-size="11.5" font-weight="600">PHYSIKA-2025</text>
+
+      <rect x="0" y="200" width="128" height="26" rx="6" fill="#0d1838" stroke="#00e676" stroke-width="0.8"/>
+      <text x="64" y="217" text-anchor="middle" fill="#00e676" font-size="10" font-weight="800">24H SPRINT READY</text>
+    </g>
+  </g>
+
+  <!-- Bottom Notice -->
+  <g transform="translate(60, 425)">
+    <rect x="0" y="0" width="880" height="30" rx="8" fill="#080e21" stroke="rgba(36,123,255,0.2)" stroke-width="1"/>
+    <text x="20" y="19" fill="#8c9dbd" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      VERIFIED TELEMETRY PROTOCOL // Pre-native GitHub telemetry layer displaying verified engineering disciplines without fabricated statistics.
+    </text>
+  </g>
+</svg>
